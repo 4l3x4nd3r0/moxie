@@ -17,48 +17,73 @@
     <meta name="apple-mobile-web-app-status-bar" content="#FFE1C4">
     <meta name="theme-color" content="#FFE1C4">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
-     
-    
+    <style type="text/css">
 
+
+body {
+	font-family: arial, helvetica, serif;
+}
+
+ul { /* all lists */
+    background: #000000;
+    padding: 15px 15px 15px 5px;
+	margin: 0;
+	list-style: none;
+}
+
+li { /* all list items */
+	float: left;
+	position: relative;
+	width: 10em;
+    list-style-type: none;
+}
+
+li ul { /* second-level lists */
+	display: none;
+	position: absolute;
+	top: 1em;
+	left: 0;
+}
+
+li>ul { /* to override top and left in browsers other than IE, which will position to the top right of the containing li, rather than bottom left */
+	top: auto;
+	left: auto;
+}
+
+li:hover ul, li.over ul { /* lists nested under hovered list items */
+	display: block;
+}
+
+#content {
+	clear: left;
+}
+
+</style>
+<script type="text/javascript">
+    startList = function() {
+    if (document.all&&document;.getElementById) {
+    navRoot = document.getElementById("nav");
+    for (i=0; i<navRoot.childNodes.length; i++) {
+    node = navRoot.childNodes;
+    if (node.nodeName=="LI") {
+    node.onmouseover=function() {
+    this.className+=" over";
+    }
+    node.onmouseout=function() {
+    this.className=this.className.replace(" over", "");
+    }
+    }
+    }
+    }
+    }
+    window.onload=startList;
+</script>
 </head>
 <body>
-
-<div class="topnav">
-      <a class="dropdown">
-            <button onclick="myFunction()" class="dropbtn">Dropdown</button>
-            <div id="myDropdown" class="dropdown-content">
-              <a href="#">Link 1</a>
-              <a href="#">Link 2</a>
-              <a href="#">Link 3</a>
-            </div>
-        </a>
-      <a class="active" href="#home">Moxie</a>
-     </div> 
-
-     <script>
-        function myFunction() {
-    document.getElementById("myDropdown").classList.toggle("show");
-  }
-  
-  // Close the dropdown menu if the user clicks outside of it
-  window.onclick = function(event) {
-    if (!event.target.matches('.dropbtn')) {
-      var dropdowns = document.getElementsByClassName("dropdown-content");
-      var i;
-      for (i = 0; i < dropdowns.length; i++) {
-        var openDropdown = dropdowns[i];
-        if (openDropdown.classList.contains('show')) {
-          openDropdown.classList.remove('show');
-        }
-      }
-    }
-  } 
-    </script>
-    
     <nav>
         <div class="wrapper">
-            <a href="index.php"></a>
-            <ul>
+            <li><img src="assets/images/menu.png" alt="Meniu" width="100" height="75">
+                <ul>
                 <li><a href="index.php">Home</a></li>
                 <?php
                     if (isset($_SESSION["userUid"])) {
@@ -70,8 +95,8 @@
                         echo "<li><a href='login.php'>Login</a></li>";
                     }
                 ?>
-            </ul>
+                </ul>
+            </li>
         </div>
     </nav>
-
 <div class="wrapper">
