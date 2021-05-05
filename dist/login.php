@@ -13,10 +13,10 @@
     <?php
     if (isset($_GET["error"])) {
         if ($_GET["error"] == "emptyinput") {
-            echo "<p>Fill in all fields!</p>"
+            echo "<p>Fill in all fields!</p>";
         }
         else if ($_GET["error"] == "wronglogin") {
-            echo "<p>Incorrect Credentials!</p>"
+            echo "<p>Incorrect Credentials!</p>";
         }
     }
     ?>

@@ -52,7 +52,7 @@ function uidExists($conn, $username, $email) {
         exit();
     }
     
-    mysqli_smt_bind_param($stmt, "ss", $username, $email);
+    mysqli_stmt_bind_param($stmt, "ss", $username, $email);
     mysqli_stmt_execute($stmt);
 
     $resultData = mysqli_stmt_get_result($stmt);
@@ -78,7 +78,7 @@ function createUser($conn, $name, $prenume, $email, $username, $pwd) {
 
     $hashedPwd = password_hash($pwd, PASSWORD_DEFAULT);
     
-    mysqli_smt_bind_param($stmt, "sssss", $name, $prenume, $email, $username, $hashedPwd);
+    mysqli_stmt_bind_param($stmt, "sssss", $name, $prenume, $email, $username, $hashedPwd);
     mysqli_stmt_execute($stmt);
     mysqli_stmt_close($stmt);
     header("location: ../signup.php?error=none");
@@ -87,7 +87,7 @@ function createUser($conn, $name, $prenume, $email, $username, $pwd) {
 
 function emptyInputLogin($username, $pwd) {
     $result;
-    if (empty($name) ||  empty($pwd)) {
+    if (empty($username) ||  empty($pwd)) {
         $result = true;
     }
     else {
@@ -96,10 +96,10 @@ function emptyInputLogin($username, $pwd) {
     return $result;
 }
 
-function loginUser($conn, $name, $pwd) {
-    $uidExists = uidExists($conn, $username, $username)
+function loginUser($conn, $username, $pwd) {
+    $uidExists = uidExists($conn, $username, $username);
 
-    if ($uidExists == false) {
+    if ($uidExists === false) {
         header("location: ../login.php?error=wronglogin");
         exit();
     }
@@ -107,11 +107,11 @@ function loginUser($conn, $name, $pwd) {
     $pwdHashed = $uidExists["usersPwd"];
     $checkPwd = password_verify($pwd, $pwdHashed);
 
-    if ($checkPwd == false) {
+    if ($checkPwd === false) {
         header("location: ../login.php?error=wronglogin");
         exit();
     }
-    else if ($checkPwd == true) {
+    else if ($checkPwd === true) {
         session_start();
         $_SESSION["userid"] = $uidExists["usersId"];
         $_SESSION["userUid"] = $uidExists["usersUid"];
