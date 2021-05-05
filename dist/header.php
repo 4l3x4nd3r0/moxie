@@ -18,7 +18,12 @@
     <meta name="theme-color" content="#FFE1C4">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
      
-    <div class="topnav">
+    
+
+</head>
+<body>
+
+<div class="topnav">
       <a class="dropdown">
             <button onclick="myFunction()" class="dropbtn">Dropdown</button>
             <div id="myDropdown" class="dropdown-content">
@@ -49,9 +54,7 @@
     }
   } 
     </script>
-
-</head>
-<body>
+    
     <nav>
         <div class="wrapper">
             <a href="index.php"></a>
