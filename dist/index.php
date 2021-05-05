@@ -15,6 +15,15 @@
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
 </head>
 <body>
-    <h1>Welcome to my site!</h1>
+    <nav>
+        <div>
+            <a href="index.php"></a>
+            <ul>
+                <li><a href="index.php">Home</a></li>
+                <li><a href="signup.php">Sign Up</a></li>
+                <li><a href="login.php">Login</a></li>
+            </ul>
+        </div>
+    </nav>
 </body>
 </html>
