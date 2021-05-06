@@ -7,7 +7,7 @@
 		</p>
 		<br>
 		<p>
-			<?php echo $lang['contact'] ?> <a href="mailto:hi@vijaythapa.com?Subject=multi-lingual%20website" target="_top">hi@vijaythapa.com</a>
+			<?php echo $lang['contact'] ?> <a href="mailto:entropycrusade@gmail.com?Subject=Moxie%20Website" target="_top">entropycrusade@gmail.com</a>
 		</p>
 
 	</div>
