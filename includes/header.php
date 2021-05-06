@@ -9,10 +9,6 @@
 	<meta title="Author" content="<?php echo $lang['author'] ?>">
 	<link rel="stylesheet" type="text/css" href="<?php echo SITEURL; ?>assets/css/style.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<<<<<<< HEAD
-=======
-	</style>
->>>>>>> 9bca676288a69976a0c5a9ae8daebb8acf55b9ed
     <script language="Javascript">
 	function openNav() {
 	document.getElementById("mySidenav").style.width = "250px";
