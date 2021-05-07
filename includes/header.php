@@ -34,7 +34,9 @@
 				<ul>
 					<?php
 						if (isset($_SESSION["userUid"])) {
+							$user = $_SESSION['userUid'];
 							echo "<li class='right'><a href='http://localhost/moxie/includes/logout.inc.php'>Logout</a></li>";
+							echo "<li class='right'><a href='http://localhost/moxie/includes/logout.inc.php'>Welcome, $user</a></li>";
 						}
 						else {
 							echo "<li class='right'><a href='http://localhost/moxie/index.php?page=signup'>Sign Up</a></li>";
