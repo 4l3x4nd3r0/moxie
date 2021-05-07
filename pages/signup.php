@@ -2,17 +2,76 @@
 <div class="body">
 <section class="signup-form">
     <div class="wrapper">
-    <h2>Sign Up</h2></br></br>
+    <h2>Sign up</h2></br></br>
     <div class="signup-form-form">
-        <form action="includes/signup.inc.php" method="POST">
-        <input type="text" name="nume" placeholder="Nume de Familie..."></br>
-        <input type="text" name="prenume" placeholder="Prenume..."></br>
-        <input type="text" name="email" placeholder="Email..."></br>
-        <input type="text" name="uid" placeholder="Username..."></br>
-        <input type="password" name="pwd" placeholder="Password..."></br>
-        <input type="password" name="pwdrepeat" placeholder="Repeat Password..."></br>
-        <button type="submit" name="submit">Sign Up</button>
+       
+    <form action="includes/signup.inc.php" method="POST">
+
+        <label> Nume de familie
+         <input type="text" name="nume" ></br>
+        </label>
+
+        <label> Prenume
+         <input type="text" name="prenume" ></br>
+        </label>
+
+        <label> Email
+         <input type="text" name="email" ></br>
+        </label>
+
+        <label> Username
+         <input type="text" name="uid" ></br>
+        </label>
+
+        <label> Parola
+         <input type="password" name="pwd" ></br>
+        </label>
+
+        <label> Confirmare parola
+         <input type="password" name="pwdrepeat" ></br>
+        </label>
+
+        <button type="submit" name="submit" >Sign Up</button>
+
         </form>
+        
+        <style>
+        body{
+            background-color:#FBE8A6;
+            text-align: center;
+        }
+        
+        form{
+            display: inline-block;
+        }
+
+        label, input {
+            display: block;
+        }
+
+        label {
+            margin-bottom: 1px;
+        }
+        
+        button{
+	        padding: 5px;
+        }
+        
+        button{
+	        border: none;
+	        background-color: #474787;
+	        color: #d1ccc0;
+	        transition: 0.4s all ease;
+        }
+
+        button:hover{
+	        background-color: #706fd3;
+	        transition: 0.4s all ease;
+	        cursor: pointer;
+        }
+
+      </style>
+
     </div>
     <?php
     if (isset($_GET["error"])) {
