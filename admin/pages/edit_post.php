@@ -23,11 +23,7 @@
 				{
 					$row = $obj->fetch_data($res);
 					$title_en = $row['title_en'];
-					$title_np = $row['title_np'];
-					$title_cn = $row['title_cn'];
 					$description_en = $row['description_en'];
-					$description_np = $row['description_np'];
-					$description_cn = $row['description_cn'];
 					$category = $row['category'];
 					$is_active = $row['is_active'];
 					$is_featured = $row['is_featured'];

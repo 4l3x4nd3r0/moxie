@@ -3,9 +3,8 @@
   <li><a href="<?php echo SITEURL; ?>"><?php echo $lang['home'] ?></a></li>
   <li><a href="http://localhost/moxie/index.php?page=about"><?php echo $lang['about'] ?></a></li>
   <?php
-    if (isset($_SESSION["userUid"])) {
-    	echo "<li><a href='profile.php'>Profile Page</a></li>";
-		include('menu.php');
+    if (isset($_SESSION["user"])) {
+    	echo "<li><a href='http://localhost/moxie/index.php?page=profile'>Profile Page</a></li>";
 		echo "<li><a href='includes/logout.inc.php'>Logout</a></li>";
     }
     else {

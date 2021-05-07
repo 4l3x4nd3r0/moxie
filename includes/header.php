@@ -2,7 +2,6 @@
 <html>
 <head>
 	<title><?php echo $lang['meta_title'] ?></title>
-
 	<meta charset="utf-8">
 	<meta title="description" content="<?php echo $lang['meta_description'] ?>">
 	<meta title="keywords" content="<?php echo $lang['meta_keywords'] ?>">
@@ -33,8 +32,8 @@
 			<div class="menu">
 				<ul>
 					<?php
-						if (isset($_SESSION["userUid"])) {
-							$user = $_SESSION['userUid'];
+						if (isset($_SESSION["user"])) {
+							$user = $_SESSION['user'];
 							echo "<li class='right'><a href='http://localhost/moxie/includes/logout.inc.php'>Logout</a></li>";
 							echo "<li class='right'><a href='http://localhost/moxie/includes/logout.inc.php'>Welcome, $user</a></li>";
 						}
