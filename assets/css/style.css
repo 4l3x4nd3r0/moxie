@@ -170,6 +170,10 @@
 	width: 100%;
 }
 
+.logare{
+	background-color: #05c46b;
+}
+
 /* CSS for Success and Error */
 .success{
 	background-color: #05c46b;
