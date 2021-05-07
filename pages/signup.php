@@ -1,77 +1,41 @@
 <div class="main">
-<div class="body">
-<div class="wrapper">
-<section class="signup-form">
+<section class="login">
     <form action="includes/signup.inc.php" method="POST">
+        <div class="title">
         <h2>Sign up</h2></br>
-        <label> Nume de familie
-         <input type="text" name="nume" ></br>
-        </label>
+        </div>
+        <div class="title"><label> Nume de familie
+         <input class="full" type="text" name="nume" ></br>
+        </label></div>
 
-        <label> Prenume
-         <input type="text" name="prenume" ></br>
-        </label>
+        <div class="title"><label> Prenume
+         <input class="full" type="text" name="prenume" ></br>
+        </label></div>
 
-        <label> Email
-         <input type="text" name="email" ></br>
-        </label>
+        <div class="title"><label> Email
+         <input class="full" type="text" name="email" ></br>
+        </label></div>
 
-        <label> Username
-         <input type="text" name="uid" ></br>
-        </label>
+        <div class="title"><label> Username
+         <input class="full" type="text" name="uid" ></br>
+        </label></div>
 
-        <label> Parola
-         <input type="password" name="pwd" ></br>
-        </label>
+        <div class="title"><label> Parola
+         <input class="full" type="password" name="pwd" ></br>
+        </label></div>
 
-        <label> Confirmare parola
-         <input type="password" name="pwdrepeat" ></br>
-        </label>
-
-        <button type="submit" name="submit" >Sign Up</button>
+        <div class="title">
+            <label> Confirmare parola
+                <input class="full" type="password" name="pwdrepeat" ></br>
+            </label>
+        </div>
+        <br>
+		<br>
+        <button class="btn-primary btn-sm" type="submit" name="submit" >Sign Up</button>
 
         </form>
         
-        <style>
-        body{
-            background-color:#FBE8A6;
-        }
-
-        section {
-            text-align: center; 
-        }
         
-        form{
-            display: inline-block;
-            text-align: center;
-        }
-
-        label, input {
-            display: block;
-        }
-
-        label {
-            margin-bottom: 1px;
-        }
-        
-        button{
-	        padding: 5px;
-        }
-        
-        button{
-	        border: none;
-	        background-color: #474787;
-	        color: #d1ccc0;
-	        transition: 0.4s all ease;
-        }
-
-        button:hover{
-	        background-color: #706fd3;
-	        transition: 0.4s all ease;
-	        cursor: pointer;
-        }
-
-      </style>
 
     <?php
     if (isset($_GET["error"])) {
@@ -99,6 +63,4 @@
     }
     ?>
     </section>
-</div>
-</div>
 </div>
