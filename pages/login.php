@@ -5,15 +5,15 @@
                     <h2>Log In</h2><br>
                 </div>
                 <div class="title"><label>Username/Email
-                <input class="full" type="text" name="uid">
+                <input class="full" type="text" name="uid" required="true">
                 </label></div>
                 <div class="title">
                     <label>Password
-                        <input class="full" type="password" name="pwd">
+                        <input class="full" type="password" name="pwd" required="true">
                     </label>
                 </div>
                 <br>
-                <button class="btn-primary full" type="submit" name="submit">Log In</button>
+                <input class="btn-primary btn-md full" type="submit" name="submit" value="<?php echo $lang['btn_login'] ?>">
             </form>
             <?php
             if (isset($_GET["error"])) {

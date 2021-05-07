@@ -30,7 +30,7 @@
             </label>
         </div>
         <br>
-        <button class="btn-primary full" type="submit" name="submit" >Sign Up</button>
+        <button class="btn-primary btn-md full" type="submit" name="submit" >Sign Up</button>
 
         </form>
         

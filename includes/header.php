@@ -29,7 +29,7 @@
 				<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
 			</div>
 			<div class="logo">
-			<a href="<?php echo SITEURL; ?>"><h1><?php echo $lang['logo'] ?></h1></a>
+			<a class="logo" href="<?php echo SITEURL; ?>"><h1><?php echo $lang['logo'] ?></h1></a>
 			</div>
 			<div class="menu">
 				<ul>

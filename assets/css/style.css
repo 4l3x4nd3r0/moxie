@@ -58,6 +58,14 @@
 	transition: 0.4s all ease;
 	text-decoration: underline;
 }
+a.logo:link{
+	color: #ffffff;
+	text-decoration: none;
+}
+a.logo:visited{
+	color: #ffffff;
+	text-decoration: none;
+}
 
 /* CSS for Main Body Here */
 .main{
@@ -168,10 +176,6 @@
 }
 .full{
 	width: 100%;
-}
-
-.logare{
-	background-color: #05c46b;
 }
 
 /* CSS for Success and Error */
