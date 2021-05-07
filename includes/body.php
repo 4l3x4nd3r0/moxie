@@ -13,7 +13,21 @@
     }
 	?>
 </div>
-<?php 
+<?php
+	if(isset($_GET['page']) && !empty($_GET['page']))
+	{
+		$page = $_GET['page'];
+		if($page=='logout')
+		{
+			unset($_SESSION['user']);
+			header('location:'.SITEURL.'index.php?page=login');
+			die();
+		}
+	}
+	else
+	{
+		$page="home";
+	}
 	if(isset($_GET['page']) && !empty($_GET['page']))
 	{
 		$page = $_GET['page'];

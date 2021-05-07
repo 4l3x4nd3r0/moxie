@@ -3,7 +3,7 @@
 	<?php 
 		$tbl_name = 'tbl_users';
         $id = $_SESSION['user'];
-		$where = "username=$id";
+		$where = "username='$id'";
 
 		$query = $obj->select_data($tbl_name,$where);
 		$res = $obj->execute_query($conn,$query);
@@ -14,15 +14,17 @@
 			{
 				while ($row=$obj->fetch_data($res)) {
 					$id = $row['id'];
-					$post_title = $row['full_name'];
+					$user_username = $row['username'];
+                    $user_name = $row['full_name'];
 					$created_at = $row['created_at'];
 					?>
 
 					<div class="body">
-						<h2><?php echo $post_title; ?></h2>
+						<h2><?php echo $user_username; ?></h2>
 						<br>
 						<p>
-							<?php echo $created_at; ?>
+                            <strong>Name:</strong> <?php echo $user_name; ?> <br>
+                            <strong>Account Created:</strong> <?php echo $created_at; ?> <br>
 						</p>
 						<br>
 					</div>
