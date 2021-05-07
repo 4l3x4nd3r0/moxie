@@ -66,10 +66,15 @@ a.logo:visited{
 	color: #ffffff;
 	text-decoration: none;
 }
+.header .dropdown .logo{
+	width: 50%;
+	float: right;
+}
 
 /* CSS for Main Body Here */
 .main{
-	margin: 5% auto;
+	margin: 5%;
+	margin-top: 0%;
 	
 }
 .main .body{
@@ -194,8 +199,9 @@ a.logo:visited{
 
 /* CSS for Login */
 .login{
-	width: 20%;
+	width: 15%;
 	margin: 10% auto;
+	margin-top: 3%;
 	padding: 5%; 
 	background-color: #dfe6e9;
 	box-shadow: 0 3px 5px 2px grey;
@@ -229,6 +235,7 @@ body {
 	font-family: "Lato", sans-serif;
 }
 
+/*CSS for Dropdown*/
 .sidenav {
 	height: 100%;
 	width: 0;

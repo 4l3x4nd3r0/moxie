@@ -8,6 +8,7 @@
 	<meta title="keywords" content="<?php echo $lang['meta_keywords'] ?>">
 	<meta title="Author" content="<?php echo $lang['author'] ?>">
 	<link rel="stylesheet" type="text/css" href="<?php echo SITEURL; ?>assets/css/style.css">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script language="Javascript">
 	function openNav() {
@@ -27,15 +28,15 @@
 		<div class="wrapper">
 			<div class="dropdown">
 				<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
-			</div>
-			<div class="logo">
-			<a class="logo" href="<?php echo SITEURL; ?>"><h1><?php echo $lang['logo'] ?></h1></a>
+				<a class="logo" href="<?php echo SITEURL; ?>"><h1><?php echo $lang['logo'] ?></h1></a>
 			</div>
 			<div class="menu">
 				<ul>
 					<?php
 						if (isset($_SESSION["userUid"])) {
+							$user = $_SESSION['userUid'];
 							echo "<li class='right'><a href='http://localhost/moxie/includes/logout.inc.php'>Logout</a></li>";
+							echo "<li class='right'><a href='http://localhost/moxie/includes/logout.inc.php'>Welcome, $user</a></li>";
 						}
 						else {
 							echo "<li class='right'><a href='http://localhost/moxie/index.php?page=signup'>Sign Up</a></li>";

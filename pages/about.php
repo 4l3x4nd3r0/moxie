@@ -1,4 +1,4 @@
-<div class="main">
+<div id="main" class="main">
 	<div class="body">
 		<h2><?php echo $lang['about'] ?></h2>
 		<br>
