@@ -9,7 +9,7 @@
     }
     else {
         echo "<li class='right'><a href='http://localhost/moxie/index.php?page=signup'>Sign Up</a></li>";
-		echo "<li class='right'><a href='http://localhost/moxie/index.php?page=login'>Login</a></li>";
+		echo "<li class='right'><a href='http://localhost/moxie/index.php?page=login'>Login</a></li>"; gay
     }
 	?>
 	<li><a href="<?php echo SITEURL; ?>index.php?page=about"><?php echo $lang['about'] ?></a></li>
