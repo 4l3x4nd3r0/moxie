@@ -1,4 +1,4 @@
-<div class="main">
+<div id="main" class="main">
         <section class="login">
             <form action="includes/login.inc.php" method="POST">
                 <div class="title">

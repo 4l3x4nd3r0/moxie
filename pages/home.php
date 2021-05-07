@@ -1,4 +1,4 @@
-<div class="main">
+<div id="main" class="main">
 
 	<?php 
 		$tbl_name = 'tbl_posts';

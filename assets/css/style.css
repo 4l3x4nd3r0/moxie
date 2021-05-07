@@ -66,6 +66,10 @@ a.logo:visited{
 	color: #ffffff;
 	text-decoration: none;
 }
+.header .dropdown .logo{
+	width: 50%;
+	float: right;
+}
 
 /* CSS for Main Body Here */
 .main{
@@ -229,6 +233,7 @@ body {
 	font-family: "Lato", sans-serif;
 }
 
+/*CSS for Dropdown*/
 .sidenav {
 	height: 100%;
 	width: 0;

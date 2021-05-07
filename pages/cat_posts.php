@@ -1,4 +1,4 @@
-<div class="main">
+<div id="main" class="main">
 
 	<?php 
 		if(isset($_GET['id']) && !empty($_GET['id']))
