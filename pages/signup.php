@@ -1,12 +1,9 @@
 <div class="main">
 <div class="body">
+<div class="wrapper">
 <section class="signup-form">
-    <div class="wrapper">
-    <h2>Sign up</h2></br></br>
-    <div class="signup-form-form">
-       
     <form action="includes/signup.inc.php" method="POST">
-
+        <h2>Sign up</h2></br>
         <label> Nume de familie
          <input type="text" name="nume" ></br>
         </label>
@@ -38,11 +35,15 @@
         <style>
         body{
             background-color:#FBE8A6;
-            text-align: center;
+        }
+
+        section {
+            text-align: center; 
         }
         
         form{
             display: inline-block;
+            text-align: center;
         }
 
         label, input {
@@ -72,7 +73,6 @@
 
       </style>
 
-    </div>
     <?php
     if (isset($_GET["error"])) {
         if ($_GET["error"] == "emptyinput") {
@@ -98,7 +98,7 @@
         }
     }
     ?>
-    </div>
     </section>
+</div>
 </div>
 </div>
