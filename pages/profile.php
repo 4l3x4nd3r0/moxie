@@ -3,10 +3,9 @@
 	<?php 
 		$tbl_name = 'tbl_users';
         $id = $_SESSION['user'];
-		$where = "";
-		$other = "ORDER BY id DESC";
+		$where = "username=$id";
 
-		$query = $obj->select_data($tbl_name,$where,$other);
+		$query = $obj->select_data($tbl_name,$where);
 		$res = $obj->execute_query($conn,$query);
 		if($res == true)
 		{
@@ -23,7 +22,7 @@
 						<h2><?php echo $post_title; ?></h2>
 						<br>
 						<p>
-							
+							<?php echo $created_at; ?>
 						</p>
 						<br>
 					</div>

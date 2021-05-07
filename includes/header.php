@@ -34,8 +34,8 @@
 					<?php
 						if (isset($_SESSION["user"])) {
 							$user = $_SESSION['user'];
-							echo "<li class='right'><a href='http://localhost/moxie/includes/logout.inc.php'>Logout</a></li>";
-							echo "<li class='right'><a href='http://localhost/moxie/includes/logout.inc.php'>Welcome, $user</a></li>";
+							echo "<li class='right'><a href='http://localhost/moxie/includes/logout.php'>Logout</a></li>";
+							echo "<li class='right'><a href='http://localhost/moxie/includes/logout.php'>Welcome, $user</a></li>";
 						}
 						else {
 							echo "<li class='right'><a href='http://localhost/moxie/index.php?page=signup'>Sign Up</a></li>";
