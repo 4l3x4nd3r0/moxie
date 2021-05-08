@@ -5,7 +5,13 @@
   <?php
     if (isset($_SESSION["user"])) {
     	echo "<li><a href='http://localhost/moxie/index.php?page=profile'>Profile Page</a></li>";
-		echo "<li><a href='includes/logout.inc.php'>Logout</a></li>";
+		echo "<li><a href='http://localhost/moxie/index.php?page=courses'>Courses</a></li>";
+		echo "<li><a href='http://localhost/moxie/index.php?page=assignments'>Assignments</a></li>";
+		echo "<li><a href='http://localhost/moxie/index.php?page=digitallibrary'>Digital Library</a></li>";
+		echo "<li><a href='http://localhost/moxie/index.php?page=community'>Community</a></li>";
+		echo "<li><a href='http://localhost/moxie/index.php?page=rewards'>Rewards</a></li>";
+		echo "<li><a href='http://localhost/moxie/index.php?page=howtouse'>How to Use</a></li>";
+		echo "<li><a href='http://localhost/moxie/index.php?page=logout'>Logout</a></li>";
     }
     else {
 		echo "<li class='right'><a href='http://localhost/moxie/index.php?page=login'>Login</a></li>";

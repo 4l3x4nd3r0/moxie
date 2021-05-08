@@ -1,65 +1,89 @@
 <div id="main" class="main">
 <section class="login">
-    <form action="includes/signup.inc.php" method="POST">
+    <form action="" method="POST">
         <div class="title">
         <h2>Sign up</h2></br>
         </div>
         <div class="title"><label> Nume de familie
-         <input class="full" type="text" name="nume" ></br>
+         <input class="full" type="text" name="nume" required="true"></br>
         </label></div>
 
         <div class="title"><label> Prenume
-         <input class="full" type="text" name="prenume" ></br>
+         <input class="full" type="text" name="prenume" required="true"></br>
+        </label></div>
+
+        <div class="title"><label> Initiala Tatalui
+         <input class="full" type="text" name="initialatata" required="true"></br>
         </label></div>
 
         <div class="title"><label> Email
-         <input class="full" type="text" name="email" ></br>
-        </label></div>
-
-        <div class="title"><label> Username
-         <input class="full" type="text" name="uid" ></br>
+         <input class="full" type="text" name="email" required="true"></br>
         </label></div>
 
         <div class="title"><label> Parola
-         <input class="full" type="password" name="pwd" ></br>
+         <input class="full" type="password" name="password" required="true"></br>
         </label></div>
 
         <div class="title">
             <label> Confirmare parola
-                <input class="full" type="password" name="pwdrepeat" ></br>
+                <input class="full" type="password" name="passwordrepeat" required="true"></br>
             </label>
         </div>
+        <label><input type="checkbox" name="GDPR" required="true"> Accept Politica de Protectie a Datelor
+        </label>
         <br>
-        <button class="btn-primary btn-md full" type="submit" name="submit" >Sign Up</button>
+        <button class="btn-primary btn-md full" type="submit" name="submit" >Inregistrare</button>
 
         </form>
         
         
 
-    <?php
-    if (isset($_GET["error"])) {
-        if ($_GET["error"] == "emptyinput") {
-            echo "<p>Fill in all fields!</p>";
-        }
-        else if ($_GET["error"] == "invaliduid") {
-            echo "<p>Choose a proper username!</p>";
-        }
-        else if ($_GET["error"] == "invalidemail") {
-            echo "<p>Choose a proper email!</p>";
-        }
-        else if ($_GET["error"] == "passwordsdontmatch") {
-            echo "<p>Passwords don't match!</p>";
-        }
-        else if ($_GET["error"] == "stmtfailed") {
-            echo "<p>Something went wrong, try again!</p>";
-        }
-        else if ($_GET["error"] == "usernametaken") {
-            echo "<p>Username already taken!</p>";
-        }
-        else if ($_GET["error"] == "none") {
-            echo "<p>You have signed up!</p>";
-        }
-    }
-    ?>
+    <?php 
+		if(isset($_POST['submit']))
+		{
+			$nume = $obj->sanitize($conn,$_POST['nume']);
+            $prenume = $obj->sanitize($conn,$_POST['prenume']);
+            $initialatata = $obj->sanitize($conn,$_POST['initialatata']);
+			$email = $obj->sanitize($conn,$_POST['email']);
+			$password = $obj->sanitize($conn,$_POST['password']);
+            $passwordrepeat = $obj->sanitize($conn,$_POST['passwordrepeat']);
+			$created_at = date('Y-m-d H:i:s');
+            $points = 0;
+            $username = $nume.'_'.$initialatata.'_'.$prenume;
+            $full_name = $nume.' '.$initialatata.' '.$prenume;
+            if ($password !== $passwordrepeat) {
+                $_SESSION['add'] = "<div class='error'>".$lang['add_fail']."</div>";
+				header('location:'.SITEURL.'index.php?page=signup');
+            }
+            else {
+                $securepassword = md5($obj->sanitize($conn,$_POST['password']));
+            }
+			$data = "
+                nume='$nume',
+                prenume='$prenume',
+				full_name='$full_name',
+				email='$email',
+				username='$username',
+				password='$securepassword',
+				created_at='$created_at',
+                points='$points'
+			";
+			$tbl_name='tbl_users';
+
+			$query = $obj->insert_data($tbl_name,$data);
+			$res = $obj->execute_query($conn,$query);
+
+			if($res==true)
+			{
+				$_SESSION['add'] = "<div class='success'>".$lang['add_success']."</div>";
+				header('location:'.SITEURL.'index.php?page=login');
+			}
+			else
+			{
+				$_SESSION['add'] = "<div class='error'>".$lang['add_fail']."</div>";
+				header('location:'.SITEURL.'index.php?page=signup');
+			}
+		}
+	?>
     </section>
 </div>

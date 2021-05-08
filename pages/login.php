@@ -32,7 +32,7 @@
                         $password = md5($obj->sanitize($conn,$_POST['password']));
 
                         $tbl_name = "tbl_users";
-                        $where = "username='$username' && password='$password'";
+                        $where = "password='$password' && username='$username' OR email='$username'";
 
                         $query = $obj->select_data($tbl_name,$where);
                         $res = $obj->execute_query($conn,$query);

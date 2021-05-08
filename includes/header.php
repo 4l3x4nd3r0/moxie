@@ -33,7 +33,24 @@
 				<ul>
 					<?php
 						if (isset($_SESSION["user"])) {
-							$user = $_SESSION['user'];
+							$tbl_name = 'tbl_users';
+							$id = $_SESSION['user'];
+							$where = "username='$id' OR email='$id'";
+
+							$query = $obj->select_data($tbl_name,$where);
+							$res = $obj->execute_query($conn,$query);
+							if($res == true)
+							{
+								$count_rows = $obj->num_rows($res);
+								if($count_rows>0)
+								{
+									while ($row=$obj->fetch_data($res)) {
+										$prenume = $row['prenume'];
+										$nume = $row['nume'];
+									}
+								}
+							}
+							$user = $prenume.' '.$nume;
 							echo "<li class='right'><a href='http://localhost/moxie/index.php?page=logout'>Logout</a></li>";
 							echo "<li class='right'><a href=''>Welcome, $user</a></li>";
 						}
