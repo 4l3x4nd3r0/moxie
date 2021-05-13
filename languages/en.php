@@ -64,5 +64,6 @@
 		'howtouse' => 'How to Use',
 		'login' => 'Login',
 		'signup' => 'Sign Up',
+		'welcomeuser' => 'Welcome, ',
 	);
 ?>

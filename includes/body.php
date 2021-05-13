@@ -1,7 +1,3 @@
-<?php
-	$site = SITEURL;
-	$format = '<li><a href="%sindex.php?page=%s">%s</a></li>';
-?>
 <div id="mySidenav" class="sidenav">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
   <?php echo sprintf($format, $site,'home', $lang['home']);?>
