@@ -20,6 +20,12 @@
 	document.getElementById("").style.marginLeft= "0";
 	}
     </script>
+	<?php
+		$site = SITEURL;
+		$format = '<li><a href="%sindex.php?page=%s">%s</a></li>';
+		$formatHeader = '<li class="right"><a href="%sindex.php?page=%s">%s</a></li>';
+		$formatWelcome = '<li class="right"><a href="%sindex.php?page=%s">%s</a></li>';
+	?>
 </head>
 
 <body>
@@ -51,12 +57,13 @@
 								}
 							}
 							$user = $prenume.' '.$nume;
-							echo "<li class='right'><a href='http://localhost/moxie/index.php?page=logout'>Logout</a></li>";
-							echo "<li class='right'><a href=''>Welcome, $user</a></li>";
+							$welcomeMessage = $lang['welcomeuser'].$user;
+							echo sprintf($formatHeader, $site,'logout', $lang['logout']);
+							echo sprintf($formatHeader, $site,'dashboard', $welcomeMessage);
 						}
 						else {
-							echo "<li class='right'><a href='http://localhost/moxie/index.php?page=signup'>Sign Up</a></li>";
-							echo "<li class='right'><a href='http://localhost/moxie/index.php?page=login'>Login</a></li>";
+							echo sprintf($formatHeader, $site,'signup', $lang['signup']);
+							echo sprintf($formatHeader, $site,'login', $lang['login']);
 						}
 					?>
 				</ul>
