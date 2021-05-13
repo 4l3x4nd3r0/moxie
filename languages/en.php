@@ -26,8 +26,8 @@
 		'btn_login' => 'Login',
 		'login_success' => 'Login Successful',
 		'login_fail' => 'Login Failed',
-		'welcome' => 'Welcome to Multi-Lingual Blog Content Management System',
-		'welcome_message' => 'This is a simple CMS. You will manage all modules (Categories, Posts and Users, from this admin panel)',
+		'welcome' => 'Welcome to Moxie Content Management System',
+		'welcome_message' => 'This is a simple CMS.',
 		'add' => 'Add New',
 		'edit' => 'Edit',
 		'delete' => 'Delete',
@@ -65,5 +65,8 @@
 		'login' => 'Login',
 		'signup' => 'Sign Up',
 		'welcomeuser' => 'Welcome, ',
+		'avatar' => 'Avatar',
+		'generate_avatar' => 'Generate Avatar',
+		'signup_success' => 'Sign Up Successful!'
 	);
 ?>

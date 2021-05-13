@@ -51,22 +51,23 @@
             $points = 0;
             $username = $nume.'_'.$initialatata.'_'.$prenume;
             $full_name = $nume.' '.$initialatata.' '.$prenume;
+            $avatar_path = 'avatar/avatar_default.png';
             if ($password !== $passwordrepeat) {
-                $_SESSION['add'] = "<div class='error'>".$lang['add_fail']."</div>";
+                $_SESSION['signup'] = "<div class='error'>".$lang['add_fail']."</div>";
 				header('location:'.SITEURL.'index.php?page=signup');
             }
-            else {
-                $securepassword = md5($obj->sanitize($conn,$_POST['password']));
-            }
+            $securepassword = md5($obj->sanitize($conn,$_POST['password']));
 			$data = "
                 nume='$nume',
                 prenume='$prenume',
 				full_name='$full_name',
+                initialatata='$initialatata',
 				email='$email',
 				username='$username',
 				password='$securepassword',
 				created_at='$created_at',
-                points='$points'
+                points='$points',
+                avatar_path='$avatar_path'
 			";
 			$tbl_name='tbl_users';
 
@@ -75,12 +76,12 @@
 
 			if($res==true)
 			{
-				$_SESSION['add'] = "<div class='success'>".$lang['add_success']."</div>";
+				$_SESSION['login'] = "<div class='success'>".$lang['signup_success']."</div>";
 				header('location:'.SITEURL.'index.php?page=login');
 			}
 			else
 			{
-				$_SESSION['add'] = "<div class='error'>".$lang['add_fail']."</div>";
+				$_SESSION['signup'] = "<div class='error'>".$lang['add_fail']."</div>";
 				header('location:'.SITEURL.'index.php?page=signup');
 			}
 		}
