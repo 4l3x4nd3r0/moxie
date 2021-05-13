@@ -2,7 +2,6 @@
 <html>
 <head>
 	<title><?php echo $lang['meta_title'] ?></title>
-
 	<meta charset="utf-8">
 	<meta title="description" content="<?php echo $lang['meta_description'] ?>">
 	<meta title="keywords" content="<?php echo $lang['meta_keywords'] ?>">
@@ -13,14 +12,20 @@
     <script language="Javascript">
 	function openNav() {
 	document.getElementById("mySidenav").style.width = "250px";
-	document.getElementById("main").style.marginLeft = "250px";
+	document.getElementById("").style.marginLeft = "250px";
 	}
 
 	function closeNav() {
 	document.getElementById("mySidenav").style.width = "0";
-	document.getElementById("main").style.marginLeft= "0";
+	document.getElementById("").style.marginLeft= "0";
 	}
     </script>
+	<?php
+		$site = SITEURL;
+		$format = '<li><a href="%sindex.php?page=%s">%s</a></li>';
+		$formatHeader = '<li class="right"><a href="%sindex.php?page=%s">%s</a></li>';
+		$formatWelcome = '<li class="right"><a href="%sindex.php?page=%s">%s</a></li>';
+	?>
 </head>
 
 <body>
@@ -33,14 +38,32 @@
 			<div class="menu">
 				<ul>
 					<?php
-						if (isset($_SESSION["userUid"])) {
-							$user = $_SESSION['userUid'];
-							echo "<li class='right'><a href='http://localhost/moxie/includes/logout.inc.php'>Logout</a></li>";
-							echo "<li class='right'><a href='http://localhost/moxie/includes/logout.inc.php'>Welcome, $user</a></li>";
+						if (isset($_SESSION["user"])) {
+							$tbl_name = 'tbl_users';
+							$id = $_SESSION['user'];
+							$where = "username='$id' OR email='$id'";
+
+							$query = $obj->select_data($tbl_name,$where);
+							$res = $obj->execute_query($conn,$query);
+							if($res == true)
+							{
+								$count_rows = $obj->num_rows($res);
+								if($count_rows>0)
+								{
+									while ($row=$obj->fetch_data($res)) {
+										$prenume = $row['prenume'];
+										$nume = $row['nume'];
+									}
+								}
+							}
+							$user = $prenume.' '.$nume;
+							$welcomeMessage = $lang['welcomeuser'].$user;
+							echo sprintf($formatHeader, $site,'logout', $lang['logout']);
+							echo sprintf($formatHeader, $site,'dashboard', $welcomeMessage);
 						}
 						else {
-							echo "<li class='right'><a href='http://localhost/moxie/index.php?page=signup'>Sign Up</a></li>";
-							echo "<li class='right'><a href='http://localhost/moxie/index.php?page=login'>Login</a></li>";
+							echo sprintf($formatHeader, $site,'signup', $lang['signup']);
+							echo sprintf($formatHeader, $site,'login', $lang['login']);
 						}
 					?>
 				</ul>

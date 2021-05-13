@@ -1,6 +1,6 @@
 <?php 
 	include('../languages/lang_config.php');
-	include('config/apply.php');
+	include('../config/apply.php');
 ?>
 <!DOCTYPE html>
 <html>

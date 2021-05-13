@@ -1,5 +1,4 @@
 <div id="main" class="main">
-
 	<?php 
 		$tbl_name = 'tbl_posts';
 		$where = "is_active='Yes' && is_featured='Yes'";
@@ -18,7 +17,11 @@
 					$post_description = $row['description_'.$_SESSION['lang']];
 					$created_at = $row['created_at'];
 					?>
-
+					<div class="wrapper">
+						<h1> Bine ai venit pe moxie! </h1>
+						<p> Acest site te va ajuta in aventura ta in tainele invatarii! </p>
+						<h2> Ultimele lecturi: </h2>
+					<div>
 					<div class="body">
 						<h2><?php echo $post_title; ?></h2>
 						<br>
@@ -44,6 +47,4 @@
 			}
 		}
 	?>
-
-	
 </div>

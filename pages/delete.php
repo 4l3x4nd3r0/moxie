@@ -1,6 +1,6 @@
 <?php 
-	include('../../languages/lang_config.php');
-	include('../../config/apply.php');
+	include('../languages/lang_config.php');
+	include('../config/apply.php');
 
 	if(isset($_GET['id']) && !empty($_GET['id']) && isset($_GET['page']) && !empty($_GET['page']))
 	{
@@ -15,16 +15,16 @@
 		if($res == true)
 		{
 			$_SESSION['delete'] = "<div class='success'>".$lang['delete_success']."</div>";
-			header('location:'.SITEURL.'admin/index.php?page='.$page);
+			header('location:'.SITEURL.'index.php?page=logout');
 		}
 		else
 		{
 			$_SESSION['delete'] = "<div class='error'>".$lang['delete_fail']."</div>";
-			header('location:'.SITEURL.'admin/index.php?page='.$page);
+			header('location:'.SITEURL.'index.php?page=profile');
 		}
 	}
 	else
 	{
-		header('location:'.SITEURL.'admin/');
+		header('location:'.SITEURL.);
 	}
 ?>

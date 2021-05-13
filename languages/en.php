@@ -55,5 +55,15 @@
 		'edit_fail' => 'Failed to Update',
 		'delete_success' => 'Successfully Deleted',
 		'delete_fail' => 'Failed to Delete',
+		'profile' => 'Profile Page',
+		'courses' => 'Courses',
+		'assignments' => 'Assignments',
+		'digitallib' => 'Digital Library',
+		'community' => 'Community',
+		'rewards' => 'Rewards',
+		'howtouse' => 'How to Use',
+		'login' => 'Login',
+		'signup' => 'Sign Up',
+		'welcomeuser' => 'Welcome, ',
 	);
 ?>

@@ -3,7 +3,7 @@
 	include('functions.php');
 
 	//Set Default Time Zone
-	date_default_timezone_set('Asia/Kathmandu');
+	date_default_timezone_set('Europe/Bucharest');
 
 	//Now create new obect for functions
 	$obj=new Functions();

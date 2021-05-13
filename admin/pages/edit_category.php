@@ -22,8 +22,6 @@
 				if ($count_rows==1) {
 					$row = $obj->fetch_data($res);
 					$title_en = $row['title_en'];
-					$title_np = $row['title_np'];
-					$title_cn = $row['title_cn'];
 					$is_active = $row['is_active'];
 					$include_in_menu = $row['include_in_menu'];
 				}
