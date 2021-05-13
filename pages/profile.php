@@ -19,6 +19,7 @@
 					$user_prenume = $row['prenume'];
 					$created_at = $row['created_at'];
 					$points = $row['points'];
+					$avatar_path = $row['avatar_path'];
 					?>
 
 					<div class="body">
@@ -29,9 +30,12 @@
 							<strong>Prenume:</strong> <?php echo $user_prenume; ?> <br>
 							<strong>Puncte:</strong> <?php echo $points; ?> <br>
                             <strong>Data Inregistrarii:</strong> <?php echo $created_at; ?> <br>
+							<img src="<?php echo $avatar_path;?>" alt="Profile Picture" height=200 width=150>
 							<br>
+							<a href="<?php echo SITEURL; ?>index.php?page=avatar&id=<?php echo $id; ?>" class="btn-primary btn-sm"><?php echo $lang['avatar'] ?></a>
 							<a href="<?php echo SITEURL; ?>index.php?page=edit_user&id=<?php echo $id; ?>" class="btn-success btn-sm"><?php echo $lang['edit'] ?></a> 
 							<a href="<?php echo SITEURL; ?>delete.php?page=users&id=<?php echo $id; ?>" class="btn-error btn-sm"><?php echo $lang['delete'] ?></a>
+							
 						</p>
 						<br>
 					</div>

@@ -7,5 +7,6 @@
 	define('DBNAME', 'mlb2018'); //Your Database Name if it's not 'mlb2018'
 
 	define('SITEURL', 'http://localhost/moxie/'); //Update the home URL of the project if you have changed port number or it's live on server
-
+	define("WIDTH", 500);
+    define("HEIGHT", 1000);
 ?>
