@@ -1,3 +1,6 @@
+<?php
+    $_SESSION['signup'] = "";
+?>
 <div id="main" class="main">
 <section class="login">
     <form action="" method="POST">
@@ -39,11 +42,12 @@
         
 
     <?php 
+        setLocale(LC_CTYPE, 'FR_fr.UTF-8');
 		if(isset($_POST['submit']))
 		{
-			$nume = $obj->sanitize($conn,$_POST['nume']);
-            $prenume = $obj->sanitize($conn,$_POST['prenume']);
-            $initialatata = $obj->sanitize($conn,$_POST['initialatata']);
+			$nume = ucfirst($obj->sanitize($conn,$_POST['nume']));
+            $prenume = ucfirst($obj->sanitize($conn,$_POST['prenume']));
+            $initialatata = strtoupper($obj->sanitize($conn,$_POST['initialatata']));
 			$email = $obj->sanitize($conn,$_POST['email']);
 			$password = $obj->sanitize($conn,$_POST['password']);
             $passwordrepeat = $obj->sanitize($conn,$_POST['passwordrepeat']);
@@ -52,10 +56,38 @@
             $username = $nume.'_'.$initialatata.'_'.$prenume;
             $full_name = $nume.' '.$initialatata.' '.$prenume;
             $avatar_path = 'avatar/avatar_default.png';
-            if ($password !== $passwordrepeat) {
-                $_SESSION['signup'] = "<div class='error'>".$lang['add_fail']."</div>";
-				header('location:'.SITEURL.'index.php?page=signup');
+
+            if (!ctype_alpha($nume)) {
+                echo "<div class = 'error'>".$lang['add_fail_lastname']."</div>";
+				exit();
             }
+
+            if (!ctype_alpha($prenume)) {
+                echo "<div class = 'error'>".$lang['add_fail_firstname']."</div>";
+				exit();
+            }
+
+            if (!ctype_alpha($initialatata) || strlen($initialatata)>1) {
+                echo "<div class = 'error'>".$lang['add_fail_initiala']."</div>";
+				exit();
+            }
+
+            if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
+                echo "<div class = 'error'>".$lang['add_fail_email']."</div>";
+                exit();
+            }
+            
+            if(strlen($password)<=6){
+                echo "<div class = 'error'>".$lang['add_fail_password']."</div>";
+                exit();
+            }
+
+            if ($password !== $passwordrepeat) {
+                echo "<div class = 'error'>".$lang['add_fail_password_not_match']."</div>";
+				exit();
+            }
+
+
             $securepassword = md5($obj->sanitize($conn,$_POST['password']));
 			$data = "
                 nume='$nume',
@@ -71,19 +103,22 @@
 			";
 			$tbl_name='tbl_users';
 
-			$query = $obj->insert_data($tbl_name,$data);
-			$res = $obj->execute_query($conn,$query);
+            
+                $query = $obj->insert_data($tbl_name,$data);
+                $res = $obj->execute_query($conn,$query);
+                
 
-			if($res==true)
-			{
-				$_SESSION['login'] = "<div class='success'>".$lang['signup_success']."</div>";
-				header('location:'.SITEURL.'index.php?page=login');
-			}
-			else
-			{
-				$_SESSION['signup'] = "<div class='error'>".$lang['add_fail']."</div>";
-				header('location:'.SITEURL.'index.php?page=signup');
-			}
+                if($res==true)
+                {
+                    $_SESSION['login'] = "<div class='success'>".$lang['signup_success']."</div>";
+                    header('location:'.SITEURL.'index.php?page=login');
+                }
+                else
+                {
+                    $_SESSION['signup'] = "<div class='error'>".$lang['add_fail']."</div>";
+                    header('location:'.SITEURL.'index.php?page=signup');
+                }
+            
 		}
 	?>
     </section>

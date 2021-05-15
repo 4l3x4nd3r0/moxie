@@ -1,5 +1,7 @@
 <div id="main" class="main">
 	<?php 
+
+
 		$tbl_name = 'tbl_posts';
 		$where = "is_active='Yes' && is_featured='Yes'";
 		$other = "ORDER BY id DESC";
@@ -31,6 +33,7 @@
 						<br>
 						<a href="<?php echo SITEURL; ?>index.php?page=blog_detail&id=<?php echo $id; ?>">
 							<button class="btn-primary btn-sm"><?php echo $lang['read_more'] ?></button>
+
 						</a>
 					</div>
 
