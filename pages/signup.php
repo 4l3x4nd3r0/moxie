@@ -45,8 +45,8 @@
         setLocale(LC_CTYPE, 'FR_fr.UTF-8');
 		if(isset($_POST['submit']))
 		{
-			$nume = ucfirst($obj->sanitize($conn,$_POST['nume']));
-            $prenume = ucfirst($obj->sanitize($conn,$_POST['prenume']));
+			$nume = ucfirst(strtolower($obj->sanitize($conn,$_POST['nume'])));
+            $prenume = ucfirst(strtolower($obj->sanitize($conn,$_POST['prenume'])));
             $initialatata = strtoupper($obj->sanitize($conn,$_POST['initialatata']));
 			$email = $obj->sanitize($conn,$_POST['email']);
 			$password = $obj->sanitize($conn,$_POST['password']);
