@@ -1,4 +1,6 @@
+
 <div id="main" class="main">
+
 
 	<?php 
 		$tbl_name = 'tbl_users';
@@ -23,20 +25,27 @@
 					?>
 
 					<div class="body">
-						<h2>Nume de Utilizator: <?php echo $user_username; ?></h2>
-						<br>
-						<p>
-                            <strong>Nume:</strong> <?php echo $user_nume; ?> <br>
-							<strong>Prenume:</strong> <?php echo $user_prenume; ?> <br>
-							<strong>Puncte:</strong> <?php echo $points; ?> <br>
-                            <strong>Data Inregistrarii:</strong> <?php echo $created_at; ?> <br>
-							<img src="<?php echo $avatar_path;?>" alt="Profile Picture" height=200 width=150>
+						<div class="userdata">
+							<h2>Nume de Utilizator: <?php echo $user_username;?></h2>
 							<br>
-							<a href="<?php echo SITEURL; ?>index.php?page=avatar&id=<?php echo $id; ?>" class="btn-primary btn-sm"><?php echo $lang['avatar'] ?></a>
-							<a href="<?php echo SITEURL; ?>index.php?page=edit_user&id=<?php echo $id; ?>" class="btn-success btn-sm"><?php echo $lang['edit'] ?></a> 
-							<a href="<?php echo SITEURL; ?>delete.php?page=users&id=<?php echo $id; ?>" class="btn-error btn-sm"><?php echo $lang['delete'] ?></a>
-							
-						</p>
+							<p>
+                            	<strong>Nume:</strong> <?php echo $user_nume; ?> <br>
+								<strong>Prenume:</strong> <?php echo $user_prenume; ?> <br>
+								<strong>Puncte:</strong> <?php echo $points; ?> <br>
+                            	<strong>Data Inregistrarii:</strong> <?php echo $created_at; ?> <br>
+								<br>
+								<a href="<?php echo SITEURL; ?>index.php?page=edit_user&id=<?php echo $id; ?>" class="btn-success btn-sm"><?php echo $lang['edit'] ?></a> 
+								<a href="<?php echo SITEURL; ?>delete.php?page=users&id=<?php echo $id; ?>" class="btn-error btn-sm"><?php echo $lang['delete'] ?></a>
+							</p>
+						</div>
+						<div class="profile_avatar">
+							<p>
+								<img src="<?php echo $avatar_path;?>" alt="Profile Picture" height=200 width=150><br>
+								<a href="<?php echo SITEURL; ?>index.php?page=avatar&id=<?php echo $id; ?>" class="btn-primary btn-md"><?php echo $lang['avatar'] ?></a>
+								
+							</p>
+						</div>
+						
 						<br>
 					</div>
 

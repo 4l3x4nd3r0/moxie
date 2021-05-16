@@ -19,7 +19,6 @@
 	clear: both;
 }
 
-
 /* CSS for Header Section */
 .header{
 	background-color: #40407a;
@@ -84,6 +83,29 @@ a.logo:visited{
 	box-shadow: 0 2px 4px 2px grey;
 	color: #2c2c54;
 }
+
+.userdata {
+	box-shadow: 0 2px 4px 2px grey;
+	color: #2c2c54;
+	float: right;
+	padding: 3%;
+	padding-right: 15%;
+	margin: 2% auto;
+	width: 37.5%;
+}
+
+.profile_avatar{
+	box-shadow: 0 2px 4px 2px grey;
+	color: #2c2c54;
+	padding: 5%;
+	margin: 2%;
+	width: 20%;
+}
+
+.profile_avatar p{
+	text-align: center;
+}
+
 
 /* CSS for Footer */
 .footer{
@@ -279,3 +301,6 @@ body {
 	.sidenav {padding-top: 15px;}
 	.sidenav a {font-size: 18px;}
 }
+
+
+
