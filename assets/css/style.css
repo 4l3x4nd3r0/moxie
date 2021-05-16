@@ -21,7 +21,7 @@
 
 /* CSS for Header Section */
 .header{
-	background-color: #40407a;
+	background-color: #5680E9;
 	color: #d1ccc0;
 }
 .header .dropdown {
@@ -48,12 +48,12 @@
 	padding: 1%;
 }
 .header .menu ul li a{
-	color: #d1ccc0;
+	color: #ffffff;
 	transition: 0.4s all ease;
 	text-decoration: none;
 }
 .header .menu ul li a:hover{
-	color: #ffffff;
+	color: #C1C8E4;
 	transition: 0.4s all ease;
 	text-decoration: underline;
 }
@@ -68,6 +68,7 @@ a.logo:visited{
 .header .dropdown .logo{
 	width: 50%;
 	float: right;
+	color: #ffffff;
 }
 
 /* CSS for Main Body Here */
@@ -82,6 +83,7 @@ a.logo:visited{
 	width: 75%;
 	box-shadow: 0 2px 4px 2px grey;
 	color: #2c2c54;
+	background-color: #ffffff;
 }
 
 .userdata {
@@ -109,7 +111,7 @@ a.logo:visited{
 
 /* CSS for Footer */
 .footer{
-	background-color: #474787;
+	background-color: #5680E9;
 	color: #f7f1e3;
 	text-align: center;
 }
@@ -128,14 +130,16 @@ a.logo:visited{
 .btn-default{
 	padding: 5px;
 }
+
+
 .btn-primary{
 	border: none;
-	background-color: #474787;
+	background-color: #7352b1;
 	color: #d1ccc0;
 	transition: 0.4s all ease;
 }
 .btn-primary:hover{
-	background-color: #706fd3;
+	background-color: #836bb1;
 	transition: 0.4s all ease;
 	cursor: pointer;
 }
@@ -255,6 +259,7 @@ a.logo:visited{
 
 body {
 	font-family: "Lato", sans-serif;
+	background-color:#C1C8E4 ;
 }
 
 /*CSS for Dropdown*/
@@ -265,7 +270,7 @@ body {
 	z-index: 1;
 	top: 0;
 	left: 0;
-	background-color: #111;
+	background-color: #344d8d;
 	overflow-x: hidden;
 	transition: 0.5s;
 	padding-top: 30px;
@@ -275,13 +280,18 @@ body {
 	padding: 8px 8px 8px 32px;
 	text-decoration: none;
 	font-size: 25px;
-	color: #818181;
+	color: #ffffff;
 	display: block;
 	transition: 0.3s;
 }
 
+.sidenav li{
+	list-style-type: none;
+	padding-bottom: 10%;
+}
+
 .sidenav a:hover {
-	color: #f1f1f1;
+	color: #C1C8E4;
 }
 
 .sidenav .closebtn {

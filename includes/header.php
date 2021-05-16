@@ -32,7 +32,7 @@
 	<header class="header">
 		<div class="wrapper">
 			<div class="dropdown">
-				<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+				<span style="font-size:30px;cursor:pointer;color:#ffffff;" onclick="openNav()">&#9776;</span>
 				<a class="logo" href="<?php echo SITEURL; ?>"><h1><?php echo $lang['logo'] ?></h1></a>
 			</div>
 			<div class="menu">
