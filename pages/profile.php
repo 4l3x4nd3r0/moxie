@@ -26,13 +26,13 @@
 
 					<div class="body">
 						<div class="userdata">
-							<h2>Nume de Utilizator: <?php echo $user_username;?></h2>
+							<h2><?php echo $lang['usernamep'] ?> <?php echo $user_username;?></h2>
 							<br>
 							<p>
-                            	<strong>Nume:</strong> <?php echo $user_nume; ?> <br>
-								<strong>Prenume:</strong> <?php echo $user_prenume; ?> <br>
-								<strong>Puncte:</strong> <?php echo $points; ?> <br>
-                            	<strong>Data Inregistrarii:</strong> <?php echo $created_at; ?> <br>
+                            	<strong><?php echo $lang['familynamep'] ?></strong> <?php echo $user_nume; ?> <br>
+								<strong><?php echo $lang['firstnamep'] ?></strong> <?php echo $user_prenume; ?> <br>
+								<strong><?php echo $lang['pointsp'] ?></strong> <?php echo $points; ?> <br>
+                            	<strong><?php echo $lang['registrydate'] ?></strong> <?php echo $created_at; ?> <br>
 								<br>
 								<a href="<?php echo SITEURL; ?>index.php?page=edit_user&id=<?php echo $id; ?>" class="btn-success btn-sm"><?php echo $lang['edit'] ?></a> 
 								<a href="<?php echo SITEURL; ?>delete.php?page=users&id=<?php echo $id; ?>" class="btn-error btn-sm"><?php echo $lang['delete'] ?></a>

@@ -133,33 +133,33 @@
         }
     ?>
         <div class="title">
-            <label>Male or Female
-                <input type="radio" name="q1" value="1">Male
-                <input TYPE="radio" name="q1" value="2">Female
+            <label><?php echo $lang['avatargender'] ?>
+                <input type="radio" name="q1" value="1"><?php echo $lang['avatarmale'] ?>
+                <input TYPE="radio" name="q1" value="2"><?php echo $lang['avatarfemale'] ?>
             </label>
         </div>
         <div class="title">
-            <label>Sapca
-                <input type="radio" name="q2" value="1">Nu
-                <input TYPE="radio" name="q2" value="2">Da
+            <label><?php echo $lang['avatarhat'] ?>
+                <input type="radio" name="q2" value="1"><?php echo $lang['avatarno'] ?>
+                <input TYPE="radio" name="q2" value="2"><?php echo $lang['avataryes'] ?>
             </label>
         </div>
         <div class="title">
-            <label>Cravata
-                <input type="radio" name="q3" value="1">Nu
-                <input TYPE="radio" name="q3" value="2">Da
+            <label><?php echo $lang['avatarbody'] ?>
+                <input type="radio" name="q3" value="1"><?php echo $lang['avatarno'] ?>
+                <input TYPE="radio" name="q3" value="2"><?php echo $lang['avataryes'] ?>
             </label>
         </div>
         <div class="title">
-            <label>Pantaloni
-                <input type="radio" name="q4" value="1">Nu
-                <input TYPE="radio" name="q4" value="2">Da
+            <label><?php echo $lang['avatarpants'] ?>
+                <input type="radio" name="q4" value="1"><?php echo $lang['avatarno'] ?>
+                <input TYPE="radio" name="q4" value="2"><?php echo $lang['avataryes'] ?>
             </label>
         </div>
         <div class="title">
-            <label>Pantofi
-                <input type="radio" name="q5" value="1">Nu
-                <input TYPE="radio" name="q5" value="2">Da
+            <label><?php echo $lang['avatarshoes'] ?>
+                <input type="radio" name="q5" value="1"><?php echo $lang['avatarno'] ?>
+                <input TYPE="radio" name="q5" value="2"><?php echo $lang['avataryes'] ?>
             </label>
         </div>
 			<span class="input-label">

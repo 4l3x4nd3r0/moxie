@@ -20,9 +20,9 @@
 					$created_at = $row['created_at'];
 					?>
 					<div>
-						<h1> Bine ai venit pe moxie! </h1>
-						<p> Acest site te va ajuta in aventura ta in tainele invatarii! </p>
-						<h2> Ultimele lecturi: </h2>
+						<h1> <?php echo $lang['welcomepageh'] ?> </h1>
+						<p> <?php echo $lang['welcomepagemessage'] ?> </p>
+						<h2> <?php echo $lang['lastlecture'] ?> </h2>
 					</div>
 					<div class="body">
 						<h2><?php echo $post_title; ?></h2>

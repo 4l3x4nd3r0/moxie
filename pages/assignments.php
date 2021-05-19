@@ -1,5 +1,5 @@
 <div class="main">
  <div class="wrapper">
-    <h1> Assignment Tab </h1>
+    <h1> <?php echo $lang['assignmentsh'] ?> </h1>
  </div>
 </div>
