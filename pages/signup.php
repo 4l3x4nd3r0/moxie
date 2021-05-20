@@ -5,37 +5,37 @@
 <section class="login">
     <form action="" method="POST">
         <div class="title">
-        <h2>Sign up</h2></br>
+        <h2><?php echo $lang['signup'] ?></h2></br>
         </div>
-        <div class="title"><label> Nume de familie
+        <div class="title"><label> <?php echo $lang['familynameregister'] ?>
          <input class="full" type="text" name="nume" required="true"></br>
         </label></div>
 
-        <div class="title"><label> Prenume
+        <div class="title"><label> <?php echo $lang['firstnameregister'] ?>
          <input class="full" type="text" name="prenume" required="true"></br>
         </label></div>
 
-        <div class="title"><label> Initiala Tatalui
+        <div class="title"><label> <?php echo $lang['fatherinitial'] ?>
          <input class="full" type="text" name="initialatata" required="true"></br>
         </label></div>
 
-        <div class="title"><label> Email
+        <div class="title"><label> <?php echo $lang['emailregister'] ?>
          <input class="full" type="text" name="email" required="true"></br>
         </label></div>
 
-        <div class="title"><label> Parola
+        <div class="title"><label> <?php echo $lang['password'] ?>
          <input class="full" type="password" name="password" required="true"></br>
         </label></div>
 
         <div class="title">
-            <label> Confirmare parola
+            <label> <?php echo $lang['repeatpassword'] ?>
                 <input class="full" type="password" name="passwordrepeat" required="true"></br>
             </label>
         </div>
-        <label><input type="checkbox" name="GDPR" required="true"> Accept Politica de Protectie a Datelor
+        <label><input type="checkbox" name="GDPR" required="true"> <?php echo $lang['gdpr'] ?>
         </label>
         <br>
-        <button class="btn-primary btn-md full" type="submit" name="submit" >Inregistrare</button>
+        <button class="btn-primary btn-md full" type="submit" name="submit" ><?php echo $lang['registerbutton'] ?></button>
 
         </form>
         
