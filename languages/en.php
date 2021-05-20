@@ -96,6 +96,13 @@
 		'avatarhat' => 'Hat',
 		'avatarpants' => 'Pants',
 		'avatarbody' => 'Shirt',
-		'avatarshoes' => 'Shoes'
+		'avatarshoes' => 'Shoes',
+		'emailregister' => 'Email',
+		'fatherinitial' => "Father's Name Initial",
+		'firstnameregister' => 'First Name',
+		'familynameregister' => 'Family Name',
+		'repeatpassword' => 'Repeat Password',
+		'gdpr' => 'Acceptance of Privacy Policy',
+		'registerbutton' => 'Register',
 	);
 ?>
