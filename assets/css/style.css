@@ -25,7 +25,7 @@
 	color: #d1ccc0;
 }
 .header .dropdown {
-	width: 5%;
+	width: 50%;
 	float: left;
 }
 .header .logo{
@@ -33,7 +33,7 @@
 	float: left;
 }
 .header .menu{
-	width: 60%;
+	width: 50%;
 	float: right;
 }
 .header .menu ul{
@@ -67,8 +67,15 @@ a.logo:visited{
 }
 .header .dropdown .logo{
 	width: 50%;
-	float: right;
 	color: #ffffff;
+}
+
+.header .dropdown .logo h2{
+	display:inline;
+}
+
+.header .dropdown span{
+	display:inline;
 }
 
 /* CSS for Main Body Here */

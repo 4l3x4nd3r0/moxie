@@ -32,8 +32,7 @@
 	<header class="header">
 		<div class="wrapper">
 			<div class="dropdown">
-				<span style="font-size:30px;cursor:pointer;color:#ffffff;" onclick="openNav()">&#9776;</span>
-				<a class="logo" href="<?php echo SITEURL; ?>"><h1><?php echo $lang['logo'] ?></h1></a>
+				<a class="logo"><span  style="font-size:30px;cursor:pointer;color:#ffffff;" onclick="openNav()">&#9776;<h2><?php echo $lang['logo'] ?></h2></a></span>
 			</div>
 			<div class="menu">
 				<ul>

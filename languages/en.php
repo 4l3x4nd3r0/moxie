@@ -4,7 +4,7 @@
 		'meta_description' => 'Moxie, an educational website',
 		'meta_keywords' => 'Education',
 		'author' => 'Entropy Crusade',
-		'logo' => 'Moxie',
+		'logo' => 'M<img src = "assets/img/Moxie.svg" width= 30 height=30>xie',
 		'home' => 'Home',
 		'about' => 'About Us',
 		'about_content' => 'Hello, we are Entropy Crusade, a team of University Students who want to bring change to Romanian Education, we are the makers of Moxie use the email below to get in touch with us!',
