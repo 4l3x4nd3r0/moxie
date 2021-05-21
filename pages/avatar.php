@@ -38,13 +38,13 @@
         {
             switch ($_POST['q1']) {
                 case 0:
-                    $a = imagecreatefrompng('avatar/avatar_default.png');
+                    $a = imagecreatefrompng('assets/img/avatar_assets/structure.png');
                     break;
                 case 1:
-                    $a = imagecreatefrompng('avatar/avatar_default.png');
+                    $a = imagecreatefrompng('assets/img/avatar_assets/structure.png');
                     break;
                 case 2:
-                    $a = imagecreatefrompng('avatar/avatar_female.png');
+                    $a = imagecreatefrompng('assets/img/avatar_assets/structure.png');
                     break;
             }
             switch ($_POST['q2']) {
@@ -55,7 +55,7 @@
                     $b = imagecreatefrompng('avatar/nothing.png');
                     break;
                 case 2:
-                    $b = imagecreatefrompng('avatar/hat.png');
+                    $b = imagecreatefrompng('assets/img/avatar_assets/Pants/pants_kaki.png');
                     break;
             }
             switch ($_POST['q3']) {
@@ -66,7 +66,7 @@
                     $c = imagecreatefrompng('avatar/nothing.png');
                     break;
                 case 2:
-                    $c = imagecreatefrompng('avatar/tie.png');
+                    $c = imagecreatefrompng('assets/img/avatar_assets/Shoes/shoes_bordeaux.png');
                     break;
             }
             switch ($_POST['q4']) {
@@ -77,7 +77,7 @@
                     $d = imagecreatefrompng('avatar/nothing.png');
                     break;
                 case 2:
-                    $d = imagecreatefrompng('avatar/avatar_female.png');
+                    $d = imagecreatefrompng('assets/img/avatar_assets/TShirts/tshirt_darkblue.png');
                     break;
             }
             switch ($_POST['q5']) {
@@ -88,7 +88,7 @@
                     $e = imagecreatefrompng('avatar/nothing.png');
                     break;
                 case 2:
-                    $e = imagecreatefrompng('avatar/avatar_female.png');
+                    $e = imagecreatefrompng('assets/img/avatar_assets/Eyes/eyes_5.png');
                     break;
             }
             
