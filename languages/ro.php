@@ -25,7 +25,7 @@
 		'password' => 'Parola',
 		'btn_login' => 'Conectare',
 		'login_success' => 'Conectat cu succes',
-		'login_fail' => 'Conectarea a eșuat',
+		'login_fail' => 'Conectarea a eșuat!',
 		'welcome' => 'Bine ați venit la sistemul de gestionare al conținutului Moxie',
 		'welcome_message' => 'Acesta este un simplu CMS.',
 		'add' => 'Adaugă nou',
