@@ -321,5 +321,10 @@ body {
 	.sidenav a {font-size: 18px;}
 }
 
-
+iframe {
+    width: 560px;
+    height: 315px;
+    margin: 0 auto;
+	display:block;
+}
 
