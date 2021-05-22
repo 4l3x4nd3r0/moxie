@@ -104,5 +104,7 @@
 		'repeatpassword' => 'Repeat Password',
 		'gdpr' => 'Acceptance of Privacy Policy',
 		'registerbutton' => 'Register',
+		'notmvp' => 'This is not included in the MVP',
+		'dashboardh' => 'Dashboard',
 	);
 ?>
