@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Gazdă: 127.0.0.1
--- Timp de generare: mai 22, 2021 la 09:38 PM
+-- Timp de generare: mai 23, 2021 la 12:14 AM
 -- Versiune server: 10.4.18-MariaDB
 -- Versiune PHP: 8.0.5
 
@@ -30,17 +30,15 @@ SET time_zone = "+00:00";
 CREATE TABLE `tbl_categories` (
   `id` int(10) UNSIGNED NOT NULL,
   `category_name_en` varchar(100) NOT NULL,
-  `subcategory_name_en` varchar(100) NOT NULL,
-  `category_name_ro` varchar(100) NOT NULL,
-  `subcategory_name_ro` varchar(100) NOT NULL
+  `category_name_ro` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Eliminarea datelor din tabel `tbl_categories`
 --
 
-INSERT INTO `tbl_categories` (`id`, `category_name_en`, `subcategory_name_en`, `category_name_ro`, `subcategory_name_ro`) VALUES
-(21, 'Mathematics', 'Grade 4', 'Matematica', 'Clasa 4');
+INSERT INTO `tbl_categories` (`id`, `category_name_en`, `category_name_ro`) VALUES
+(21, 'Mathematics', 'Matematica');
 
 -- --------------------------------------------------------
 
@@ -52,9 +50,11 @@ CREATE TABLE `tbl_posts` (
   `id` int(10) UNSIGNED NOT NULL,
   `title_en` varchar(255) NOT NULL,
   `description_en` mediumtext NOT NULL,
+  `title_ro` varchar(100) NOT NULL,
+  `description_ro` mediumtext NOT NULL,
   `url` varchar(255) NOT NULL,
   `category` int(10) UNSIGNED NOT NULL,
-  `subcategory` varchar(100) NOT NULL,
+  `subcategory` int(10) UNSIGNED NOT NULL,
   `is_active` varchar(5) NOT NULL,
   `is_featured` varchar(5) NOT NULL,
   `created_at` datetime NOT NULL
@@ -64,8 +64,9 @@ CREATE TABLE `tbl_posts` (
 -- Eliminarea datelor din tabel `tbl_posts`
 --
 
-INSERT INTO `tbl_posts` (`id`, `title_en`, `description_en`, `url`, `category`, `subcategory`, `is_active`, `is_featured`, `created_at`) VALUES
-(13, 'Hello World', 'Hello!', 'hello-world', 0, '0', 'Yes', 'Yes', '2021-05-06 17:17:55');
+INSERT INTO `tbl_posts` (`id`, `title_en`, `description_en`, `title_ro`, `description_ro`, `url`, `category`, `subcategory`, `is_active`, `is_featured`, `created_at`) VALUES
+(13, 'Hello World', 'Hello!', '', '', 'hello-world', 0, 0, 'Yes', 'Yes', '2021-05-06 17:17:55'),
+(15, 'Forming, Writing and Reading of Fractions', '<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/eatSwW0QdSw\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>\r\n\r\nThis works Bitches!', 'Formarea, scrierea și citirea fracțiilor', '<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/eatSwW0QdSw\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>', 'forming,-writing-and-reading-of-fractions', 21, 1, 'Yes', 'Yes', '2021-05-22 23:19:59');
 
 -- --------------------------------------------------------
 
@@ -154,6 +155,25 @@ INSERT INTO `tbl_rewards` (`id`, `hair_1`, `hair_2`, `hair_3`, `hair_4`, `hair_5
 -- --------------------------------------------------------
 
 --
+-- Structură tabel pentru tabel `tbl_sub_categories`
+--
+
+CREATE TABLE `tbl_sub_categories` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `subcategory_name_en` varchar(100) NOT NULL,
+  `subcategory_name_ro` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Eliminarea datelor din tabel `tbl_sub_categories`
+--
+
+INSERT INTO `tbl_sub_categories` (`id`, `subcategory_name_en`, `subcategory_name_ro`) VALUES
+(1, 'Grade 4', 'Clasa 4');
+
+-- --------------------------------------------------------
+
+--
 -- Structură tabel pentru tabel `tbl_users`
 --
 
@@ -203,6 +223,12 @@ ALTER TABLE `tbl_rewards`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexuri pentru tabele `tbl_sub_categories`
+--
+ALTER TABLE `tbl_sub_categories`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexuri pentru tabele `tbl_users`
 --
 ALTER TABLE `tbl_users`
@@ -216,13 +242,19 @@ ALTER TABLE `tbl_users`
 -- AUTO_INCREMENT pentru tabele `tbl_categories`
 --
 ALTER TABLE `tbl_categories`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
 -- AUTO_INCREMENT pentru tabele `tbl_posts`
 --
 ALTER TABLE `tbl_posts`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+
+--
+-- AUTO_INCREMENT pentru tabele `tbl_sub_categories`
+--
+ALTER TABLE `tbl_sub_categories`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT pentru tabele `tbl_users`
