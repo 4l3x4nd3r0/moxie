@@ -65,7 +65,7 @@
 		'courses' => 'Courses',
 		'assignments' => 'Assignments',
 		'digitallib' => 'Digital Library',
-		'community' => 'Community',
+		'communityh' => 'Community',
 		'rewards' => 'Rewards',
 		'howtouse' => 'How to Use',
 		'login' => 'Login',

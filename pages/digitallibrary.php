@@ -1,9 +1,11 @@
 <div class="main">
- <div class="wrapper">
-    <h1> <?php echo $lang['digitallibh'] ?></h1>
-    <br><br><br><br>
+<div class="wrapper">
     <?php
       echo "<div class = 'error'>".$lang['notmvp']."</div>";
     ?> 
  </div>
+ <div class="body">
+		<h2><?php echo $lang['digitallib'] ?></h2>
+		<br>
+	</div>
 </div>

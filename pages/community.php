@@ -1,9 +1,11 @@
 <div class="main">
  <div class="wrapper">
-    <h1> <?php echo $lang['communityh'] ?></h1>
-    <br><br><br><br>
     <?php
       echo "<div class = 'error'>".$lang['notmvp']."</div>";
     ?> 
  </div>
+ <div class="body">
+		<h2><?php echo $lang['communityh'] ?></h2>
+		<br>
+	</div>
 </div>

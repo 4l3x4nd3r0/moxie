@@ -8,7 +8,7 @@
 		echo sprintf($format, $site,'courses', $lang['courses']);
 		echo sprintf($format, $site,'assignments', $lang['assignments']);
 		echo sprintf($format, $site,'digitallibrary', $lang['digitallib']);
-		echo sprintf($format, $site,'community', $lang['community']);
+		echo sprintf($format, $site,'community', $lang['communityh']);
 		echo sprintf($format, $site,'rewards', $lang['rewards']);
 		echo sprintf($format, $site,'howtouse', $lang['howtouse']);
 		echo sprintf($format, $site,'logout', $lang['logout']);
