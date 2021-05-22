@@ -19,12 +19,16 @@
 					$post_description = $row['description_'.$_SESSION['lang']];
 					$created_at = $row['created_at'];
 					?>
-					<div>
-						<h1> <?php echo $lang['welcomepageh'] ?> </h1>
-						<p> <?php echo $lang['welcomepagemessage'] ?> </p>
-						<h2> <?php echo $lang['lastlecture'] ?> </h2>
-					</div>
+
 					<div class="body">
+
+						<div>
+						<h1> <?php echo $lang['welcomepageh'] ?> </h1><br>
+						<p> <?php echo $lang['welcomepagemessage'] ?> </p><br>
+						<h2> <?php echo $lang['lastlecture'] ?> </h2><br>
+						</div>
+
+						<div class="body post">
 						<h2><?php echo $post_title; ?></h2>
 						<br>
 						<p>
@@ -33,8 +37,9 @@
 						<br>
 						<a href="<?php echo SITEURL; ?>index.php?page=blog_detail&id=<?php echo $id; ?>">
 							<button class="btn-primary btn-sm"><?php echo $lang['read_more'] ?></button>
-
 						</a>
+
+						</div>
 					</div>
 
 					<?php

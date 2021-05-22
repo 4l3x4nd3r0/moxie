@@ -268,7 +268,9 @@ body {
 	font-family: "Lato", sans-serif;
 	background-color:#C1C8E4 ;
 }
-
+.body .post{
+	padding-right: 150px;
+}
 /*CSS for Dropdown*/
 .sidenav {
 	height: 100%;
