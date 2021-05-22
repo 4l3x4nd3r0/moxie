@@ -13,6 +13,6 @@
 	</p>
 	<br>
 		<p>
-			<?php echo $lang['contact'] ?> <a href="mailto:hi@vijaythapa.com?Subject=multi-lingual%20website" target="_top">hi@vijaythapa.com</a>
+			<?php echo $lang['contact'] ?> <a href="entropycrusade@gmail.com?Subject=moxie" target="_top">entropycrusade@gmail.com</a>
 		</p>
 </div>

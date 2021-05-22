@@ -13,18 +13,18 @@
 			<span class="input-label"><?php echo $lang['title'] ?> (<?php echo $lang['english'] ?>)</span>
 			<input class="half" type="text" name="title_en" placeholder="Post Title in English" required="true">
 		</div>
+		<div class="input-group">
+			<span class="input-label"><?php echo $lang['title'] ?> (<?php echo $lang['romanian'] ?>)</span>
+			<input class="half" type="text" name="title_ro" placeholder="Post Title in Romanian" required="true">
+		</div>
 
 		<div class="input-group">
 			<span class="input-label"><?php echo $lang['description'] ?> (<?php echo $lang['english'] ?>)</span>
 			<textarea class="half" name="description_en" placeholder="Post Description in English" required="true"></textarea>
 		</div>
 		<div class="input-group">
-			<span class="input-label"><?php echo $lang['description'] ?> (<?php echo $lang['nepali'] ?>)</span>
-			<textarea class="half" name="description_np" placeholder="Post Description in Nepali" required="true"></textarea>
-		</div>
-		<div class="input-group">
-			<span class="input-label"><?php echo $lang['description'] ?> (<?php echo $lang['chinese'] ?>)</span>
-			<textarea class="half" name="description_cn" placeholder="Post Description in Chinese" required="true"></textarea>
+			<span class="input-label"><?php echo $lang['description'] ?> (<?php echo $lang['romanian'] ?>)</span>
+			<textarea class="half" name="description_ro" placeholder="Post Description in Romanian" required="true"></textarea>
 		</div>
 
 		<div class="input-group">
@@ -44,6 +44,36 @@
 								$title=$row['category_name_'.$_SESSION['lang']];
 								?>
 								<option value="<?php echo $id; ?>"><?php echo $title; ?></option>
+								<?php
+							}
+						}
+						else{
+							?>
+							<option value="0">None</option>
+							<?php 
+						}
+					}
+				?>
+			</select>
+		</div>
+
+		<div class="input-group">
+			<span class="input-label"><?php echo $lang['subcategory'] ?></span>
+			<select class="half" name="subcategory">
+				<?php 
+					$tbl_name = 'tbl_sub_categories';
+					$query = $obj->select_data($tbl_name);
+					$res = $obj->execute_query($conn,$query);
+					if($res==true)
+					{
+						$count_rows = $obj->num_rows($res);
+						if($count_rows>0)
+						{
+							while ($row=$obj->fetch_data($res)) {
+								$sid=$row['id'];
+								$stitle=$row['subcategory_name_'.$_SESSION['lang']];
+								?>
+								<option value="<?php echo $sid; ?>"><?php echo $stitle; ?></option>
 								<?php
 							}
 						}
@@ -78,26 +108,24 @@
 		if(isset($_POST['submit']))
 		{
 			$title_en = $obj->sanitize($conn,$_POST['title_en']);
-			$title_np = $obj->sanitize($conn,$_POST['title_np']);
-			$title_cn = $obj->sanitize($conn,$_POST['title_cn']);
 			$description_en = $obj->sanitize($conn,$_POST['description_en']);
-			$description_np = $obj->sanitize($conn,$_POST['description_np']);
-			$description_cn = $obj->sanitize($conn,$_POST['description_cn']);
+			$title_ro = $obj->sanitize($conn,$_POST['title_ro']);
+			$description_ro = $obj->sanitize($conn,$_POST['description_ro']);
 			$url = strtolower(str_replace(' ', '-', $title_en));
 			$category = $_POST['category'];
+			$subcategory = $_POST['subcategory'];
 			$is_active = $_POST['is_active'];
 			$is_featured = $_POST['is_featured'];
 			$created_at = date('Y-m-d H:i:s');
 
 			$data="
 				title_en='$title_en',
-				title_np='$title_np',
-				title_cn='$title_cn',
+				title_ro='$title_ro',
 				description_en='$description_en',
-				description_np='$description_np',
-				description_cn='$description_cn',
+				description_ro='$description_ro',
 				url = '$url',
 				category='$category',
+				subcategory='$subcategory',
 				is_active='$is_active',
 				is_featured='$is_featured',
 				created_at='$created_at'

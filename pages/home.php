@@ -1,10 +1,16 @@
 <div id="main" class="main">
+<div class="body">
+	<div>
+		<h1> <?php echo $lang['welcomepageh'] ?> </h1><br>
+		<p> <?php echo $lang['welcomepagemessage'] ?> </p><br>
+		<h2> <?php echo $lang['lastlecture'] ?> </h2><br>
+	</div>
 	<?php 
 
 
 		$tbl_name = 'tbl_posts';
 		$where = "is_active='Yes' && is_featured='Yes'";
-		$other = "ORDER BY id DESC";
+		$other = "ORDER BY created_at DESC";
 
 		$query = $obj->select_data($tbl_name,$where,$other);
 		$res = $obj->execute_query($conn,$query);
@@ -20,14 +26,6 @@
 					$created_at = $row['created_at'];
 					?>
 
-					<div class="body">
-
-						<div>
-						<h1> <?php echo $lang['welcomepageh'] ?> </h1><br>
-						<p> <?php echo $lang['welcomepagemessage'] ?> </p><br>
-						<h2> <?php echo $lang['lastlecture'] ?> </h2><br>
-						</div>
-
 						<div class="body post">
 						<h2><?php echo $post_title; ?></h2>
 						<br>
@@ -40,7 +38,6 @@
 						</a>
 
 						</div>
-					</div>
 
 					<?php
 				}
@@ -55,4 +52,5 @@
 			}
 		}
 	?>
+	</div>
 </div>

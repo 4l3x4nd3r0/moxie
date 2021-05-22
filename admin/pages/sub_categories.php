@@ -23,7 +23,7 @@
 	<table class="tbl-responsive">
 		<tr>
 			<td colspan="5">
-				<a href="<?php echo SITEURL; ?>admin/index.php?page=add_category">
+				<a href="<?php echo SITEURL; ?>admin/index.php?page=add_sub_category">
 					<button class="btn-primary btn-sm"><?php echo $lang['add'] ?></button>
 				</a>
 			</td>
@@ -36,7 +36,7 @@
 		</tr>
 
 		<?php 
-			$tbl_name = 'tbl_categories';
+			$tbl_name = 'tbl_sub_categories';
 			$query = $obj->select_data($tbl_name);
 			$res = $obj->execute_query($conn,$query);
 			$sn = 1;
@@ -48,14 +48,14 @@
 				{
 					while ($row=$obj->fetch_data($res)) {
 						$id = $row['id'];
-						$title = $row['category_name_'.$_SESSION['lang']];
+						$title = $row['subcategory_name_'.$_SESSION['lang']];
 						?>
 
 						<tr>
 							<td><?php echo $sn++; ?>. </td>
 							<td><?php echo $title; ?></td>
 							<td>
-								<a href="<?php echo SITEURL; ?>admin/pages/delete.php?page=categories&id=<?php echo $id; ?>" class="btn-error btn-sm"><?php echo $lang['delete'] ?></a>
+								<a href="<?php echo SITEURL; ?>admin/pages/delete.php?page=sub_categories&id=<?php echo $id; ?>" class="btn-error btn-sm"><?php echo $lang['delete'] ?></a>
 							</td>
 						</tr>
 
@@ -64,7 +64,7 @@
 				}
 				else
 				{
-					echo "<tr><td colspan='5' class='error'>No Categories Found.</td></tr>";
+					echo "<tr><td colspan='5' class='error'>No Sub Categories Found.</td></tr>";
 				}
 			}
 		?>

@@ -27,6 +27,9 @@
 						<a href="<?php echo SITEURL; ?>admin/index.php?page=categories"><?php echo $lang['categories'] ?></a>
 					</li>
 					<li>
+						<a href="<?php echo SITEURL; ?>admin/index.php?page=sub_categories"><?php echo $lang['subtitle'] ?></a>
+					</li>
+					<li>
 						<a href="<?php echo SITEURL; ?>admin/index.php?page=posts"><?php echo $lang['posts'] ?></a>
 					</li>
 					<li>

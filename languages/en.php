@@ -109,6 +109,10 @@
 		'notmvp' => 'This is not included in the MVP',
 		'dashboardh' => 'Dashboard',
 		'avatarstyle' => 'Style: ',
-		'save_avatar' => 'Save Avatar'
+		'save_avatar' => 'Save Avatar',
+		'subcategory' => 'Subcategory',
+		'romanian' => 'Romanian',
+		'subtitle' => 'Sub Category',
+		'search' => 'Search'
 	);
 ?>
