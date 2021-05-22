@@ -38,21 +38,14 @@
 		{
 			//echo "Click";
 			$title_en = $obj->sanitize($conn,$_POST['title_en']);
-			$title_np = $obj->sanitize($conn,$_POST['title_np']);
-			$title_cn = $obj->sanitize($conn,$_POST['title_cn']);
-			$is_active = $_POST['is_active'];
-			$include_in_menu = $_POST['include_in_menu'];
-			$created_at = date('Y-m-d H:i:s');
 
 			$tbl_name = 'tbl_categories';
 
 			$data= "
-				title_en = '$title_en',
-				title_np = '$title_np',
-				title_cn = '$title_cn',
-				is_active = '$is_active',
-				include_in_menu = '$include_in_menu',
-				created_at = '$created_at'
+				category_name_en = '$title_en',
+				subcategory_name_en = '$title_en',
+				category_name_ro = '$title_en',
+				subcategory_name_ro = '$title_en'
 			";
 
 			$query = $obj->insert_data($tbl_name,$data);

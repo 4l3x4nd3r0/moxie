@@ -93,7 +93,9 @@
 		'avatarfemale' => 'Female',
 		'avataryes' => 'Yes',
 		'avatarno' => 'No',
-		'avatarhat' => 'Hat',
+		'avatareye' => 'Eyes',
+		'avatarmouth' => 'Mouth',
+		'avatarhat' => 'Hair',
 		'avatarpants' => 'Pants',
 		'avatarbody' => 'Shirt',
 		'avatarshoes' => 'Shoes',
@@ -106,5 +108,7 @@
 		'registerbutton' => 'Register',
 		'notmvp' => 'This is not included in the MVP',
 		'dashboardh' => 'Dashboard',
+		'avatarstyle' => 'Style: ',
+		'save_avatar' => 'Save Avatar'
 	);
 ?>

@@ -41,7 +41,7 @@
 						{
 							while ($row=$obj->fetch_data($res)) {
 								$id=$row['id'];
-								$title=$row['title_'.$_SESSION['lang']];
+								$title=$row['category_name_'.$_SESSION['lang']];
 								?>
 								<option value="<?php echo $id; ?>"><?php echo $title; ?></option>
 								<?php

@@ -11,14 +11,32 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script language="Javascript">
 	function openNav() {
-	document.getElementById("mySidenav").style.width = "250px";
-	document.getElementById("").style.marginLeft = "250px";
+		document.getElementById("mySidenav").style.width = "250px";
+		document.getElementById("").style.marginLeft = "250px";
 	}
 
 	function closeNav() {
-	document.getElementById("mySidenav").style.width = "0";
-	document.getElementById("").style.marginLeft= "0";
+		document.getElementById("mySidenav").style.width = "0";
+		document.getElementById("").style.marginLeft= "0";
 	}
+	function updateHairInput(val) {
+        document.getElementById('texthair').value=val; 
+    }
+	function updateEyesInput(val) {
+        document.getElementById('texteyes').value=val; 
+    }
+	function updateMouthInput(val) {
+        document.getElementById('textmouth').value=val; 
+    }
+	function updateShirtInput(val) {
+        document.getElementById('textshirt').value=val; 
+    }
+	function updatePantsInput(val) {
+        document.getElementById('textpants').value=val; 
+    }
+	function updateShoesInput(val) {
+        document.getElementById('textshoes').value=val; 
+    }
     </script>
 	<?php
 		$site = SITEURL;

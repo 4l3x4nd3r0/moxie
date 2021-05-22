@@ -55,7 +55,7 @@
             $points = 0;
             $username = $nume.'_'.$initialatata.'_'.$prenume;
             $full_name = $nume.' '.$initialatata.' '.$prenume;
-            $avatar_path = 'avatar/avatar_default.png';
+            $avatar_path = 'assets/img/avatar_assets/default_avatar.png';
 
             if (!ctype_alpha($nume)) {
                 echo "<div class = 'error'>".$lang['add_fail_lastname']."</div>";
