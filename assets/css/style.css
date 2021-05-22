@@ -271,6 +271,15 @@ body {
 .body .post{
 	padding-right: 150px;
 }
+.main .howtobody{
+	padding: 3%;
+	margin: 2% auto;
+	width: 50%;
+	box-shadow: 0 2px 4px 2px grey;
+	color: #2c2c54;
+	background-color: #ffffff;
+}
+
 /*CSS for Dropdown*/
 .sidenav {
 	height: 100%;
