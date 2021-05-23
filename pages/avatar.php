@@ -337,7 +337,11 @@
         }
         else 
         {
-            echo '<img height=200 width=150 src=$avatar_path/>';
+            echo '<div class="profile_avatar">';
+            echo '<p>';
+            echo '<img height=200 width=150 src="'.$avatar_path.'">';
+            echo '</p>';
+            echo '</div>';
         }
         function generate_avatar($temp_avatar_path, $a, $b, $c, $d, $e, $f, $g)
         {
@@ -365,7 +369,11 @@
 			imagepng($dest_image);
 			$imagedata = ob_get_contents();
 			ob_end_clean();
+            echo '<div class="profile_avatar">';
+            echo '<p>';
 			echo '<img height=200 width=150 src="data:image/png;base64,'.base64_encode($imagedata).'"/>';
+            echo '</p>';
+            echo '</div>';
             //destroy all the image resources to free up memory
             imagedestroy($a);
             imagedestroy($b);
