@@ -14,7 +14,7 @@
 			$count_rows = $obj->num_rows($res);
 			if($count_rows>0)
 			{
-				while ($row=$obj->fetch_data($res)) {
+				$row=$obj->fetch_data($res);
 					$id = $row['id'];
 					$user_username = $row['username'];
                     $user_nume = $row['nume'];
@@ -75,6 +75,5 @@
 				</div>
 				<?php
 			}
-		}
 	?>
 </div>

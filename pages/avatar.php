@@ -29,6 +29,7 @@
 		{
 			header('location:'.SITEURL.'index.php?page=profile');
 		}
+        $temp_avatar_path = 'avatar/'.$id.'_temp.png';
         $new_avatar_path = 'avatar/'.$id.'.png';
     ?>
     <?php 
@@ -332,13 +333,13 @@
                     break;
             }
             
-            generate_avatar($new_avatar_path, $a, $b, $c, $d, $e, $f, $g);
+            generate_avatar($temp_avatar_path, $a, $b, $c, $d, $e, $f, $g);
         }
-        if($_SERVER['REQUEST_METHOD'] == "POST" and isset($_POST['back']))
+        else 
         {
-            header('location:'.SITEURL.'index.php?page=profile');
+            echo '<img height=200 width=150 src=$avatar_path/>';
         }
-        function generate_avatar($new_avatar_path, $a, $b, $c, $d, $e, $f, $g)
+        function generate_avatar($temp_avatar_path, $a, $b, $c, $d, $e, $f, $g)
         {
             $dest_image = imagecreatetruecolor(WIDTH, HEIGHT);
 
@@ -354,12 +355,12 @@
             imagecopy($dest_image, $b, 0, 0, 0, 0, WIDTH, HEIGHT);
             imagecopy($dest_image, $c, 0, 0, 0, 0, WIDTH, HEIGHT);
             imagecopy($dest_image, $d, 0, 0, 0, 0, WIDTH, HEIGHT);
-            imagecopy($dest_image, $e, 0, 0, 0, 0, WIDTH, HEIGHT);
             imagecopy($dest_image, $f, 0, 0, 0, 0, WIDTH, HEIGHT);
+            imagecopy($dest_image, $e, 0, 0, 0, 0, WIDTH, HEIGHT);
             imagecopy($dest_image, $g, 0, 0, 0, 0, WIDTH, HEIGHT);
 
             //send the appropriate headers and output the image in the browser
-            imagepng($dest_image, $new_avatar_path);
+            imagepng($dest_image, $temp_avatar_path);
 			ob_start();
 			imagepng($dest_image);
 			$imagedata = ob_get_contents();
@@ -449,7 +450,8 @@
             if(isset($_POST['submit1']))
 		    {
                 $id = $_POST['id'];
-
+                copy($temp_avatar_path, $new_avatar_path);
+                unlink($temp_avatar_path);
                 $data = "
                     avatar_path='$new_avatar_path'
                 ";
