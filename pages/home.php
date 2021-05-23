@@ -11,7 +11,7 @@
 		$tbl_name = 'tbl_posts';
 		$where = "is_active='Yes' && is_featured='Yes'";
 		$other = "ORDER BY created_at DESC";
-
+		$sn = 1;
 		$query = $obj->select_data($tbl_name,$where,$other);
 		$res = $obj->execute_query($conn,$query);
 		if($res == true)
@@ -24,6 +24,11 @@
 					$post_title = $row['title_'.$_SESSION['lang']];
 					$post_description = $row['description_'.$_SESSION['lang']];
 					$created_at = $row['created_at'];
+					$sn++;
+					if($sn > 3)
+					{
+						break;
+					}
 					?>
 
 						<div class="body post">
