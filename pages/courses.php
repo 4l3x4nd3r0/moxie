@@ -61,7 +61,7 @@
    <input id="submit" type="submit" name="search" value="Search">
    </form>
     <?php
-      if($_SERVER['REQUEST_METHOD'] == "POST" and isset($_POST['filter']))
+      if($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['filter']))
       {
          $filtercategory = $obj->sanitize($conn,$_POST['category']);
          $filtersubcategory = $obj->sanitize($conn,$_POST['subcategory']);
@@ -110,7 +110,7 @@
                   echo "<div class = 'error'>".$lang['add_fail_password_not_match']."</div>";
                }
          }
-      else if($_SERVER['REQUEST_METHOD'] == "POST" and isset($_POST['search']))
+      if($_SERVER['REQUEST_METHOD'] == "POST" and isset($_POST['search']))
       {
          //echo "Click";
          $search = $obj->sanitize($conn,$_POST['searchtext']);

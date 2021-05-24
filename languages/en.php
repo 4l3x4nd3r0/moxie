@@ -113,6 +113,7 @@
 		'subcategory' => 'Subcategory',
 		'romanian' => 'Romanian',
 		'subtitle' => 'Sub Category',
-		'search' => 'Search'
+		'search' => 'Search',
+		'generalstyle' => 'Style '
 	);
 ?>
