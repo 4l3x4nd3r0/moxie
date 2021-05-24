@@ -337,10 +337,22 @@ iframe {
 	display:block;
 }
 
-.main .body .poza_about {
-  	padding-left: 5%;
-}
 
-.main .body .poza_about p {
-	padding-left: 11%;
+  .main .body .column {
+	flex: 33.33%;
+	padding: 5%;
+  }
+
+  .main .body .column .moxie h2 {
+	flex: 33.33%;
+	padding-left: 23%;
+  }
+
+  .main .body .column .crusade h2 {
+	flex: 33.33%;
+	padding-left: 25%;
+  }
+
+  .main .body .row {
+	display: flex;
   }

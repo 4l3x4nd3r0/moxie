@@ -127,6 +127,7 @@
 		'itemtshirt' => 'Item that you do not own is Tshirt.',
 		'itempants' => 'Item that you do not own is Pants.',
 		'itemshoes' => 'Item that you do not own is Shoes',
-		'thismoxie' => 'This is moxie!'
+		'thismoxie' => 'This is Moxie!',
+		'thiscrusade' => 'This is our logo!',
 	);
 ?>

@@ -5,18 +5,37 @@
 		<p>
 			<?php echo $lang['about_content'] ?>
 		</p>
-		
+
 		<br>
 
-		<div class="poza_about">
+		<div class="row">
+			<div class="column">
+				<img src = "assets/img/Moxie.svg" width= 375 height= 375>
+			</div>
 
-			<img src = "assets/img/Moxie.svg" width= 375 height= 375>
-			<br>
-			<p>
-			<?php echo $lang['thismoxie']; ?>
-			</p>
+			<div class="column">
+				<img src = "assets/img/Entropy Crusade.svg" width= 375 height= 375>
+			</div>
 		</div>
 
+		<div class="row">
+			<div class="column">
+				<div class="moxie">
+					<h2>
+						<?php echo $lang['thismoxie'] ?>
+					</h2>
+				</div>
+			</div>
+
+			<div class="column">
+				<div class="crusade">
+					<h2>
+						<?php echo $lang['thiscrusade'] ?>
+					</h2>
+				</div>
+			</div>
+		</div>
+	
 		<br>
 
 		<br>
