@@ -50,22 +50,6 @@
 					</div>
 					<?php
 				}
-				$tbl_name = 'tbl_rewards';
-				$where = "id='$id'";
-				$query = $obj->select_data($tbl_name,$where);
-				$res = $obj->execute_query($conn,$query);
-				if($res == true)
-				{
-					$count_rows = $obj->num_rows($res);
-					if($count_rows>0){}
-					else
-					{
-						$data = "id='$id'";
-						$tbl_name = 'tbl_rewards';
-						$query = $obj->insert_data($tbl_name,$data);
-               		 	$res = $obj->execute_query($conn,$query);
-					}
-				}
 			}
 			else
 			{

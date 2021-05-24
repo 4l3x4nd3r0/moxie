@@ -114,6 +114,11 @@
 		'romanian' => 'Romanian',
 		'subtitle' => 'Sub Category',
 		'search' => 'Search',
-		'generalstyle' => 'Style '
+		'generalstyle' => 'Style ',
+		'erroravatar' => "You don't own this item! ",
+		'itemeyes' => 'Item that you do not own is Eyes.',
+		'itemowned' => 'Owned',
+		'btn_buy' => 'Buy',
+		'itemnotowned' => 'Not Owned',
 	);
 ?>
