@@ -123,51 +123,163 @@
                     $b = imagecreatefrompng('assets/img/avatar_assets/nothing.png');
                     break;
                 case 1:
-                    $b = imagecreatefrompng('assets/img/avatar_assets/Hair/hair_1.png');
+                    if($hair_1 == 0)
+                    {
+                        echo "<div class = 'error'>".$lang['erroravatar'].$lang['itemhair']."</div>";
+                        $c = imagecreatefrompng('assets/img/avatar_assets/Hair/hair_0.png');
+                    }
+                    else
+                    {
+                        $c = imagecreatefrompng('assets/img/avatar_assets/Hair/hair_1.png');
+                    }
                     break;
                 case 2:
-                    $b = imagecreatefrompng('assets/img/avatar_assets/Hair/hair_2.png');
+                    if($hair_2 == 0)
+                    {
+                        echo "<div class = 'error'>".$lang['erroravatar'].$lang['itemhair']."</div>";
+                        $c = imagecreatefrompng('assets/img/avatar_assets/Hair/hair_0.png');
+                    }
+                    else
+                    {
+                        $c = imagecreatefrompng('assets/img/avatar_assets/Hair/hair_2.png');
+                    }
                     break;
                 case 3:
-                    $b = imagecreatefrompng('assets/img/avatar_assets/Hair/hair_3.png');
+                    if($hair_3 == 0)
+                    {
+                        echo "<div class = 'error'>".$lang['erroravatar'].$lang['itemhair']."</div>";
+                        $c = imagecreatefrompng('assets/img/avatar_assets/Hair/hair_0.png');
+                    }
+                    else
+                    {
+                        $c = imagecreatefrompng('assets/img/avatar_assets/Hair/hair_3.png');
+                    }
                     break;
                 case 4:
-                    $b = imagecreatefrompng('assets/img/avatar_assets/Hair/hair_4.png');
+                    if($hair_4 == 0)
+                    {
+                        echo "<div class = 'error'>".$lang['erroravatar'].$lang['itemhair']."</div>";
+                        $c = imagecreatefrompng('assets/img/avatar_assets/Hair/hair_0.png');
+                    }
+                    else
+                    {
+                        $c = imagecreatefrompng('assets/img/avatar_assets/Hair/hair_4.png');
+                    }
                     break;
                 case 5:
-                    $b = imagecreatefrompng('assets/img/avatar_assets/Hair/hair_5.png');
+                    if($hair_5 == 0)
+                    {
+                        echo "<div class = 'error'>".$lang['erroravatar'].$lang['itemhair']."</div>";
+                        $c = imagecreatefrompng('assets/img/avatar_assets/Hair/hair_0.png');
+                    }
+                    else
+                    {
+                        $c = imagecreatefrompng('assets/img/avatar_assets/Hair/hair_5.png');
+                    }
                     break;
                 case 6:
-                    $b = imagecreatefrompng('assets/img/avatar_assets/Hair/hair_6.png');
+                    if($hair_6 == 0)
+                    {
+                        echo "<div class = 'error'>".$lang['erroravatar'].$lang['itemhair']."</div>";
+                        $c = imagecreatefrompng('assets/img/avatar_assets/Hair/hair_0.png');
+                    }
+                    else
+                    {
+                        $c = imagecreatefrompng('assets/img/avatar_assets/Hair/hair_6.png');
+                    }
                     break;
                 case 7:
-                    $b = imagecreatefrompng('assets/img/avatar_assets/Hair/hair_7.png');
+                    if($hair_7 == 0)
+                    {
+                        echo "<div class = 'error'>".$lang['erroravatar'].$lang['itemhair']."</div>";
+                        $c = imagecreatefrompng('assets/img/avatar_assets/Hair/hair_0.png');
+                    }
+                    else
+                    {
+                        $c = imagecreatefrompng('assets/img/avatar_assets/Hair/hair_7.png');
+                    }
                     break;
                 case 8:
-                    $b = imagecreatefrompng('assets/img/avatar_assets/Hair/hair_8.png');
+                    if($hair_8 == 0)
+                    {
+                        echo "<div class = 'error'>".$lang['erroravatar'].$lang['itemhair']."</div>";
+                        $c = imagecreatefrompng('assets/img/avatar_assets/Hair/hair_0.png');
+                    }
+                    else
+                    {
+                        $c = imagecreatefrompng('assets/img/avatar_assets/Hair/hair_8.png');
+                    }
                     break;
                 case 9:
-                    $b = imagecreatefrompng('assets/img/avatar_assets/Hair/hair_9.png');
+                    if($hair_9 == 0)
+                    {
+                        echo "<div class = 'error'>".$lang['erroravatar'].$lang['itemhair']."</div>";
+                        $c = imagecreatefrompng('assets/img/avatar_assets/Hair/hair_0.png');
+                    }
+                    else
+                    {
+                        $c = imagecreatefrompng('assets/img/avatar_assets/Hair/hair_9.png');
+                    }
                     break;
                 case 10:
-                    $b = imagecreatefrompng('assets/img/avatar_assets/Hair/hair_10.png');
+                    if($hair_10 == 0)
+                    {
+                        echo "<div class = 'error'>".$lang['erroravatar'].$lang['itemhair']."</div>";
+                        $c = imagecreatefrompng('assets/img/avatar_assets/Hair/hair_0.png');
+                    }
+                    else
+                    {
+                        $c = imagecreatefrompng('assets/img/avatar_assets/Hair/hair_10.png');
+                    }
                     break;
                 case 11:
-                    $b = imagecreatefrompng('assets/img/avatar_assets/Hair/hair_11.png');
+                    if($hair_11 == 0)
+                    {
+                        echo "<div class = 'error'>".$lang['erroravatar'].$lang['itemhair']."</div>";
+                        $c = imagecreatefrompng('assets/img/avatar_assets/Hair/hair_0.png');
+                    }
+                    else
+                    {
+                        $c = imagecreatefrompng('assets/img/avatar_assets/Hair/hair_11.png');
+                    }
                     break;
                 case 12:
-                    $b = imagecreatefrompng('assets/img/avatar_assets/Hair/hair_12.png');
+                    if($hair_12 == 0)
+                    {
+                        echo "<div class = 'error'>".$lang['erroravatar'].$lang['itemhair']."</div>";
+                        $c = imagecreatefrompng('assets/img/avatar_assets/Hair/hair_0.png');
+                    }
+                    else
+                    {
+                        $c = imagecreatefrompng('assets/img/avatar_assets/Hair/hair_12.png');
+                    }
                     break;
             }
             switch ($_POST['eyes']) {
                 case 1:
-                    $c = imagecreatefrompng('assets/img/avatar_assets/Eyes/eyes_1.png');
+                    $d = imagecreatefrompng('assets/img/avatar_assets/Eyes/eyes_1.png');
                     break;
                 case 2:
-                    $c = imagecreatefrompng('assets/img/avatar_assets/Eyes/eyes_2.png');
+                    if($eyes_2 == 0)
+                    {
+                        echo "<div class = 'error'>".$lang['erroravatar'].$lang['itemeyes']."</div>";
+                        $c = imagecreatefrompng('assets/img/avatar_assets/Eyes/eyes_1.png');
+                    }
+                    else
+                    {
+                        $c = imagecreatefrompng('assets/img/avatar_assets/Eyes/eyes_2.png');
+                    }
                     break;
                 case 3:
-                    $c = imagecreatefrompng('assets/img/avatar_assets/Eyes/eyes_3.png');
+                    if($eyes_3 == 0)
+                    {
+                        echo "<div class = 'error'>".$lang['erroravatar'].$lang['itemeyes']."</div>";
+                        $c = imagecreatefrompng('assets/img/avatar_assets/Eyes/eyes_1.png');
+                    }
+                    else
+                    {
+                        $c = imagecreatefrompng('assets/img/avatar_assets/Eyes/eyes_3.png');
+                    }
                     break;
                 case 4:
                     if($eyes_4 == 0)
@@ -181,28 +293,92 @@
                     }
                     break;
                 case 5:
-                    $c = imagecreatefrompng('assets/img/avatar_assets/Eyes/eyes_5.png');
+                    if($eyes_5 == 0)
+                    {
+                        echo "<div class = 'error'>".$lang['erroravatar'].$lang['itemeyes']."</div>";
+                        $c = imagecreatefrompng('assets/img/avatar_assets/Eyes/eyes_1.png');
+                    }
+                    else
+                    {
+                        $c = imagecreatefrompng('assets/img/avatar_assets/Eyes/eyes_5.png');
+                    }
                     break;
                 case 6:
-                    $c = imagecreatefrompng('assets/img/avatar_assets/Eyes/eyes_6.png');
+                    if($eyes_6 == 0)
+                    {
+                        echo "<div class = 'error'>".$lang['erroravatar'].$lang['itemeyes']."</div>";
+                        $c = imagecreatefrompng('assets/img/avatar_assets/Eyes/eyes_1.png');
+                    }
+                    else
+                    {
+                        $c = imagecreatefrompng('assets/img/avatar_assets/Eyes/eyes_6.png');
+                    }
                     break;
                 case 7:
-                    $c = imagecreatefrompng('assets/img/avatar_assets/Eyes/eyes_7.png');
+                    if($eyes_7 == 0)
+                    {
+                        echo "<div class = 'error'>".$lang['erroravatar'].$lang['itemeyes']."</div>";
+                        $c = imagecreatefrompng('assets/img/avatar_assets/Eyes/eyes_1.png');
+                    }
+                    else
+                    {
+                        $c = imagecreatefrompng('assets/img/avatar_assets/Eyes/eyes_7.png');
+                    }
                     break;
                 case 8:
-                    $c = imagecreatefrompng('assets/img/avatar_assets/Eyes/eyes_8.png');
+                    if($eyes_8 == 0)
+                    {
+                        echo "<div class = 'error'>".$lang['erroravatar'].$lang['itemeyes']."</div>";
+                        $c = imagecreatefrompng('assets/img/avatar_assets/Eyes/eyes_1.png');
+                    }
+                    else
+                    {
+                        $c = imagecreatefrompng('assets/img/avatar_assets/Eyes/eyes_8.png');
+                    }
                     break;
                 case 9:
-                    $c = imagecreatefrompng('assets/img/avatar_assets/Eyes/eyes_9.png');
+                    if($eyes_9 == 0)
+                    {
+                        echo "<div class = 'error'>".$lang['erroravatar'].$lang['itemeyes']."</div>";
+                        $c = imagecreatefrompng('assets/img/avatar_assets/Eyes/eyes_1.png');
+                    }
+                    else
+                    {
+                        $c = imagecreatefrompng('assets/img/avatar_assets/Eyes/eyes_9.png');
+                    }
                     break;
                 case 10:
-                    $c = imagecreatefrompng('assets/img/avatar_assets/Eyes/eyes_10.png');
+                    if($eyes_10 == 0)
+                    {
+                        echo "<div class = 'error'>".$lang['erroravatar'].$lang['itemeyes']."</div>";
+                        $c = imagecreatefrompng('assets/img/avatar_assets/Eyes/eyes_1.png');
+                    }
+                    else
+                    {
+                        $c = imagecreatefrompng('assets/img/avatar_assets/Eyes/eyes_10.png');
+                    }
                     break;
                 case 11:
-                    $c = imagecreatefrompng('assets/img/avatar_assets/Eyes/eyes_11.png');
+                    if($eyes_11 == 0)
+                    {
+                        echo "<div class = 'error'>".$lang['erroravatar'].$lang['itemeyes']."</div>";
+                        $c = imagecreatefrompng('assets/img/avatar_assets/Eyes/eyes_1.png');
+                    }
+                    else
+                    {
+                        $c = imagecreatefrompng('assets/img/avatar_assets/Eyes/eyes_11.png');
+                    }
                     break;
                 case 12:
-                    $c = imagecreatefrompng('assets/img/avatar_assets/Eyes/eyes_12.png');
+                    if($eyes_12 == 0)
+                    {
+                        echo "<div class = 'error'>".$lang['erroravatar'].$lang['itemeyes']."</div>";
+                        $c = imagecreatefrompng('assets/img/avatar_assets/Eyes/eyes_1.png');
+                    }
+                    else
+                    {
+                        $c = imagecreatefrompng('assets/img/avatar_assets/Eyes/eyes_12.png');
+                    }
                     break;
             }
             switch ($_POST['mouth']) {
@@ -210,40 +386,136 @@
                     $d = imagecreatefrompng('assets/img/avatar_assets/Mouths/mouth_1.png');
                     break;
                 case 2:
-                    $d = imagecreatefrompng('assets/img/avatar_assets/Mouths/mouth_2.png');
+                    if($mouth_2 == 0)
+                    {
+                        echo "<div class = 'error'>".$lang['erroravatar'].$lang['itemmouth']."</div>";
+                        $c = imagecreatefrompng('assets/img/avatar_assets/Mouths/mouth_1.png');
+                    }
+                    else
+                    {
+                        $c = imagecreatefrompng('assets/img/avatar_assets/Mouths/mouth_2.png');
+                    }
                     break;
                 case 3:
-                    $d = imagecreatefrompng('assets/img/avatar_assets/Mouths/mouth_3.png');
+                    if($mouth_3 == 0)
+                    {
+                        echo "<div class = 'error'>".$lang['erroravatar'].$lang['itemmouth']."</div>";
+                        $c = imagecreatefrompng('assets/img/avatar_assets/Mouths/mouth_1.png');
+                    }
+                    else
+                    {
+                        $c = imagecreatefrompng('assets/img/avatar_assets/Mouths/mouth_3.png');
+                    }
                     break;
                 case 4:
-                    $d = imagecreatefrompng('assets/img/avatar_assets/Mouths/mouth_4.png');
+                    if($mouth_4 == 0)
+                    {
+                        echo "<div class = 'error'>".$lang['erroravatar'].$lang['itemmouth']."</div>";
+                        $c = imagecreatefrompng('assets/img/avatar_assets/Mouths/mouth_1.png');
+                    }
+                    else
+                    {
+                        $c = imagecreatefrompng('assets/img/avatar_assets/Mouths/mouth_4.png');
+                    }
                     break;
                 case 5:
-                    $d = imagecreatefrompng('assets/img/avatar_assets/Mouths/mouth_5.png');
+                    if($mouth_5 == 0)
+                    {
+                        echo "<div class = 'error'>".$lang['erroravatar'].$lang['itemmouth']."</div>";
+                        $c = imagecreatefrompng('assets/img/avatar_assets/Mouths/mouth_1.png');
+                    }
+                    else
+                    {
+                        $c = imagecreatefrompng('assets/img/avatar_assets/Mouths/mouth_5.png');
+                    }
                     break;
                 case 6:
-                    $d = imagecreatefrompng('assets/img/avatar_assets/Mouths/mouth_6.png');
+                    if($mouth_6 == 0)
+                    {
+                        echo "<div class = 'error'>".$lang['erroravatar'].$lang['itemmouth']."</div>";
+                        $c = imagecreatefrompng('assets/img/avatar_assets/Mouths/mouth_1.png');
+                    }
+                    else
+                    {
+                        $c = imagecreatefrompng('assets/img/avatar_assets/Mouths/mouth_6.png');
+                    }
                     break;
                 case 7:
-                    $d = imagecreatefrompng('assets/img/avatar_assets/Mouths/mouth_7.png');
+                    if($mouth_7 == 0)
+                    {
+                        echo "<div class = 'error'>".$lang['erroravatar'].$lang['itemmouth']."</div>";
+                        $c = imagecreatefrompng('assets/img/avatar_assets/Mouths/mouth_1.png');
+                    }
+                    else
+                    {
+                        $c = imagecreatefrompng('assets/img/avatar_assets/Mouths/mouth_7.png');
+                    }
                     break;
                 case 8:
-                    $d = imagecreatefrompng('assets/img/avatar_assets/Mouths/mouth_8.png');
+                    if($mouth_8 == 0)
+                    {
+                        echo "<div class = 'error'>".$lang['erroravatar'].$lang['itemmouth']."</div>";
+                        $c = imagecreatefrompng('assets/img/avatar_assets/Mouths/mouth_1.png');
+                    }
+                    else
+                    {
+                        $c = imagecreatefrompng('assets/img/avatar_assets/Mouths/mouth_8.png');
+                    }
                     break;
                 case 9:
-                    $d = imagecreatefrompng('assets/img/avatar_assets/Mouths/mouth_9.png');
+                    if($mouth_9 == 0)
+                    {
+                        echo "<div class = 'error'>".$lang['erroravatar'].$lang['itemmouth']."</div>";
+                        $c = imagecreatefrompng('assets/img/avatar_assets/Mouths/mouth_1.png');
+                    }
+                    else
+                    {
+                        $c = imagecreatefrompng('assets/img/avatar_assets/Mouths/mouth_9.png');
+                    }
                     break;
                 case 10:
-                    $d = imagecreatefrompng('assets/img/avatar_assets/Mouths/mouth_10.png');
+                    if($mouth_10 == 0)
+                    {
+                        echo "<div class = 'error'>".$lang['erroravatar'].$lang['itemmouth']."</div>";
+                        $c = imagecreatefrompng('assets/img/avatar_assets/Mouths/mouth_1.png');
+                    }
+                    else
+                    {
+                        $c = imagecreatefrompng('assets/img/avatar_assets/Mouths/mouth_10.png');
+                    }
                     break;
                 case 11:
-                    $d = imagecreatefrompng('assets/img/avatar_assets/Mouths/mouth_11.png');
+                    if($mouth_11 == 0)
+                    {
+                        echo "<div class = 'error'>".$lang['erroravatar'].$lang['itemmouth']."</div>";
+                        $c = imagecreatefrompng('assets/img/avatar_assets/Mouths/mouth_1.png');
+                    }
+                    else
+                    {
+                        $c = imagecreatefrompng('assets/img/avatar_assets/Mouths/mouth_11.png');
+                    }
                     break;
                 case 12:
-                    $d = imagecreatefrompng('assets/img/avatar_assets/Mouths/mouth_12.png');
+                    if($mouth_12 == 0)
+                    {
+                        echo "<div class = 'error'>".$lang['erroravatar'].$lang['itemmouth']."</div>";
+                        $c = imagecreatefrompng('assets/img/avatar_assets/Mouths/mouth_1.png');
+                    }
+                    else
+                    {
+                        $c = imagecreatefrompng('assets/img/avatar_assets/Mouths/mouth_12.png');
+                    }
                     break;
                 case 13:
-                    $d = imagecreatefrompng('assets/img/avatar_assets/Mouths/mouth_13.png');
+                    if($mouth_13 == 0)
+                    {
+                        echo "<div class = 'error'>".$lang['erroravatar'].$lang['itemmouth']."</div>";
+                        $c = imagecreatefrompng('assets/img/avatar_assets/Mouths/mouth_1.png');
+                    }
+                    else
+                    {
+                        $c = imagecreatefrompng('assets/img/avatar_assets/Mouths/mouth_13.png');
+                    }
                     break;
             }
             switch ($_POST['tshirt']) {
@@ -251,28 +523,92 @@
                     $e = imagecreatefrompng('assets/img/avatar_assets/TShirts/thsirt_pink.png');
                     break;
                 case 2:
-                    $e = imagecreatefrompng('assets/img/avatar_assets/TShirts/tshirt_black.png');
+                    if($tshirt_2 == 0)
+                    {
+                        echo "<div class = 'error'>".$lang['erroravatar'].$lang['itemtshirt']."</div>";
+                        $c = imagecreatefrompng('assets/img/avatar_assets/TShirts/thsirt_pink.png');
+                    }
+                    else
+                    {
+                        $c = imagecreatefrompng('assets/img/avatar_assets/TShirts/tshirt_black.png');
+                    }
                     break;
                 case 3:
-                    $e = imagecreatefrompng('assets/img/avatar_assets/TShirts/tshirt_darkblue.png');
+                    if($tshirt_3 == 0)
+                    {
+                        echo "<div class = 'error'>".$lang['erroravatar'].$lang['itemtshirt']."</div>";
+                        $c = imagecreatefrompng('assets/img/avatar_assets/TShirts/thsirt_pink.png');
+                    }
+                    else
+                    {
+                        $c = imagecreatefrompng('assets/img/avatar_assets/TShirts/tshirt_darkblue.png');
+                    }
                     break;
                 case 4:
-                    $e = imagecreatefrompng('assets/img/avatar_assets/TShirts/tshirt_green.png');
+                    if($tshirt_4 == 0)
+                    {
+                        echo "<div class = 'error'>".$lang['erroravatar'].$lang['itemtshirt']."</div>";
+                        $c = imagecreatefrompng('assets/img/avatar_assets/TShirts/thsirt_pink.png');
+                    }
+                    else
+                    {
+                        $c = imagecreatefrompng('assets/img/avatar_assets/TShirts/tshirt_green.png');
+                    }
                     break;
                 case 5:
-                    $e = imagecreatefrompng('assets/img/avatar_assets/TShirts/tshirt_lightblue.png');
+                    if($tshirt_5 == 0)
+                    {
+                        echo "<div class = 'error'>".$lang['erroravatar'].$lang['itemtshirt']."</div>";
+                        $c = imagecreatefrompng('assets/img/avatar_assets/TShirts/thsirt_pink.png');
+                    }
+                    else
+                    {
+                        $c = imagecreatefrompng('assets/img/avatar_assets/TShirts/tshirt_lightblue.png');
+                    }
                     break;
                 case 6:
-                    $e = imagecreatefrompng('assets/img/avatar_assets/TShirts/tshirt_orange.png');
+                    if($tshirt_6 == 0)
+                    {
+                        echo "<div class = 'error'>".$lang['erroravatar'].$lang['itemtshirt']."</div>";
+                        $c = imagecreatefrompng('assets/img/avatar_assets/TShirts/thsirt_pink.png');
+                    }
+                    else
+                    {
+                        $c = imagecreatefrompng('assets/img/avatar_assets/TShirts/tshirt_orange.png');
+                    }
                     break;
                 case 7:
-                    $e = imagecreatefrompng('assets/img/avatar_assets/TShirts/tshirt_purple.png');
+                    if($tshirt_7 == 0)
+                    {
+                        echo "<div class = 'error'>".$lang['erroravatar'].$lang['itemtshirt']."</div>";
+                        $c = imagecreatefrompng('assets/img/avatar_assets/TShirts/thsirt_pink.png');
+                    }
+                    else
+                    {
+                        $c = imagecreatefrompng('assets/img/avatar_assets/TShirts/tshirt_purple.png');
+                    }
                     break;
                 case 8:
-                    $e = imagecreatefrompng('assets/img/avatar_assets/TShirts/tshirt_red.png');
+                    if($tshirt_8 == 0)
+                    {
+                        echo "<div class = 'error'>".$lang['erroravatar'].$lang['itemtshirt']."</div>";
+                        $c = imagecreatefrompng('assets/img/avatar_assets/TShirts/thsirt_pink.png');
+                    }
+                    else
+                    {
+                        $c = imagecreatefrompng('assets/img/avatar_assets/TShirts/tshirt_red.png');
+                    }
                     break;
                 case 9:
-                    $e = imagecreatefrompng('assets/img/avatar_assets/TShirts/tshirt_yellow.png');
+                    if($tshirt_9 == 0)
+                    {
+                        echo "<div class = 'error'>".$lang['erroravatar'].$lang['itemtshirt']."</div>";
+                        $c = imagecreatefrompng('assets/img/avatar_assets/TShirts/thsirt_pink.png');
+                    }
+                    else
+                    {
+                        $c = imagecreatefrompng('assets/img/avatar_assets/TShirts/tshirt_yellow.png');
+                    }
                     break;
             }
             switch ($_POST['pants']) {
@@ -280,25 +616,81 @@
                     $f = imagecreatefrompng('assets/img/avatar_assets/Pants/pants_black.png');
                     break;
                 case 2:
-                    $f = imagecreatefrompng('assets/img/avatar_assets/Pants/pants_brown.png');
+                    if($pants_2 == 0)
+                    {
+                        echo "<div class = 'error'>".$lang['erroravatar'].$lang['itempants']."</div>";
+                        $c = imagecreatefrompng('assets/img/avatar_assets/Pants/pants_black.png');
+                    }
+                    else
+                    {
+                        $c = imagecreatefrompng('assets/img/avatar_assets/Pants/pants_brown.png');
+                    }
                     break;
                 case 3:
-                    $f = imagecreatefrompng('assets/img/avatar_assets/Pants/pants_darkblue.png');
+                    if($pants_3 == 0)
+                    {
+                        echo "<div class = 'error'>".$lang['erroravatar'].$lang['itempants']."</div>";
+                        $c = imagecreatefrompng('assets/img/avatar_assets/Pants/pants_black.png');
+                    }
+                    else
+                    {
+                        $c = imagecreatefrompng('assets/img/avatar_assets/Pants/pants_darkblue.png');
+                    }
                     break;
                 case 4:
-                    $f = imagecreatefrompng('assets/img/avatar_assets/Pants/pants_darkgreen.png');
+                    if($pants_4 == 0)
+                    {
+                        echo "<div class = 'error'>".$lang['erroravatar'].$lang['itempants']."</div>";
+                        $c = imagecreatefrompng('assets/img/avatar_assets/Pants/pants_black.png');
+                    }
+                    else
+                    {
+                        $c = imagecreatefrompng('assets/img/avatar_assets/Pants/pants_darkgreen.png');
+                    }
                     break;
                 case 5:
-                    $f = imagecreatefrompng('assets/img/avatar_assets/Pants/pants_darkpurple.png');
+                    if($pants_5 == 0)
+                    {
+                        echo "<div class = 'error'>".$lang['erroravatar'].$lang['itempants']."</div>";
+                        $c = imagecreatefrompng('assets/img/avatar_assets/Pants/pants_black.png');
+                    }
+                    else
+                    {
+                        $c = imagecreatefrompng('assets/img/avatar_assets/Pants/pants_darkpurple.png');
+                    }
                     break;
                 case 6:
-                    $f = imagecreatefrompng('assets/img/avatar_assets/Pants/pants_jean.png');
+                    if($pants_6 == 0)
+                    {
+                        echo "<div class = 'error'>".$lang['erroravatar'].$lang['itempants']."</div>";
+                        $c = imagecreatefrompng('assets/img/avatar_assets/Pants/pants_black.png');
+                    }
+                    else
+                    {
+                        $c = imagecreatefrompng('assets/img/avatar_assets/Pants/pants_jean.png');
+                    }
                     break;
                 case 7:
-                    $f = imagecreatefrompng('assets/img/avatar_assets/Pants/pants_kaki.png');
+                    if($pants_7 == 0)
+                    {
+                        echo "<div class = 'error'>".$lang['erroravatar'].$lang['itempants']."</div>";
+                        $c = imagecreatefrompng('assets/img/avatar_assets/Pants/pants_black.png');
+                    }
+                    else
+                    {
+                        $c = imagecreatefrompng('assets/img/avatar_assets/Pants/pants_kaki.png');
+                    }
                     break;
                 case 8:
-                    $f = imagecreatefrompng('assets/img/avatar_assets/Pants/pants_olive.png');
+                    if($pants_8 == 0)
+                    {
+                        echo "<div class = 'error'>".$lang['erroravatar'].$lang['itempants']."</div>";
+                        $c = imagecreatefrompng('assets/img/avatar_assets/Pants/pants_black.png');
+                    }
+                    else
+                    {
+                        $c = imagecreatefrompng('assets/img/avatar_assets/Pants/pants_olive.png');
+                    }
                     break;
             }
             switch ($_POST['shoes']) {
@@ -306,14 +698,31 @@
                     $g = imagecreatefrompng('assets/img/avatar_assets/Shoes/shoes_bordeaux.png');
                     break;
                 case 2:
-                    $g = imagecreatefrompng('assets/img/avatar_assets/Shoes/shoes_brown.png');
+                    if($shoes_2 == 0)
+                    {
+                        echo "<div class = 'error'>".$lang['erroravatar'].$lang['itemshoes']."</div>";
+                        $c = imagecreatefrompng('assets/img/avatar_assets/Shoes/shoes_bordeaux.png');
+                    }
+                    else
+                    {
+                        $c = imagecreatefrompng('assets/img/avatar_assets/Shoes/shoes_brown.png');
+                    }
                     break;
                 case 3:
-                    $g = imagecreatefrompng('assets/img/avatar_assets/Shoes/shoes_darkblue.png');
+                    if($shoes_3 == 0)
+                    {
+                        echo "<div class = 'error'>".$lang['erroravatar'].$lang['itemshoes']."</div>";
+                        $c = imagecreatefrompng('assets/img/avatar_assets/Shoes/shoes_bordeaux.png');
+                    }
+                    else
+                    {
+                        $c = imagecreatefrompng('assets/img/avatar_assets/Shoes/shoes_darkblue.png');
+                    }
                     break;
                 case 4:
                     if ($shoes_4 = 0)
-                    {
+                    {   
+                        echo "<div class = 'error'>".$lang['erroravatar'].$lang['itemshoes']."</div>";
                         $g = imagecreatefrompng('assets/img/avatar_assets/Shoes/shoes_bordeaux.png');
                     }
                     else
@@ -322,28 +731,92 @@
                     }
                     break;
                 case 5:
-                    $g = imagecreatefrompng('assets/img/avatar_assets/Shoes/shoes_darkgrey.png');
+                    if($shoes_5 == 0)
+                    {
+                        echo "<div class = 'error'>".$lang['erroravatar'].$lang['itemshoes']."</div>";
+                        $c = imagecreatefrompng('assets/img/avatar_assets/Shoes/shoes_bordeaux.png');
+                    }
+                    else
+                    {
+                        $c = imagecreatefrompng('assets/img/avatar_assets/Shoes/shoes_darkgrey.png');
+                    }
                     break;
                 case 6:
-                    $g = imagecreatefrompng('assets/img/avatar_assets/Shoes/shoes_darkkaki.png');
+                    if($shoes_6 == 0)
+                    {
+                        echo "<div class = 'error'>".$lang['erroravatar'].$lang['itemshoes']."</div>";
+                        $c = imagecreatefrompng('assets/img/avatar_assets/Shoes/shoes_bordeaux.png');
+                    }
+                    else
+                    {
+                        $c = imagecreatefrompng('assets/img/avatar_assets/Shoes/shoes_darkkaki.png');
+                    }
                     break;
                 case 7:
-                    $g = imagecreatefrompng('assets/img/avatar_assets/Shoes/shoes_lightblue.png');
+                    if($shoes_7 == 0)
+                    {
+                        echo "<div class = 'error'>".$lang['erroravatar'].$lang['itemshoes']."</div>";
+                        $c = imagecreatefrompng('assets/img/avatar_assets/Shoes/shoes_bordeaux.png');
+                    }
+                    else
+                    {
+                        $c = imagecreatefrompng('assets/img/avatar_assets/Shoes/shoes_lightblue.png');
+                    }
                     break;
                 case 8:
-                    $g = imagecreatefrompng('assets/img/avatar_assets/Shoes/shoes_lightgrey.png');
+                    if($shoes_8 == 0)
+                    {
+                        echo "<div class = 'error'>".$lang['erroravatar'].$lang['itemshoes']."</div>";
+                        $c = imagecreatefrompng('assets/img/avatar_assets/Shoes/shoes_bordeaux.png');
+                    }
+                    else
+                    {
+                        $c = imagecreatefrompng('assets/img/avatar_assets/Shoes/shoes_lightgrey.png');
+                    }
                     break;
                 case 9:
-                    $g = imagecreatefrompng('assets/img/avatar_assets/Shoes/shoes_ligthgreen.png');
+                    if($shoes_9 == 0)
+                    {
+                        echo "<div class = 'error'>".$lang['erroravatar'].$lang['itemshoes']."</div>";
+                        $c = imagecreatefrompng('assets/img/avatar_assets/Shoes/shoes_bordeaux.png');
+                    }
+                    else
+                    {
+                        $c = imagecreatefrompng('assets/img/avatar_assets/Shoes/shoes_lightgreen.png');
+                    }
                     break;
                 case 10:
-                    $g = imagecreatefrompng('assets/img/avatar_assets/Shoes/shoes_olive.png');
+                    if($shoes_10 == 0)
+                    {
+                        echo "<div class = 'error'>".$lang['erroravatar'].$lang['itemshoes']."</div>";
+                        $c = imagecreatefrompng('assets/img/avatar_assets/Shoes/shoes_bordeaux.png');
+                    }
+                    else
+                    {
+                        $c = imagecreatefrompng('assets/img/avatar_assets/Shoes/shoes_olive.png');
+                    }
                     break;
                 case 11:
-                    $g = imagecreatefrompng('assets/img/avatar_assets/Shoes/shoes_orange.png');
+                    if($shoes_11 == 0)
+                    {
+                        echo "<div class = 'error'>".$lang['erroravatar'].$lang['itemshoes']."</div>";
+                        $c = imagecreatefrompng('assets/img/avatar_assets/Shoes/shoes_bordeaux.png');
+                    }
+                    else
+                    {
+                        $c = imagecreatefrompng('assets/img/avatar_assets/Shoes/shoes_orange.png');
+                    }
                     break;
                 case 12:
-                    $g = imagecreatefrompng('assets/img/avatar_assets/Shoes/shoes_pink.png');
+                    if($shoes_12 == 0)
+                    {
+                        echo "<div class = 'error'>".$lang['erroravatar'].$lang['itemshoes']."</div>";
+                        $c = imagecreatefrompng('assets/img/avatar_assets/Shoes/shoes_bordeaux.png');
+                    }
+                    else
+                    {
+                        $c = imagecreatefrompng('assets/img/avatar_assets/Shoes/shoes_pink.png');
+                    }
                     break;
             }
             

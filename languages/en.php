@@ -116,9 +116,14 @@
 		'search' => 'Search',
 		'generalstyle' => 'Style ',
 		'erroravatar' => "You don't own this item! ",
-		'itemeyes' => 'Item that you do not own is Eyes.',
 		'itemowned' => 'Owned',
 		'btn_buy' => 'Buy',
 		'itemnotowned' => 'Not Owned',
+		'itemhair' => 'Item that you do not own is Hair.',
+		'itemeyes' => 'Item that you do not own is Eyes.',
+		'itemmouth' => 'Item that you do not own is Mouth.',
+		'itemtshirt' => 'Item that you do not own is Tshirt.',
+		'itempants' => 'Item that you do not own is Pants.',
+		'itemshoes' => 'Item that you do not own is Shoes',
 	);
 ?>
