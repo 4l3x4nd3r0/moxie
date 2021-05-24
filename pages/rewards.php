@@ -376,5 +376,73 @@
 </table>
 </div>
 <br>
+<br>
+<div style="overflow-x:auto;">
+<table>
+   <tr>
+   <?php $sn = 0; ?>
+      <td rowspan="4"><?php echo $lang['avatarhat'] ?></td>
+      <td><?php echo $lang['generalstyle'].$sn++ ?></td>
+      <td><?php echo $lang['generalstyle'].$sn++ ?></td>
+      <td><?php echo $lang['generalstyle'].$sn++ ?></td>
+      <td><?php echo $lang['generalstyle'].$sn++ ?></td>
+      <td><?php echo $lang['generalstyle'].$sn++ ?></td>
+      <td><?php echo $lang['generalstyle'].$sn++ ?></td>
+      <td><?php echo $lang['generalstyle'].$sn++ ?></td>
+      <td><?php echo $lang['generalstyle'].$sn++ ?></td>
+      <td><?php echo $lang['generalstyle'].$sn++ ?></td>
+      <td><?php echo $lang['generalstyle'].$sn++ ?></td>
+      <td><?php echo $lang['generalstyle'].$sn++ ?></td>
+      <td><?php echo $lang['generalstyle'].$sn++ ?></td>
+      <td><?php echo $lang['generalstyle'].$sn++ ?></td>
+   </tr>
+   <tr>
+      <td><?php echo '<img height=200 width=150 src="assets/img/avatar_assets/Hair/hair_0.png">'; ?></td>
+      <td><?php if($hair_1 != 1) { echo '<div style="filter: blur(8px);-webkit-filter: blur(8px);">'; echo '<img height=200 width=150 src="assets/img/avatar_assets/Hair/hair_1.png">'; echo '</div>'; } else { echo '<img height=200 width=150 src="assets/img/avatar_assets/Hair/hair_1.png">'; } ?></td>
+      <td><?php if($hair_2 != 1) { echo '<img height=200 width=150 src="assets/img/avatar_assets/Hair/hair_2.png">'; } else { echo '<img height=200 width=150 src="assets/img/avatar_assets/Hair/hair_2.png">'; } ?></td>
+      <td><?php if($hair_3 != 1) { echo '<img height=200 width=150 src="assets/img/avatar_assets/Hair/hair_3.png">'; } else { echo '<img height=200 width=150 src="assets/img/avatar_assets/Hair/hair_3.png">'; } ?></td>
+      <td><?php if($hair_4 != 1) { echo '<img height=200 width=150 src="assets/img/avatar_assets/Hair/hair_4.png">'; } else { echo '<img height=200 width=150 src="assets/img/avatar_assets/Hair/hair_4.png">'; } ?></td>
+      <td><?php if($hair_5 != 1) { echo '<img height=200 width=150 src="assets/img/avatar_assets/Hair/hair_5.png">'; } else { echo '<img height=200 width=150 src="assets/img/avatar_assets/Hair/hair_5.png">'; } ?></td>
+      <td><?php if($hair_6 != 1) { echo '<img height=200 width=150 src="assets/img/avatar_assets/Hair/hair_6.png">'; } else { echo '<img height=200 width=150 src="assets/img/avatar_assets/Hair/hair_6.png">'; } ?></td>
+      <td><?php if($hair_7 != 1) { echo '<img height=200 width=150 src="assets/img/avatar_assets/Hair/hair_7.png">'; } else { echo '<img height=200 width=150 src="assets/img/avatar_assets/Hair/hair_7.png">'; } ?></td>
+      <td><?php if($hair_8 != 1) { echo '<img height=200 width=150 src="assets/img/avatar_assets/Hair/hair_8.png">'; } else { echo '<img height=200 width=150 src="assets/img/avatar_assets/Hair/hair_8.png">'; } ?></td>
+      <td><?php if($hair_9 != 1) { echo '<img height=200 width=150 src="assets/img/avatar_assets/Hair/hair_9.png">'; } else { echo '<img height=200 width=150 src="assets/img/avatar_assets/Hair/hair_9.png">'; } ?></td>
+      <td><?php if($hair_10 != 1) { echo '<img height=200 width=150 src="assets/img/avatar_assets/Hair/hair_10.png">'; } else { echo '<img height=200 width=150 src="assets/img/avatar_assets/Hair/hair_10.png">'; } ?></td>
+      <td><?php if($hair_11 != 1) { echo '<img height=200 width=150 src="assets/img/avatar_assets/Hair/hair_11.png">'; } else { echo '<img height=200 width=150 src="assets/img/avatar_assets/Hair/hair_11.png">'; } ?></td>
+      <td><?php if($hair_12 != 1) { echo '<img height=200 width=150 src="assets/img/avatar_assets/Hair/hair_12.png">'; } else { echo '<img height=200 width=150 src="assets/img/avatar_assets/Hair/hair_12.png">'; } ?></td>
+   </tr>
+   <tr>
+      <td><output><?php echo $lang['itemowned']; ?></output></td>
+      <td><?php if($hair_1 != 1) { echo '<output>'.$lang['itemnotowned'].'</output>'; } else { echo '<output>'.$lang['itemowned'].'</output>'; } ?></td>
+      <td><?php if($hair_2 != 1) { echo '<output>'.$lang['itemnotowned'].'</output>'; } else { echo '<output>'.$lang['itemowned'].'</output>'; } ?></td>
+      <td><?php if($hair_3 != 1) { echo '<output>'.$lang['itemnotowned'].'</output>'; } else { echo '<output>'.$lang['itemowned'].'</output>'; } ?></td>
+      <td><?php if($hair_4 != 1) { echo '<output>'.$lang['itemnotowned'].'</output>'; } else { echo '<output>'.$lang['itemowned'].'</output>'; } ?></td>
+      <td><?php if($hair_5 != 1) { echo '<output>'.$lang['itemnotowned'].'</output>'; } else { echo '<output>'.$lang['itemowned'].'</output>'; } ?></td>
+      <td><?php if($hair_6 != 1) { echo '<output>'.$lang['itemnotowned'].'</output>'; } else { echo '<output>'.$lang['itemowned'].'</output>'; } ?></td>
+      <td><?php if($hair_7 != 1) { echo '<output>'.$lang['itemnotowned'].'</output>'; } else { echo '<output>'.$lang['itemowned'].'</output>'; } ?></td>
+      <td><?php if($hair_8 != 1) { echo '<output>'.$lang['itemnotowned'].'</output>'; } else { echo '<output>'.$lang['itemowned'].'</output>'; } ?></td>
+      <td><?php if($hair_9 != 1) { echo '<output>'.$lang['itemnotowned'].'</output>'; } else { echo '<output>'.$lang['itemowned'].'</output>'; } ?></td>
+      <td><?php if($hair_10 != 1) { echo '<output>'.$lang['itemnotowned'].'</output>'; } else { echo '<output>'.$lang['itemowned'].'</output>'; } ?></td>
+      <td><?php if($hair_11 != 1) { echo '<output>'.$lang['itemnotowned'].'</output>'; } else { echo '<output>'.$lang['itemowned'].'</output>'; } ?></td>
+      <td><?php if($hair_12 != 1) { echo '<output>'.$lang['itemnotowned'].'</output>'; } else { echo '<output>'.$lang['itemowned'].'</output>'; } ?></td>
+   </tr>
+   <tr>
+      <td></td>
+      <td><?php if($hair_1 != 1) { echo '<input class="btn-primary btn-md full" type="submit" name="hair1" value='.$lang['btn_buy'].'>'; } ?></td>
+      <td><?php if($hair_2 != 1) { echo '<input class="btn-primary btn-md full" type="submit" name="hair2" value='.$lang['btn_buy'].'>'; } ?></td>
+      <td><?php if($hair_3 != 1) { echo '<input class="btn-primary btn-md full" type="submit" name="hair3" value='.$lang['btn_buy'].'>'; } ?></td>
+      <td><?php if($hair_4 != 1) { echo '<input class="btn-primary btn-md full" type="submit" name="hair4" value='.$lang['btn_buy'].'>'; } ?></td>
+      <td><?php if($hair_5 != 1) { echo '<input class="btn-primary btn-md full" type="submit" name="hair5" value='.$lang['btn_buy'].'>'; } ?></td>
+      <td><?php if($hair_6 != 1) { echo '<input class="btn-primary btn-md full" type="submit" name="hair6" value='.$lang['btn_buy'].'>'; } ?></td>
+      <td><?php if($hair_7 != 1) { echo '<input class="btn-primary btn-md full" type="submit" name="hair7" value='.$lang['btn_buy'].'>'; } ?></td>
+      <td><?php if($hair_8 != 1) { echo '<input class="btn-primary btn-md full" type="submit" name="hair8" value='.$lang['btn_buy'].'>'; } ?></td>
+      <td><?php if($hair_9 != 1) { echo '<input class="btn-primary btn-md full" type="submit" name="hair9" value='.$lang['btn_buy'].'>'; } ?></td>
+      <td><?php if($hair_10 != 1) { echo '<input class="btn-primary btn-md full" type="submit" name="hair10" value='.$lang['btn_buy'].'>'; } ?></td>
+      <td><?php if($hair_11 != 1) { echo '<input class="btn-primary btn-md full" type="submit" name="hair11" value='.$lang['btn_buy'].'>'; } ?></td>
+      <td><?php if($hair_12 != 1) { echo '<input class="btn-primary btn-md full" type="submit" name="hair12" value='.$lang['btn_buy'].'>'; } ?></td>
+   </tr>
+</table>
+</div>
+<br>
  </div>
 </div>
