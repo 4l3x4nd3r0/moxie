@@ -7,7 +7,9 @@
 		'logo' => 'M<img src = "assets/img/Moxie.svg" width= 30 height=30>xie',
 		'home' => 'Home',
 		'about' => 'About Us',
-		'about_content' => 'Hello, we are Entropy Crusade, a team of University Students who want to bring change to Romanian Education, we are the makers of Moxie use the email below to get in touch with us!',
+		'about_content' => 'We are Entropy Crusade, a team of 5 teenagers who want to make a change in the education field. Our main purpose is to help digitalizing it and change the way students see school; we want to get it seen as something made out of pleasure, not out of obligation. Moxie, our platform, is the first step to reaching our goal.
+	    We are still at the start of our journey, this being the reason why our platform is still developing. Because of this, we apologize for the eventual lacks or information or errors. 
+		In case you have any questions, complains or suggestion, please contact us using the email adres below. Thank you for your attention!',
 		'contact' => 'Contact:',
 		'english' => 'English',
 		'nepali' => 'Nepali',
@@ -125,5 +127,6 @@
 		'itemtshirt' => 'Item that you do not own is Tshirt.',
 		'itempants' => 'Item that you do not own is Pants.',
 		'itemshoes' => 'Item that you do not own is Shoes',
+		'thismoxie' => 'This is moxie!'
 	);
 ?>

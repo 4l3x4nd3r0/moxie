@@ -337,3 +337,10 @@ iframe {
 	display:block;
 }
 
+.main .body .poza_about {
+  	padding-left: 5%;
+}
+
+.main .body .poza_about p {
+	padding-left: 11%;
+  }
