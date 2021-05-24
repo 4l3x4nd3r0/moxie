@@ -121,6 +121,7 @@
 		'itemowned' => 'Owned',
 		'btn_buy' => 'Buy',
 		'itemnotowned' => 'Not Owned',
+		'cost' => ' Cost: ',
 		'itemhair' => 'Item that you do not own is Hair.',
 		'itemeyes' => 'Item that you do not own is Eyes.',
 		'itemmouth' => 'Item that you do not own is Mouth.',
@@ -129,5 +130,9 @@
 		'itemshoes' => 'Item that you do not own is Shoes',
 		'thismoxie' => 'This is Moxie!',
 		'thiscrusade' => 'This is our logo!',
+		'pct' => ' Starfish',
+		'nopoints' => 'Insufficient Starfish!',
+		'errorpoints' => 'A Problem Has Happened! Oh, no!',
+		'successpoints' => 'The purchased Item has been added to your avatar selection.'
 	);
 ?>

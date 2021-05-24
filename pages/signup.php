@@ -52,7 +52,7 @@
 			$password = $obj->sanitize($conn,$_POST['password']);
             $passwordrepeat = $obj->sanitize($conn,$_POST['passwordrepeat']);
 			$created_at = date('Y-m-d H:i:s');
-            $points = 0;
+            $points = 25;
             $username = $nume.'_'.$initialatata.'_'.$prenume;
             $full_name = $nume.' '.$initialatata.' '.$prenume;
             $avatar_path = 'assets/img/avatar_assets/default_avatar.png';

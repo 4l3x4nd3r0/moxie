@@ -34,7 +34,8 @@
     ?>
     <?php 
 			$tbl_name = 'tbl_rewards';
-			$query = $obj->select_data($tbl_name);
+         $where = "id='$id'";
+			$query = $obj->select_data($tbl_name,$where);
 			$res = $obj->execute_query($conn,$query);
 			if($res)
 			{
@@ -42,7 +43,6 @@
 				if($count_rows > 0)
 				{
 					$row=$obj->fetch_data($res);
-					$id = $row['id'];
                     $hair_1 = $row['hair_1'];
                     $hair_2 = $row['hair_2'];
                     $hair_3 = $row['hair_3'];
@@ -110,6 +110,22 @@
                     $tshirt_8 = $row['tshirt_8'];
                     $tshirt_9 = $row['tshirt_9'];
 					}
+               else
+               {
+                  $data = "
+                     id='$id'
+                  ";
+                  $query = $obj->insert_data($tbl_name,$data);
+                  $res = $obj->execute_query($conn,$query);
+                  if($res==true)
+                  {
+                     header('location:'.SITEURL.'index.php?page=rewards');
+                  }
+                  else
+                  {
+                     header('location:'.SITEURL.'index.php?page=profile');
+                  }
+               }
 				}
 	?>
     <div class="body">

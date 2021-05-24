@@ -2,6 +2,24 @@
  <div class="wrapper">
     <h1> <?php echo $lang['rewardsh'] ?> </h1>
     <br>
+    <?php 
+		$tbl_name = 'tbl_users';
+      $id = $_SESSION['user'];
+		$where = "username='$id' OR email='$id'";
+
+		$query = $obj->select_data($tbl_name,$where);
+		$res = $obj->execute_query($conn,$query);
+		if($res == true)
+		{
+			$count_rows = $obj->num_rows($res);
+			if($count_rows>0)
+			{
+				$row=$obj->fetch_data($res);
+				$id = $row['id'];
+				$points = $row['points'];
+         }
+      }
+	?>
     <?php
       $price_1 = 25;
       $price_2 = 35;
@@ -11,7 +29,8 @@
     ?>
     <?php 
 			$tbl_name = 'tbl_rewards';
-			$query = $obj->select_data($tbl_name);
+         $where = "id='$id'";
+			$query = $obj->select_data($tbl_name,$where);
 			$res = $obj->execute_query($conn,$query);
 			if($res)
 			{
@@ -19,7 +38,6 @@
 				if($count_rows > 0)
 				{
 					$row=$obj->fetch_data($res);
-					$id = $row['id'];
                     $hair_1 = $row['hair_1'];
                     $hair_2 = $row['hair_2'];
                     $hair_3 = $row['hair_3'];
@@ -87,31 +105,163 @@
                     $tshirt_8 = $row['tshirt_8'];
                     $tshirt_9 = $row['tshirt_9'];
 					}
+               else
+               {
+                  $data = "
+                     id='$id'
+                  ";
+                  $query = $obj->insert_data($tbl_name,$data);
+                  $res = $obj->execute_query($conn,$query);
+                  if($res==true)
+                  {
+                     header('location:'.SITEURL.'index.php?page=rewards');
+                  }
+                  else
+                  {
+                     header('location:'.SITEURL.'index.php?page=profile');
+                  }
+               }
 				}
-		?>
-      <?php 
-		$tbl_name = 'tbl_users';
-      $id = $_SESSION['user'];
-		$where = "username='$id' OR email='$id'";
-
-		$query = $obj->select_data($tbl_name,$where);
-		$res = $obj->execute_query($conn,$query);
-		if($res == true)
-		{
-			$count_rows = $obj->num_rows($res);
-			if($count_rows>0)
-			{
-				$row=$obj->fetch_data($res);
-				$id = $row['id'];
-				$points = $row['points'];
-         }
-      }
-		?>
+	?>
 <div>
 <?php
    echo '<strong>'.$lang['pointsp'].'</strong>'; echo ' '.$points;
 ?>
 </div>
+<?php
+   if($_SERVER['REQUEST_METHOD'] == "POST" and isset($_POST['shoes2']))
+   {
+      $cost = $price_1;
+      $item = $shoes_4;
+      if($points>$cost OR $points = $cost)
+      {
+         $data = "
+            shoes_2='1'
+         ";
+         $tbl_name='tbl_rewards';
+         $where = "id='$id'";
+         $query = $obj->update_data($tbl_name,$data,$where);
+         $res = $obj->execute_query($conn,$query);
+
+         if($res==true)
+            {
+               echo "<div class='success'>".$lang['successpoints']."</div>";
+               $tbl_name = 'tbl_users';
+               $where = "id='$id'";
+               $new_points = $points - $cost;
+               $data = "
+                  points='$new_points'
+               ";
+               $query = $obj->update_data($tbl_name,$data,$where);
+               $res = $obj->execute_query($conn,$query);
+               if($res==true){
+                  header('location:'.SITEURL.'index.php?page=rewards');
+               }
+               else
+               {
+                  echo "<div class='error'>".$lang['nopoints']."</div>";
+               }
+            }
+            else
+            {
+               echo "<div class='error'>".$lang['errorpoints']."</div>";
+               header('location:'.SITEURL.'index.php?page=rewards');
+            }
+      }
+      else
+      {
+         echo "<div class='error'>".$lang['nopoints']."</div>";
+      }
+   }
+   if($_SERVER['REQUEST_METHOD'] == "POST" and isset($_POST['shoes3']))
+   {
+      $cost = $price_1;
+      $item = $shoes_4;
+      if($points>$cost OR $points = $cost)
+      {
+         $data = "
+            shoes_3='1'
+         ";
+         $tbl_name='tbl_rewards';
+         $where = "id='$id'";
+         $query = $obj->update_data($tbl_name,$data,$where);
+         $res = $obj->execute_query($conn,$query);
+
+         if($res==true)
+            {
+               echo "<div class='success'>".$lang['successpoints']."</div>";
+               $tbl_name = 'tbl_users';
+               $where = "id='$id'";
+               $new_points = $points - $cost;
+               $data = "
+                  points='$new_points'
+               ";
+               $query = $obj->update_data($tbl_name,$data,$where);
+               $res = $obj->execute_query($conn,$query);
+               if($res==true){
+                  header('location:'.SITEURL.'index.php?page=rewards');
+               }
+               else
+               {
+                  echo "<div class='error'>".$lang['nopoints']."</div>";
+               }
+            }
+            else
+            {
+               echo "<div class='error'>".$lang['errorpoints']."</div>";
+               header('location:'.SITEURL.'index.php?page=rewards');
+            }
+      }
+      else
+      {
+         echo "<div class='error'>".$lang['nopoints']."</div>";
+      }
+   }
+   if($_SERVER['REQUEST_METHOD'] == "POST" and isset($_POST['shoes4']))
+   {
+      $cost = $price_1;
+      $item = $shoes_4;
+      if($points>$cost OR $points = $cost)
+      {
+         $data = "
+            shoes_4='1'
+         ";
+         $tbl_name='tbl_rewards';
+         $where = "id='$id'";
+         $query = $obj->update_data($tbl_name,$data,$where);
+         $res = $obj->execute_query($conn,$query);
+
+         if($res==true)
+            {
+               echo "<div class='success'>".$lang['successpoints']."</div>";
+               $tbl_name = 'tbl_users';
+               $where = "id='$id'";
+               $new_points = $points - $cost;
+               $data = "
+                  points='$new_points'
+               ";
+               $query = $obj->update_data($tbl_name,$data,$where);
+               $res = $obj->execute_query($conn,$query);
+               if($res==true){
+                  header('location:'.SITEURL.'index.php?page=rewards');
+               }
+               else
+               {
+                  echo "<div class='error'>".$lang['nopoints']."</div>";
+               }
+            }
+            else
+            {
+               echo "<div class='error'>".$lang['errorpoints']."</div>";
+               header('location:'.SITEURL.'index.php?page=rewards');
+            }
+      }
+      else
+      {
+         echo "<div class='error'>".$lang['nopoints']."</div>";
+      }
+   }
+?>
 <div style="overflow-x:auto;">
 <table>
    <tr>
@@ -445,32 +595,34 @@
       <td><?php echo '<img height=200 width=150 src="assets/img/avatar_assets/Shoes/shoes_pink.png">'; ?></td>
    </tr>
    <tr>
-      <td><?php if($shoes_1 != 1) { echo '<output>'.$lang['itemnotowned'].'</output>'; } else { echo '<output>'.$lang['itemowned'].'</output>'; } ?></td>
-      <td><?php if($shoes_2 != 1) { echo '<output>'.$lang['itemnotowned'].'</output>'; } else { echo '<output>'.$lang['itemowned'].'</output>'; } ?></td>
-      <td><?php if($shoes_3 != 1) { echo '<output>'.$lang['itemnotowned'].'</output>'; } else { echo '<output>'.$lang['itemowned'].'</output>'; } ?></td>
-      <td><?php if($shoes_4 != 1) { echo '<output>'.$lang['itemnotowned'].'</output>'; } else { echo '<output>'.$lang['itemowned'].'</output>'; } ?></td>
-      <td><?php if($shoes_5 != 1) { echo '<output>'.$lang['itemnotowned'].'</output>'; } else { echo '<output>'.$lang['itemowned'].'</output>'; } ?></td>
-      <td><?php if($shoes_6 != 1) { echo '<output>'.$lang['itemnotowned'].'</output>'; } else { echo '<output>'.$lang['itemowned'].'</output>'; } ?></td>
-      <td><?php if($shoes_7 != 1) { echo '<output>'.$lang['itemnotowned'].'</output>'; } else { echo '<output>'.$lang['itemowned'].'</output>'; } ?></td>
-      <td><?php if($shoes_8 != 1) { echo '<output>'.$lang['itemnotowned'].'</output>'; } else { echo '<output>'.$lang['itemowned'].'</output>'; } ?></td>
-      <td><?php if($shoes_9 != 1) { echo '<output>'.$lang['itemnotowned'].'</output>'; } else { echo '<output>'.$lang['itemowned'].'</output>'; } ?></td>
-      <td><?php if($shoes_10 != 1) { echo '<output>'.$lang['itemnotowned'].'</output>'; } else { echo '<output>'.$lang['itemowned'].'</output>'; } ?></td>
-      <td><?php if($shoes_11 != 1) { echo '<output>'.$lang['itemnotowned'].'</output>'; } else { echo '<output>'.$lang['itemowned'].'</output>'; } ?></td>
-      <td><?php if($shoes_12 != 1) { echo '<output>'.$lang['itemnotowned'].'</output>'; } else { echo '<output>'.$lang['itemowned'].'</output>'; } ?></td>
+      <td><?php if($shoes_1 != 1) { echo '<output>'.$lang['itemnotowned'].'</output>'.'<br>'.'<output>'.$lang['cost'].$price_1.$lang['pct'].'</output>'; } else { echo '<output>'.$lang['itemowned'].'</output>'; } ?></td>
+      <td><?php if($shoes_2 != 1) { echo '<output>'.$lang['itemnotowned'].'</output>'.'<br>'.'<output>'.$lang['cost'].$price_1.$lang['pct'].'</output>'; } else { echo '<output>'.$lang['itemowned'].'</output>'; } ?></td>
+      <td><?php if($shoes_3 != 1) { echo '<output>'.$lang['itemnotowned'].'</output>'.'<br>'.'<output>'.$lang['cost'].$price_1.$lang['pct'].'</output>'; } else { echo '<output>'.$lang['itemowned'].'</output>'; } ?></td>
+      <td><?php if($shoes_4 != 1) { echo '<output>'.$lang['itemnotowned'].'</output>'.'<br>'.'<output>'.$lang['cost'].$price_1.$lang['pct'].'</output>'; } else { echo '<output>'.$lang['itemowned'].'</output>'; } ?></td>
+      <td><?php if($shoes_5 != 1) { echo '<output>'.$lang['itemnotowned'].'</output>'.'<br>'.'<output>'.$lang['cost'].$price_1.$lang['pct'].'</output>'; } else { echo '<output>'.$lang['itemowned'].'</output>'; } ?></td>
+      <td><?php if($shoes_6 != 1) { echo '<output>'.$lang['itemnotowned'].'</output>'.'<br>'.'<output>'.$lang['cost'].$price_1.$lang['pct'].'</output>'; } else { echo '<output>'.$lang['itemowned'].'</output>'; } ?></td>
+      <td><?php if($shoes_7 != 1) { echo '<output>'.$lang['itemnotowned'].'</output>'.'<br>'.'<output>'.$lang['cost'].$price_2.$lang['pct'].'</output>'; } else { echo '<output>'.$lang['itemowned'].'</output>'; } ?></td>
+      <td><?php if($shoes_8 != 1) { echo '<output>'.$lang['itemnotowned'].'</output>'.'<br>'.'<output>'.$lang['cost'].$price_2.$lang['pct'].'</output>'; } else { echo '<output>'.$lang['itemowned'].'</output>'; } ?></td>
+      <td><?php if($shoes_9 != 1) { echo '<output>'.$lang['itemnotowned'].'</output>'.'<br>'.'<output>'.$lang['cost'].$price_3.$lang['pct'].'</output>'; } else { echo '<output>'.$lang['itemowned'].'</output>'; } ?></td>
+      <td><?php if($shoes_10 != 1) { echo '<output>'.$lang['itemnotowned'].'</output>'.'<br>'.'<output>'.$lang['cost'].$price_3.$lang['pct'].'</output>'; } else { echo '<output>'.$lang['itemowned'].'</output>'; } ?></td>
+      <td><?php if($shoes_11 != 1) { echo '<output>'.$lang['itemnotowned'].'</output>'.'<br>'.'<output>'.$lang['cost'].$price_4.$lang['pct'].'</output>'; } else { echo '<output>'.$lang['itemowned'].'</output>'; } ?></td>
+      <td><?php if($shoes_12 != 1) { echo '<output>'.$lang['itemnotowned'].'</output>'.'<br>'.'<output>'.$lang['cost'].$price_5.$lang['pct'].'</output>'; } else { echo '<output>'.$lang['itemowned'].'</output>'; } ?></td>
    </tr>
    <tr>
-      <td><?php if($shoes_1 != 1) { echo '<input class="btn-primary btn-md full" type="submit" name="shoes1" value='.$lang['btn_buy'].'>'; } ?></td>
-      <td><?php if($shoes_2 != 1) { echo '<input class="btn-primary btn-md full" type="submit" name="shoes2" value='.$lang['btn_buy'].'>'; } ?></td>
-      <td><?php if($shoes_3 != 1) { echo '<input class="btn-primary btn-md full" type="submit" name="shoes3" value='.$lang['btn_buy'].'>'; } ?></td>
-      <td><?php if($shoes_4 != 1) { echo '<input class="btn-primary btn-md full" type="submit" name="shoes4" value='.$lang['btn_buy'].'>'; } ?></td>
-      <td><?php if($shoes_5 != 1) { echo '<input class="btn-primary btn-md full" type="submit" name="shoes5" value='.$lang['btn_buy'].'>'; } ?></td>
-      <td><?php if($shoes_6 != 1) { echo '<input class="btn-primary btn-md full" type="submit" name="shoes6" value='.$lang['btn_buy'].'>'; } ?></td>
-      <td><?php if($shoes_7 != 1) { echo '<input class="btn-primary btn-md full" type="submit" name="shoes7" value='.$lang['btn_buy'].'>'; } ?></td>
-      <td><?php if($shoes_8 != 1) { echo '<input class="btn-primary btn-md full" type="submit" name="shoes8" value='.$lang['btn_buy'].'>'; } ?></td>
-      <td><?php if($shoes_9 != 1) { echo '<input class="btn-primary btn-md full" type="submit" name="shoes9" value='.$lang['btn_buy'].'>'; } ?></td>
-      <td><?php if($shoes_10 != 1) { echo '<input class="btn-primary btn-md full" type="submit" name="shoes10" value='.$lang['btn_buy'].'>'; } ?></td>
-      <td><?php if($shoes_11 != 1) { echo '<input class="btn-primary btn-md full" type="submit" name="shoes11" value='.$lang['btn_buy'].'>'; } ?></td>
-      <td><?php if($shoes_12 != 1) { echo '<input class="btn-primary btn-md full" type="submit" name="shoes12" value='.$lang['btn_buy'].'>'; } ?></td>
+      <form method="post">
+         <td><?php if($shoes_1 != 1) { echo '<input class="btn-primary btn-md full" type="submit" name="shoes1" value='.$lang['btn_buy'].'>'; } ?></td>
+         <td><?php if($shoes_2 != 1) { echo '<input class="btn-primary btn-md full" type="submit" name="shoes2" value='.$lang['btn_buy'].'>'; } ?></td>
+         <td><?php if($shoes_3 != 1) { echo '<input class="btn-primary btn-md full" type="submit" name="shoes3" value='.$lang['btn_buy'].'>'; } ?></td>
+         <td><?php if($shoes_4 != 1) { echo '<input class="btn-primary btn-md full" type="submit" name="shoes4" value='.$lang['btn_buy'].'>'; } ?></td>
+         <td><?php if($shoes_5 != 1) { echo '<input class="btn-primary btn-md full" type="submit" name="shoes5" value='.$lang['btn_buy'].'>'; } ?></td>
+         <td><?php if($shoes_6 != 1) { echo '<input class="btn-primary btn-md full" type="submit" name="shoes6" value='.$lang['btn_buy'].'>'; } ?></td>
+         <td><?php if($shoes_7 != 1) { echo '<input class="btn-primary btn-md full" type="submit" name="shoes7" value='.$lang['btn_buy'].'>'; } ?></td>
+         <td><?php if($shoes_8 != 1) { echo '<input class="btn-primary btn-md full" type="submit" name="shoes8" value='.$lang['btn_buy'].'>'; } ?></td>
+         <td><?php if($shoes_9 != 1) { echo '<input class="btn-primary btn-md full" type="submit" name="shoes9" value='.$lang['btn_buy'].'>'; } ?></td>
+         <td><?php if($shoes_10 != 1) { echo '<input class="btn-primary btn-md full" type="submit" name="shoes10" value='.$lang['btn_buy'].'>'; } ?></td>
+         <td><?php if($shoes_11 != 1) { echo '<input class="btn-primary btn-md full" type="submit" name="shoes11" value='.$lang['btn_buy'].'>'; } ?></td>
+         <td><?php if($shoes_12 != 1) { echo '<input class="btn-primary btn-md full" type="submit" name="shoes12" value='.$lang['btn_buy'].'>'; } ?></td>
+      </form>
    </tr>
 </table>
 </div>
