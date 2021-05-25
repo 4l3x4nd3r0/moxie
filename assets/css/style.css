@@ -356,3 +356,16 @@ iframe {
   .main .body .row {
 	display: flex;
   }
+
+  .search_bar {
+	display: inline;
+  }
+
+  .search_bar .search{
+	display: inline;
+	float: inline-end;
+  }
+
+  .search_bar .search .sbar{
+  width: 400px; 
+}

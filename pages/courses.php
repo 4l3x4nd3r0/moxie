@@ -1,34 +1,37 @@
 <div class="main">
- <div class="wrapper">
-   <h1> <?php echo $lang['coursesh'] ?></h1>
    <form action="" method="POST">
-   <select name="category">
-   <option value="0">None</option>
-				<?php 
-					$tbl_name = 'tbl_categories';
-					$query = $obj->select_data($tbl_name);
-					$res = $obj->execute_query($conn,$query);
-					if($res==true)
-					{
-						$count_rows = $obj->num_rows($res);
-						if($count_rows>0)
-						{
-							while ($row=$obj->fetch_data($res)) {
-								$id=$row['id'];
-								$title=$row['category_name_'.$_SESSION['lang']];
-								?>
-								<option value="<?php echo $id; ?>"><?php echo $title; ?></option>
-								<?php
-							}
-						}
-						else{
-							?>
+      <div class="body">
+      <h1> <?php echo $lang['coursesh'] ?></h1>
+      <br>
+      <div class="search_bar">
+         <select name="category">
+         <option value="0">None</option>
+                  <?php 
+                     $tbl_name = 'tbl_categories';
+                     $query = $obj->select_data($tbl_name);
+                     $res = $obj->execute_query($conn,$query);
+                     if($res==true)
+                     {
+                        $count_rows = $obj->num_rows($res);
+                        if($count_rows>0)
+                        {
+                           while ($row=$obj->fetch_data($res)) {
+                           $id=$row['id'];
+                           $title=$row['category_name_'.$_SESSION['lang']];
+                           ?>
+                           <option value="<?php echo $id; ?>"><?php echo $title; ?></option>
+                           <?php
+                        }
+                     }
+                     else{
+                        ?>
 
-							<?php 
-						}
-					}
-				?>
-			</select>
+                        <?php 
+                     }
+                  }
+               ?>
+            </select>
+      
    <select name="subcategory">
    <option value="0">None</option>
 				<?php 
@@ -57,9 +60,17 @@
 				?>
 			</select>
    <input id="filter" type="submit" name="filter" value="Filter">
-   <input name="searchtext" type="text" placeholder="<?php echo $lang['search']; ?>">
-   <input id="submit" type="submit" name="search" value="Search">
+   </div>
+
+   <div class="search_bar">
+      <div class="search">
+         <input class="sbar" name="searchtext" type="text" placeholder="<?php echo $lang['search']; ?>">
+         <input id="submit" type="submit" name="search" value="Search">
+      </div>
+   </div>
+
    </form>
+
     <?php
       if($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['filter']))
       {
@@ -98,6 +109,7 @@
                      <button class="btn-primary btn-sm"><?php echo $lang['read_more'] ?></button>
                   </a>
                </div>
+            
                <?php if($sn > 3) {
                         echo '<br>';
                         $sn = 0;
@@ -172,7 +184,7 @@
                      $created_at = $row['created_at'];
                      $sn++;
                      ?>
-   
+
                      <div class="body">
                         <h2><?php echo $post_title; ?></h2>
                         <br>
@@ -184,6 +196,7 @@
                            <button class="btn-primary btn-sm"><?php echo $lang['read_more'] ?></button>
                         </a>
                      </div>
+                  
                      <?php if($sn > 3) {
                         echo '<br>';
                         $sn = 0;
@@ -197,5 +210,4 @@
                }
             }
          ?>
- </div>
 </div>
