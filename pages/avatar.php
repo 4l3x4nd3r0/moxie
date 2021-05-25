@@ -34,7 +34,7 @@
     ?>
     <?php 
 			$tbl_name = 'tbl_rewards';
-         $where = "id='$id'";
+            $where = "id='$id'";
 			$query = $obj->select_data($tbl_name,$where);
 			$res = $obj->execute_query($conn,$query);
 			if($res)

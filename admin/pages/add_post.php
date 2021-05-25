@@ -138,7 +138,38 @@
 			if($res == true)
 			{
 				$_SESSION['add'] = "<div class='success'>".$lang['add_success']."</div>";
-				header('location:'.SITEURL.'admin/index.php?page=posts');
+				$tbl_name='tbl_posts';
+				$where = "title_en='$title_en'";
+				$query = $obj->select_data($tbl_name,$where);
+				$res = $obj->execute_query($conn,$query);
+				if($res == true)
+				{
+					$count_rows = $obj->num_rows($res);
+					if($count_rows>0)
+					{
+						$row=$obj->fetch_data($res);
+						$lessid = $row['id'];
+						$tbl_name='tbl_lessons';
+						$col1 = 'lessons_'.$lessid;
+						$col2 = 'test_'.$lessid;
+						$query = $obj->add_lesson($tbl_name, $col1, $col2);
+						$res = $obj->execute_query($conn,$query);
+						if($res == true)
+						{
+							header('location:'.SITEURL.'admin/index.php?page=posts');
+						}
+						else
+						{
+							$_SESSION['add'] = "<div class='error'>".$lang['add_fail']."</div>";
+							header('location:'.SITEURL.'admin/index.php?page=add_post');
+						}
+					}
+					else
+					{
+						$_SESSION['add'] = "<div class='error'>".$lang['add_fail']."</div>";
+						header('location:'.SITEURL.'admin/index.php?page=add_post');
+					}
+				}
 			}
 			else
 			{
