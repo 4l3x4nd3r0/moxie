@@ -83,6 +83,12 @@
 							echo sprintf($formatHeader, $site,'login', $lang['login']);
 						}
 					?>
+					<li class="right">
+						<a href="<?php echo SITEURL; ?>index.php?lang=ro"><img src="https://upload.wikimedia.org/wikipedia/commons/7/73/Flag_of_Romania.svg" height=25 width=25></a>
+					</li>
+					<li class="right">
+						<a href="<?php echo SITEURL; ?>index.php?lang=en"><img src="https://upload.wikimedia.org/wikipedia/commons/a/ae/Flag_of_the_United_Kingdom.svg" height=25 width=25></a>
+					</li>
 				</ul>
 			</div>
 
