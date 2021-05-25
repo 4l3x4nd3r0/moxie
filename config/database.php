@@ -41,7 +41,7 @@
 
 		public function add_lesson($tbl_name, $col1, $col2)
 		{
-			$query = "ALTER TABLE $tbl_name ADD {$col1} INT(10) NOT NULL DEFAULT 0, ADD {$col2} INT(10) NOT NULL DEFAULT 0";
+			$query = "ALTER TABLE $tbl_name ADD {$col1} INT(10) NOT NULL DEFAULT 0, ADD {$col2} INT(10) NOT NULL DEFAULT 999";
 			return $query;
 		}
 
