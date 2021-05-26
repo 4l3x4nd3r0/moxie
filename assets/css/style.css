@@ -341,6 +341,7 @@ iframe {
   .main .body .column {
 	flex: 33.33%;
 	padding: 5%;
+	padding-left: 1%;
   }
 
   .main .body .column .moxie h2 {
@@ -368,4 +369,11 @@ iframe {
 
   .search_bar .search .sbar{
   width: 400px; 
-}
+ }
+ 
+ .column .courses .body{
+	padding:3%;
+	flex: 33.33%;
+	width: 105%;
+	height: 105%;
+ }

@@ -4,7 +4,7 @@
       <h1> <?php echo $lang['coursesh'] ?></h1>
       <br>
       <div class="search_bar">
-         <select name="category">
+         <select style="height:30px;width:250px;" name="category">
          <option value="0">None</option>
                   <?php 
                      $tbl_name = 'tbl_categories';
@@ -30,9 +30,8 @@
                      }
                   }
                ?>
-            </select>
-      
-   <select name="subcategory">
+            </select>  
+   <select style="height:30px;width:250px;" name="subcategory">
    <option value="0">None</option>
 				<?php 
 					$tbl_name = 'tbl_sub_categories';
@@ -59,7 +58,8 @@
 					}
 				?>
 			</select>
-   <input id="filter" type="submit" name="filter" value="Filter">
+
+      <input id="filter" type="submit" name="filter" value="Filter">
    </div>
 
    <div class="search_bar">
@@ -71,6 +71,7 @@
 
    </form>
 
+   <div class="row">
     <?php
       if($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['filter']))
       {
@@ -98,6 +99,8 @@
                $created_at = $row['created_at'];
                $sn++;
             ?>
+             <div class="column">
+              <div class="courses">  
                <div class="body">
                   <h2><?php echo $post_title; ?></h2>
                   <br>
@@ -109,6 +112,8 @@
                      <button type="button" class="btn-primary btn-sm"><?php echo $lang['read_more'] ?></button>
                   </a>
                </div>
+              </div>
+             </div>
             
                <?php if($sn > 3) {
                         echo '<br>';
@@ -144,6 +149,8 @@
                $created_at = $row['created_at'];
                $sn++;
             ?>
+              <div class="column">
+               <div class="courses">
                <div class="body">
                   <h2><?php echo $post_title; ?></h2>
                   <br>
@@ -155,6 +162,8 @@
                      <button type="button" class="btn-primary btn-sm"><?php echo $lang['read_more'] ?></button>
                   </a>
                </div>
+              </div>
+            </div>
                <?php if($sn > 3) {
                         echo '<br>';
                         $sn = 0;
@@ -186,8 +195,9 @@
                      $created_at = $row['created_at'];
                      $sn++;
                      ?>
-
-                     <div class="body">
+                    <div class="column">
+                     <div class="courses">
+                      <div class="body">
                         <h2><?php echo $post_title; ?></h2>
                         <br>
                         <p>
@@ -198,7 +208,9 @@
                            <button type="button" class="btn-primary btn-sm"><?php echo $lang['read_more'] ?></button>
                         </a>
                      </div>
-                  
+                  </div>
+                  </div>
+
                      <?php if($sn > 3) {
                         echo '<br>';
                         $sn = 0;
@@ -214,4 +226,5 @@
       }
       
          ?>
+      </div>
 </div>
