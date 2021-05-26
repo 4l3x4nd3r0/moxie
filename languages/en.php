@@ -186,5 +186,7 @@
 		'a54' => '14 over 20',
 		'test' => 'Test',
 		'turnin' => 'Turn In',
+		'congrats_test' => 'Congratulations you have achieved: ',
+		'outof' => 'out of',
 	);
 ?>

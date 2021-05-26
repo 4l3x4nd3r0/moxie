@@ -160,6 +160,8 @@
 		'pct' => ' Stele de mare',
 		'nopoints' => 'Stele de mare insuficiente !',
 		'errorpoints' => 'O problemă a apărut!Oh, nu!',
-		'successpoints' => 'Articolul achiziționat a fost adăugat la selecția dvs. de avatar.'
+		'successpoints' => 'Articolul achiziționat a fost adăugat la selecția dvs. de avatar.',
+		'congrats_test' => 'Felicitări ai obținut: ',
+		'outof' => 'din',
 	);
 ?>
