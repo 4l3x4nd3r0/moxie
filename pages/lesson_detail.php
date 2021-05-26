@@ -160,18 +160,21 @@
 					}
 					else
 					{
-						$tbl_name = 'tbl_lessons';
-						$test = $results;
-						$data = "
-							test_$id='$results'
-						";
-						$where = "id='$uid'";
-						$query = $obj->update_data($tbl_name,$data,$where);
-						$res = $obj->execute_query($conn,$query);
-						if($res==true)
-						{
-							echo $lang['congrats_test'].' '.$results.' '.$lang['outof'].' '.$max;
-						}
+						
+					}
+				}
+				else
+				{
+					$tbl_name = 'tbl_lessons';
+					$data = "
+						test_$id='$results'
+					";
+					$where = "id='$uid'";
+					$query = $obj->update_data($tbl_name,$data,$where);
+					$res = $obj->execute_query($conn,$query);
+					if($res==true)
+					{
+						echo $lang['congrats_test'].' '.$results.' '.$lang['outof'].' '.$max;
 					}
 				}
 			}
