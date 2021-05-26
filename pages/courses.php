@@ -1,4 +1,60 @@
 <div class="main">
+   <?php 
+		$tbl_name = 'tbl_users';
+      $uid = $_SESSION['user'];
+		$where = "username='$uid' OR email='$uid'";
+
+		$query = $obj->select_data($tbl_name,$where);
+		$res = $obj->execute_query($conn,$query);
+		if($res == true)
+		{
+			$count_rows = $obj->num_rows($res);
+			if($count_rows>0)
+			{
+				$row=$obj->fetch_data($res);
+				$uid = $row['id'];
+         }
+      }
+	?>
+   <?php
+		$tbl_name = 'tbl_lessons';
+		$where = "id='$uid'";
+		$query = $obj->select_data($tbl_name,$where);
+		$res = $obj->execute_query($conn,$query);
+		if($res == true)
+		{
+			$count_rows = $obj->num_rows($res);
+			if($count_rows==1)
+			{
+            $sn=1;
+            $id=1;
+				while($row = $obj->fetch_data($res))
+            {
+               $lesson[$sn] = $row['lessons_'.$id];
+				   $test[$sn] = $row['test_'.$id];
+               $sn++;
+               $id++;
+            }
+				
+			}
+			else
+			{
+				$data = "
+               id='$uid'
+            ";
+				$query = $obj->insert_data($tbl_name,$data);
+            $res = $obj->execute_query($conn,$query);
+				if($res==true)
+                  {
+                     header('location:'.SITEURL.'index.php?page=courses');
+                  }
+                  else
+                  {
+                     
+                  }
+			}
+		}
+	?>
    <form action="" method="POST">
       <div class="body">
       <h1> <?php echo $lang['coursesh'] ?></h1>
@@ -109,16 +165,18 @@
                   </p>
                   <br>
                   <a href="<?php echo SITEURL; ?>index.php?page=lesson_detail&id=<?php echo $id; ?>">
-                     <button type="button" class="btn-primary btn-sm"><?php echo $lang['read_more'] ?></button>
+                     <button type="button" class="btn-primary btn-sm"><?php echo $lang['accesscourse'] ?></button>
                   </a>
                </div>
               </div>
              </div>
             
-               <?php if($sn > 3) {
-                        echo '<br>';
-                        $sn = 0;
-                     } ?>
+            <?php 
+               if($sn > 3) {
+                  echo '<br>';
+                  $sn = 0;
+               }
+            ?>
                      <?php
                   }
             }
@@ -159,15 +217,17 @@
                   </p>
                   <br>
                   <a href="<?php echo SITEURL; ?>index.php?page=lesson_detail&id=<?php echo $id; ?>">
-                     <button type="button" class="btn-primary btn-sm"><?php echo $lang['read_more'] ?></button>
+                     <button type="button" class="btn-primary btn-sm"><?php echo $lang['accesscourse'] ?></button>
                   </a>
                </div>
               </div>
             </div>
-               <?php if($sn > 3) {
-                        echo '<br>';
-                        $sn = 0;
-                     } ?>
+               <?php 
+                  if($sn > 3) {
+                     echo '<br>';
+                     $sn = 0;
+                  }
+               ?>
                      <?php
                   }
                }
@@ -205,7 +265,7 @@
                         </p>
                         <br>
                         <a href="<?php echo SITEURL; ?>index.php?page=lesson_detail&id=<?php echo $id; ?>">
-                           <button type="button" class="btn-primary btn-sm"><?php echo $lang['read_more'] ?></button>
+                           <button type="button" class="btn-primary btn-sm"><?php echo $lang['accesscourse'] ?></button>
                         </a>
                      </div>
                   </div>
