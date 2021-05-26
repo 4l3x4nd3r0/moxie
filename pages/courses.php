@@ -90,8 +90,8 @@
          $res = $obj->execute_query($conn,$query);
          $count_rows = $obj->num_rows($res);
          if($count_rows>0)
-         {
-            while ($row=$obj->fetch_data($res)) {
+            {
+               while ($row=$obj->fetch_data($res)) {
                $id = $row['id'];
                $post_title = $row['title_'.$_SESSION['lang']];
                $post_description = $row['description_'.$_SESSION['lang']];
@@ -116,13 +116,15 @@
                      } ?>
                      <?php
                   }
-               }
-               else
-               {
-                  echo "<div class = 'error'>".$lang['add_fail_password_not_match']."</div>";
-               }
+            }
+         else
+         {
+            echo "<div class = 'error'>".$lang['add_fail_password_not_match']."</div>";
          }
-      if($_SERVER['REQUEST_METHOD'] == "POST" and isset($_POST['search']))
+      }
+      else
+      {
+         if($_SERVER['REQUEST_METHOD'] == "POST" and isset($_POST['search']))
       {
          //echo "Click";
          $search = $obj->sanitize($conn,$_POST['searchtext']);
@@ -209,5 +211,7 @@
                   echo "<div class = 'error'>".$lang['add_fail_password_not_match']."</div>";
                }
             }
+      }
+      
          ?>
 </div>
