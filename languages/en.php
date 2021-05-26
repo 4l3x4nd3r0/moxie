@@ -95,12 +95,34 @@
 		'avatarfemale' => 'Female',
 		'avataryes' => 'Yes',
 		'avatarno' => 'No',
-		'avatareye' => 'Eyes',
-		'avatarmouth' => 'Mouth',
-		'avatarhat' => 'Hair',
-		'avatarpants' => 'Pants',
-		'avatarbody' => 'Shirt',
-		'avatarshoes' => 'Shoes',
+		'avatareye' => 'E 
+		  				Y
+					    E
+						S',
+		'avatarmouth' => 'M
+						  O
+						  U
+						  T
+						  H',
+		'avatarhat' => 'H
+						A
+						I
+						R',
+		'avatarpants' => 'P
+						  A
+						  N
+						  T
+						  S',
+		'avatarbody' => 'S
+						 H
+						 I
+						 R
+						 T',
+		'avatarshoes' => 'S
+						  H
+						  O
+						  E
+						  S',
 		'emailregister' => 'Email',
 		'fatherinitial' => "Father's Name Initial",
 		'firstnameregister' => 'First Name',

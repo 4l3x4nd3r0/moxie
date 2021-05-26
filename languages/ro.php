@@ -7,7 +7,9 @@
 		'logo' => 'Moxie',
 		'home' => 'Acasă',
 		'about' => 'Despre noi',
-		'about_content' => 'Bună ziua, suntem Entropy Crusade, o echipă formată din studenți universitari care doresc să aducă schimbări în învățământul românesc, suntem creatorii platformei Moxie, folosiți e-mailul de mai jos pentru a intra în legătură cu noi!',
+		'about_content' => 'Noi suntem Entropy Crusade, o echipă formată din 5 tineri ce vor să aducă o schimbare în domeniul educaţiei. Scopul nostru principal este să ajutăm la digitalizarea acesteia şi să schimbăm felul în care elevii văd şcoala; să o aducem la pragul de ceva făcut cu plăcere, nu doar din obligaţie. Moxie, platforma noastră, este primul pas prin care ne dorim să ne atingem ţelul. 
+		Suntem încă la început de drum, motiv pentru care platforma este încă în dezvoltare şi continua creştere. De aceea, ne cerem scuze pentru eventualele lipsuri sau erori. 
+		În cazul în care aveţi întrebări, nemulţumiri sau sugestii, vă rugăm să ne contactaţi la adresa de email de mai jos. Vă mulţumim!',
 		'contact' => 'Contact:',
 		'english' => 'English',
 		'nepali' => 'Nepali',

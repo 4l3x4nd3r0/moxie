@@ -1,5 +1,6 @@
 <div class="main">
  <div class="wrapper">
+  <div class="body">
     <h1> <?php echo $lang['rewardsh'] ?> </h1>
     <br>
     <?php 
@@ -3034,11 +3035,13 @@
       }
    }
 ?>
+</div>
+<div class="body">
 <div style="overflow-x:auto;">
 <table>
    <tr>
    <?php $sn = 0; ?>
-      <td rowspan="4"><?php echo $lang['avatarhat'] ?></td>
+      <td style="font-weight: bold;font-size: large;color: #5680e9;" rowspan="4"><?php echo $lang['avatarhat'] ?></td>
       <td><?php echo $lang['generalstyle'].$sn++ ?></td>
       <td><?php echo $lang['generalstyle'].$sn++ ?></td>
       <td><?php echo $lang['generalstyle'].$sn++ ?></td>
@@ -3102,13 +3105,15 @@
    </tr>
 </table>
 </div>
+</div>
+
 <br>
-<br>
+<div class="body">
 <div style="overflow-x:auto;">
 <table>
    <tr>
    <?php $sn = 1; ?>
-      <td rowspan="4"><?php echo $lang['avatareye'] ?></td>
+      <td style="font-weight: bold;font-size: large;color: #5680e9;" rowspan="4"><?php echo $lang['avatareye'] ?></td>
       <td><?php echo $lang['generalstyle'].$sn++ ?></td>
       <td><?php echo $lang['generalstyle'].$sn++ ?></td>
       <td><?php echo $lang['generalstyle'].$sn++ ?></td>
@@ -3168,13 +3173,15 @@
    </tr>
 </table>
 </div>
+</div>
+
 <br>
-<br>
+<div class="body">
 <div style="overflow-x:auto;">
 <table>
    <tr>
    <?php $sn = 1; ?>
-      <td rowspan="4"><?php echo $lang['avatarmouth'] ?></td>
+      <td style="font-weight: bold;font-size: large;color: #5680e9;" rowspan="4"><?php echo $lang['avatarmouth'] ?></td>
       <td><?php echo $lang['generalstyle'].$sn++ ?></td>
       <td><?php echo $lang['generalstyle'].$sn++ ?></td>
       <td><?php echo $lang['generalstyle'].$sn++ ?></td>
@@ -3238,13 +3245,15 @@
    </tr>
 </table>
 </div>
+</div>
 <br>
-<br>
+
+<div class="body">
 <div style="overflow-x:auto;">
 <table>
    <tr>
    <?php $sn = 1; ?>
-      <td rowspan="4"><?php echo $lang['avatarbody'] ?></td>
+      <td style="font-weight: bold;font-size: large;color: #5680e9;" rowspan="4"><?php echo $lang['avatarbody'] ?></td>
       <td><?php echo $lang['generalstyle'].$sn++ ?></td>
       <td><?php echo $lang['generalstyle'].$sn++ ?></td>
       <td><?php echo $lang['generalstyle'].$sn++ ?></td>
@@ -3292,13 +3301,15 @@
    </tr>
 </table>
 </div>
+</div>
+
 <br>
-<br>
+<div class="body">
 <div style="overflow-x:auto;">
 <table>
    <tr>
    <?php $sn = 1; ?>
-      <td rowspan="4"><?php echo $lang['avatarpants'] ?></td>
+      <td style="font-weight: bold;font-size: large;color: #5680e9;" rowspan="4"><?php echo $lang['avatarpants'] ?></td>
       <td><?php echo $lang['generalstyle'].$sn++ ?></td>
       <td><?php echo $lang['generalstyle'].$sn++ ?></td>
       <td><?php echo $lang['generalstyle'].$sn++ ?></td>
@@ -3342,13 +3353,15 @@
    </tr>
 </table>
 </div>
+</div>
+
 <br>
-<br>
+<div class="body">
 <div style="overflow-x:auto;">
 <table>
    <tr>
    <?php $sn = 1; ?>
-      <td rowspan="4"><?php echo $lang['avatarshoes'] ?></td>
+      <td style="font-weight: bold;font-size: large;color: #5680e9;" rowspan="4"><?php echo $lang['avatarshoes'] ?></td>
       <td><?php echo $lang['generalstyle'].$sn++ ?></td>
       <td><?php echo $lang['generalstyle'].$sn++ ?></td>
       <td><?php echo $lang['generalstyle'].$sn++ ?></td>
@@ -3408,5 +3421,6 @@
    </tr>
 </table>
 </div>
- </div>
+</div>
+</div>
 </div>

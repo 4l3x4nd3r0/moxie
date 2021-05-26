@@ -377,3 +377,8 @@ iframe {
 	width: 105%;
 	height: 105%;
  }
+
+  .body td{
+	  text-align: center;
+	  border:1px solid black;
+  }
