@@ -179,6 +179,96 @@
 				}
 			}
 		?>
+		<?php if($id==1)
+		{
+			?>
+		<form method="post" action="">
+			<h2><?php echo $lang['test'] ?></h2>
+			<label><strong><?php echo $lang['q1'] ?></strong></label>
+			<br>
+			<input type="radio" name="q1" value="1">
+			<label><?php echo $lang['a11'] ?></label>
+			<br>
+			<input type="radio" name="q1" value="0">
+			<label><?php echo $lang['a12'] ?></label>
+			<br>
+			<input type="radio" name="q1" value="0">
+			<label><?php echo $lang['a13'] ?></label>
+			<br>
+			<input type="radio" name="q1" value="0">
+			<label><?php echo $lang['a14'] ?></label>
+			<br>
+			<br>
+			<label><strong><?php echo $lang['q2'] ?></strong></label>
+			<br>
+			<input type="radio" name="q2" value="0">
+			<label><?php echo $lang['a21'] ?></label>
+			<br>
+			<input type="radio" name="q2" value="0">
+			<label><?php echo $lang['a22'] ?></label>
+			<br>
+			<input type="radio" name="q2" value="1">
+			<label><?php echo $lang['a23'] ?></label>
+			<br>
+			<input type="radio" name="q2" value="0">
+			<label><?php echo $lang['a24'] ?></label>
+			<br>
+			<br>
+			<label><strong><?php echo $lang['q3'] ?></strong></label>
+			<br>
+			<input type="radio" name="q3" value="0">
+			<label><?php echo $lang['a31'] ?></label>
+			<br>
+			<input type="radio" name="q3" value="1">
+			<label><?php echo $lang['a32'] ?></label>
+			<br>
+			<input type="radio" name="q3" value="0">
+			<label><?php echo $lang['a33'] ?></label>
+			<br>
+			<input type="radio" name="q3" value="0">
+			<label><?php echo $lang['a34'] ?></label>
+			<br>
+			<br>
+			<label><strong><?php echo $lang['q4'] ?></strong></label>
+			<br>
+			<input type="radio" name="q4" value="0">
+			<label><?php echo $lang['a41'] ?></label>
+			<br>
+			<input type="radio" name="q4" value="0">
+			<label><?php echo $lang['a42'] ?></label>
+			<br>
+			<input type="radio" name="q4" value="0">
+			<label><?php echo $lang['a43'] ?></label>
+			<br>
+			<input type="radio" name="q4" value="1">
+			<label><?php echo $lang['a44'] ?></label>
+			<br>
+			<br>
+			<label><strong><?php echo $lang['q5'] ?></strong></label>
+			<br>
+			<input type="radio" name="q5" value="0">
+			<label><?php echo $lang['a51'] ?></label>
+			<br>
+			<input type="radio" name="q5" value="0">
+			<label><?php echo $lang['a52'] ?></label>
+			<br>
+			<input type="radio" name="q5" value="1">
+			<label><?php echo $lang['a53'] ?></label>
+			<br>
+			<input type="radio" name="q5" value="0">
+			<label><?php echo $lang['a54'] ?></label>
+			<br>
+			<br>
+			<input type="submit" name="testsubmit" value="<?php echo $lang['turnin'] ?>">
+		</form>
+		<br>
+		<?php
+		}
+		else
+		{
+
+		}
+		?>
 	</div>
 	<?php
 		if($_SERVER['REQUEST_METHOD'] == "POST" and isset($_POST['finnish']))
