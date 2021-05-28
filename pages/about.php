@@ -41,7 +41,10 @@
 		<br>
 
 		<p>
-		<?php echo $lang['contact'] ?> <a href="mailto:entropycrusade@gmail.com?Subject=Moxie%20Website" target="_top">entropycrusade@gmail.com</a>
+		<?php echo $lang['contact'] ?> <br>
+		 <a href="mailto:entropycrusade@gmail.com?Subject=Moxie%20Website" target="_top">entropycrusade@gmail.com</a> <br>
+		 <a href="https://www.facebook.com/moxie.entropycrusade/" target="_top">Facebook</a> <br>
+		 <a href="https://instagram.com/moxie_education?utm_medium=copy_link" target="_top">Instagram</a> <br>
 		</p>
 
 	</div>
