@@ -194,5 +194,6 @@
 		'turnin' => 'Predare',
 		'congrats_test' => 'Felicitări ai primit: ',
 		'outof' => 'din',
+		'add_fail_courses_no_matches' => 'Filtrul/Cursul nu a fost găsit.'
 	);
 ?>

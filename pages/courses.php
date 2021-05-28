@@ -233,7 +233,7 @@
                }
                else
                {
-                  echo "<div class = 'error'>".$lang['add_fail_password_not_match']."</div>";
+                  echo "<div class = 'error'>".$lang['add_fail_courses_no_matches']."</div>";
                }
          }
          else
@@ -280,7 +280,7 @@
                   }
                }
                else {
-                  echo "<div class = 'error'>".$lang['add_fail_password_not_match']."</div>";
+                  echo "<div class = 'error'>".$lang['add_fail_courses_no_matches']."</div>";
                }
             }
       }

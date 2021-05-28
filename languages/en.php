@@ -188,5 +188,6 @@
 		'turnin' => 'Turn In',
 		'congrats_test' => 'Congratulations you have achieved: ',
 		'outof' => 'out of',
+		'add_fail_courses_no_matches' => 'No matches for the search/filter.'
 	);
 ?>
