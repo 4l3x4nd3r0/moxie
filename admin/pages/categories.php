@@ -32,8 +32,6 @@
 		<tr>
 			<th><?php echo $lang['sn'] ?></th>
 			<th><?php echo $lang['title'] ?></th>
-			<th><?php echo $lang['is_active'] ?></th>
-			<th><?php echo $lang['include_in_menu'] ?></th>
 			<th><?php echo $lang['actions'] ?></th>
 		</tr>
 
@@ -50,23 +48,13 @@
 				{
 					while ($row=$obj->fetch_data($res)) {
 						$id = $row['id'];
-						$title = $row['title_'.$_SESSION['lang']];
-						$is_active = $row['is_active'];
-						$include_in_menu = $row['include_in_menu'];
+						$title = $row['category_name_'.$_SESSION['lang']];
 						?>
 
 						<tr>
 							<td><?php echo $sn++; ?>. </td>
 							<td><?php echo $title; ?></td>
 							<td>
-								<?php if($is_active=='Yes'){echo $lang['yes'];}else if($is_active=='No'){echo $lang['no'];} ?>
-								
-							</td>
-							<td>
-								<?php if($include_in_menu=='Yes'){echo $lang['yes'];}else if($include_in_menu=='No'){echo $lang['no'];} ?>
-							</td>
-							<td>
-								<a href="<?php echo SITEURL; ?>admin/index.php?page=edit_category&id=<?php echo $id; ?>" class="btn-success btn-sm"><?php echo $lang['edit'] ?></a>  
 								<a href="<?php echo SITEURL; ?>admin/pages/delete.php?page=categories&id=<?php echo $id; ?>" class="btn-error btn-sm"><?php echo $lang['delete'] ?></a>
 							</td>
 						</tr>

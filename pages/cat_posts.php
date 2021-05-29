@@ -29,7 +29,7 @@
 								<?php echo substr($post_description, 0,400).' ...'; ?>
 							</p>
 							<br>
-							<a href="<?php echo SITEURL; ?>index.php?page=blog_detail&id=<?php echo $id; ?>">
+							<a href="<?php echo SITEURL; ?>index.php?page=lesson_detail&id=<?php echo $id; ?>">
 								<button class="btn-primary btn-sm"><?php echo $lang['read_more'] ?></button>
 							</a>
 						</div>

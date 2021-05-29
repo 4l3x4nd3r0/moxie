@@ -19,14 +19,13 @@
 	clear: both;
 }
 
-
 /* CSS for Header Section */
 .header{
-	background-color: #40407a;
+	background-color: #5680E9;
 	color: #d1ccc0;
 }
 .header .dropdown {
-	width: 5%;
+	width: 50%;
 	float: left;
 }
 .header .logo{
@@ -34,7 +33,7 @@
 	float: left;
 }
 .header .menu{
-	width: 60%;
+	width: 50%;
 	float: right;
 }
 .header .menu ul{
@@ -49,12 +48,12 @@
 	padding: 1%;
 }
 .header .menu ul li a{
-	color: #d1ccc0;
+	color: #ffffff;
 	transition: 0.4s all ease;
 	text-decoration: none;
 }
 .header .menu ul li a:hover{
-	color: #ffffff;
+	color: #C1C8E4;
 	transition: 0.4s all ease;
 	text-decoration: underline;
 }
@@ -68,7 +67,15 @@ a.logo:visited{
 }
 .header .dropdown .logo{
 	width: 50%;
-	float: right;
+	color: #ffffff;
+}
+
+.header .dropdown .logo h2{
+	display:inline;
+}
+
+.header .dropdown span{
+	display:inline;
 }
 
 /* CSS for Main Body Here */
@@ -83,11 +90,35 @@ a.logo:visited{
 	width: 75%;
 	box-shadow: 0 2px 4px 2px grey;
 	color: #2c2c54;
+	background-color: #ffffff;
 }
+
+.userdata {
+	box-shadow: 0 2px 4px 2px grey;
+	color: #2c2c54;
+	float: right;
+	padding: 3%;
+	padding-right: 15%;
+	margin: 2% auto;
+	width: 37.5%;
+}
+
+.profile_avatar{
+	box-shadow: 0 2px 4px 2px grey;
+	color: #2c2c54;
+	padding: 5%;
+	margin: 2%;
+	width: 20%;
+}
+
+.profile_avatar p{
+	text-align: center;
+}
+
 
 /* CSS for Footer */
 .footer{
-	background-color: #474787;
+	background-color: #5680E9;
 	color: #f7f1e3;
 	text-align: center;
 }
@@ -106,14 +137,16 @@ a.logo:visited{
 .btn-default{
 	padding: 5px;
 }
+
+
 .btn-primary{
 	border: none;
-	background-color: #474787;
+	background-color: #7352b1;
 	color: #d1ccc0;
 	transition: 0.4s all ease;
 }
 .btn-primary:hover{
-	background-color: #706fd3;
+	background-color: #836bb1;
 	transition: 0.4s all ease;
 	cursor: pointer;
 }
@@ -233,6 +266,18 @@ a.logo:visited{
 
 body {
 	font-family: "Lato", sans-serif;
+	background-color:#C1C8E4 ;
+}
+.body .post{
+	padding-right: 150px;
+}
+.main .howtobody{
+	padding: 3%;
+	margin: 2% auto;
+	width: 50%;
+	box-shadow: 0 2px 4px 2px grey;
+	color: #2c2c54;
+	background-color: #ffffff;
 }
 
 /*CSS for Dropdown*/
@@ -243,7 +288,7 @@ body {
 	z-index: 1;
 	top: 0;
 	left: 0;
-	background-color: #111;
+	background-color: #344d8d;
 	overflow-x: hidden;
 	transition: 0.5s;
 	padding-top: 30px;
@@ -253,13 +298,18 @@ body {
 	padding: 8px 8px 8px 32px;
 	text-decoration: none;
 	font-size: 25px;
-	color: #818181;
+	color: #ffffff;
 	display: block;
 	transition: 0.3s;
 }
 
+.sidenav li{
+	list-style-type: none;
+	padding-bottom: 10%;
+}
+
 .sidenav a:hover {
-	color: #f1f1f1;
+	color: #C1C8E4;
 }
 
 .sidenav .closebtn {
@@ -279,3 +329,56 @@ body {
 	.sidenav {padding-top: 15px;}
 	.sidenav a {font-size: 18px;}
 }
+
+iframe {
+    width: 560px;
+    height: 315px;
+    margin: 0 auto;
+	display:block;
+}
+
+
+  .main .body .column {
+	flex: 33.33%;
+	padding: 5%;
+	padding-left: 1%;
+  }
+
+  .main .body .column .moxie h2 {
+	flex: 33.33%;
+	padding-left: 23%;
+  }
+
+  .main .body .column .crusade h2 {
+	flex: 33.33%;
+	padding-left: 25%;
+  }
+
+  .main .body .row {
+	display: flex;
+  }
+
+  .search_bar {
+	display: inline;
+  }
+
+  .search_bar .search{
+	display: inline;
+	float: inline-end;
+  }
+
+  .search_bar .search .sbar{
+  width: 400px; 
+ }
+ 
+ .column .courses .body{
+	padding:3%;
+	flex: 33.33%;
+	width: 105%;
+	height: 105%;
+ }
+
+  .body td{
+	  text-align: center;
+	  border:1px solid black;
+  }

@@ -1,5 +1,11 @@
 <div class="main">
  <div class="wrapper">
-    <h1> Assignment Tab </h1>
+ <div class="body">
+		<h2><?php echo $lang['assignmentsh'] ?></h2>
+		<br>
+    <?php
+      echo "<div class = 'error'>".$lang['notmvp']."</div>";
+    ?> 
+	</div>
  </div>
 </div>

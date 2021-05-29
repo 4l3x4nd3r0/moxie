@@ -15,15 +15,10 @@
 			<input type="text" name="title_en" placeholder="Category Title in English" required="true" class="half">
 		</div>
 		<div class="input-group">
-			<span class="input-label"><?php echo $lang['is_active'] ?></span>
-			<input type="radio" name="is_active" value="Yes"> <?php echo $lang['yes'] ?>
-			<input type="radio" name="is_active" value="No"> <?php echo $lang['no'] ?>
+			<span class="input-label"><?php echo $lang['title'] ?> (<?php echo $lang['romanian'] ?>)</span> 
+			<input type="text" name="title_ro" placeholder="Category Title in Romanian" required="true" class="half">
 		</div>
-		<div class="input-group">
-			<span class="input-label"><?php echo $lang['include_in_menu'] ?></span>
-			<input type="radio" name="include_in_menu" value="Yes"> <?php echo $lang['yes'] ?>
-			<input type="radio" name="include_in_menu" value="No"> <?php echo $lang['no'] ?>
-		</div>
+
 
 		<div class="input-group">
 			<span class="input-label">
@@ -38,21 +33,12 @@
 		{
 			//echo "Click";
 			$title_en = $obj->sanitize($conn,$_POST['title_en']);
-			$title_np = $obj->sanitize($conn,$_POST['title_np']);
-			$title_cn = $obj->sanitize($conn,$_POST['title_cn']);
-			$is_active = $_POST['is_active'];
-			$include_in_menu = $_POST['include_in_menu'];
-			$created_at = date('Y-m-d H:i:s');
-
+			$title_ro = $obj->sanitize($conn,$_POST['title_ro']);
 			$tbl_name = 'tbl_categories';
 
 			$data= "
-				title_en = '$title_en',
-				title_np = '$title_np',
-				title_cn = '$title_cn',
-				is_active = '$is_active',
-				include_in_menu = '$include_in_menu',
-				created_at = '$created_at'
+				category_name_en = '$title_en',
+				category_name_ro = '$title_ro',
 			";
 
 			$query = $obj->insert_data($tbl_name,$data);

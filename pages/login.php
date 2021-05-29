@@ -12,12 +12,12 @@
                     ?>
                 </div>
                 <div class="title">
-                    <label>Username/Email
+                    <label><?php echo $lang['usernameslashemail'] ?>
                         <input class="full" type="text" name="username" required="true">
                     </label>
                 </div>
                 <div class="title">
-                    <label>Password
+                    <label><?php echo $lang['password'] ?>
                         <input class="full" type="password" name="password" required="true">
                     </label>
                 </div>

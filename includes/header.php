@@ -11,14 +11,32 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script language="Javascript">
 	function openNav() {
-	document.getElementById("mySidenav").style.width = "250px";
-	document.getElementById("").style.marginLeft = "250px";
+		document.getElementById("mySidenav").style.width = "250px";
+		document.getElementById("").style.marginLeft = "250px";
 	}
 
 	function closeNav() {
-	document.getElementById("mySidenav").style.width = "0";
-	document.getElementById("").style.marginLeft= "0";
+		document.getElementById("mySidenav").style.width = "0";
+		document.getElementById("").style.marginLeft= "0";
 	}
+	function updateHairInput(val) {
+        document.getElementById('texthair').value=val; 
+    }
+	function updateEyesInput(val) {
+        document.getElementById('texteyes').value=val; 
+    }
+	function updateMouthInput(val) {
+        document.getElementById('textmouth').value=val; 
+    }
+	function updateShirtInput(val) {
+        document.getElementById('textshirt').value=val; 
+    }
+	function updatePantsInput(val) {
+        document.getElementById('textpants').value=val; 
+    }
+	function updateShoesInput(val) {
+        document.getElementById('textshoes').value=val; 
+    }
     </script>
 	<?php
 		$site = SITEURL;
@@ -32,8 +50,7 @@
 	<header class="header">
 		<div class="wrapper">
 			<div class="dropdown">
-				<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
-				<a class="logo" href="<?php echo SITEURL; ?>"><h1><?php echo $lang['logo'] ?></h1></a>
+				<a class="logo"><span  style="font-size:30px;cursor:pointer;color:#ffffff;" onclick="openNav()">&#9776;<h2><?php echo $lang['logo'] ?></h2></a></span>
 			</div>
 			<div class="menu">
 				<ul>
@@ -66,6 +83,12 @@
 							echo sprintf($formatHeader, $site,'login', $lang['login']);
 						}
 					?>
+					<li class="right">
+						<a href="<?php echo SITEURL; ?>index.php?lang=ro"><img src="https://upload.wikimedia.org/wikipedia/commons/7/73/Flag_of_Romania.svg" height=25 width=25></a>
+					</li>
+					<li class="right">
+						<a href="<?php echo SITEURL; ?>index.php?lang=en"><img src="https://upload.wikimedia.org/wikipedia/commons/a/ae/Flag_of_the_United_Kingdom.svg" height=25 width=25></a>
+					</li>
 				</ul>
 			</div>
 
