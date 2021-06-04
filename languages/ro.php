@@ -82,7 +82,7 @@
 		'rewardsh' => 'Recompense',
 		'coursesh' => 'Cursuri',
 		'welcomepageh' => 'Bun venit pe Moxie!',
-		'welcomepagemessage' => 'Acest site te va învăța!',
+		'welcomepagemessage' => 'Motto:"Realizată de TINERI pentru TINEri!" <img src = "assets/img/Moxie.svg" width= 180 height= 180>',
 		'lastlecture' => 'Ultimul curs:',
 		'usernameslashemail' => 'Nume de utilizator/Email',
 		'firstnamep' => 'Prenume:',
@@ -128,6 +128,12 @@
 						  O
 						  F
 						  I',
+		'avatareye1' => 'Ochi:',
+		'avatarmouth1' => 'Gură:',
+		'avatarhat1' => 'Păr:',
+		'avatarpants1' => 'Pantaloni:',
+		'avatarbody1' => 'Tricou:',
+		'avatarshoes1' => 'Pantofi:',
 		'emailregister' => 'Email',
 		'fatherinitial' => "Inițiala numelui tatălui",
 		'firstnameregister' => 'Prenume',

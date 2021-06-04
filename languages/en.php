@@ -82,7 +82,7 @@
 		'rewardsh' => 'Rewards',
 		'coursesh' => 'Courses',
 		'welcomepageh' => 'Welcome to Moxie!',
-		'welcomepagemessage' => 'This site will teach you!',
+		'welcomepagemessage' => 'Motto:"Made by YOUNG PEOPLE for YOUng people!" <img src = "assets/img/Moxie.svg" width= 180 height= 180>',
 		'lastlecture' => 'Latest lecture:',
 		'usernameslashemail' => 'Username/Email',
 		'firstnamep' => 'First Name:',
@@ -123,6 +123,12 @@
 						  O
 						  E
 						  S',
+		'avatareye1' => 'Eyes:',
+		'avatarmouth1' => 'Mouth:',
+		'avatarhat1' => 'Hair:',
+		'avatarpants1' => 'Pants:',
+		'avatarbody1' => 'Shirt:',
+		'avatarshoes1' => 'Shoes:',
 		'emailregister' => 'Email',
 		'fatherinitial' => "Father's Name Initial",
 		'firstnameregister' => 'First Name',

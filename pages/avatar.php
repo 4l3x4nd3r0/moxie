@@ -808,7 +808,7 @@
                         $g = imagecreatefrompng('assets/img/avatar_assets/Shoes/shoes_bordeaux.png');
                     }
                     else
-                    {
+                    
                         $g = imagecreatefrompng('assets/img/avatar_assets/Shoes/shoes_olive.png');
                     }
                     break;
@@ -891,7 +891,7 @@
     <table>
         <div class="title">
         <tr>
-            <th scope="row"><label><?php echo $lang['avatarhat'] ?></th>
+            <th scope="row"><label><?php echo $lang['avatarhat1'] ?></th>
                 <th><input type="range" name="hair" min="0" max="12" value="0" step="1" onchange="updateHairInput(this.value);"></th>
             </label>
             <th><label> <?php echo $lang['avatarstyle']; echo '<output id="texthair" value="">0</output>' ?> </label></th>
@@ -899,7 +899,7 @@
         </div>
         <div class="title">
         <tr>
-            <th scope="row"><label><?php echo $lang['avatareye'] ?></th>
+            <th scope="row"><label><?php echo $lang['avatareye1'] ?></th>
                 <th><input type="range" name="eyes" min="1" max="12" value="1" step="1" onchange="updateEyesInput(this.value);"></th>
             </label>
             <th><label> <?php echo $lang['avatarstyle']; echo '<output id="texteyes" value="">1</output>' ?> </label></th>
@@ -907,7 +907,7 @@
         </div>
         <div class="title">
         <tr>
-            <th scope="row"><label><?php echo $lang['avatarmouth'] ?></th>
+            <th scope="row"><label><?php echo $lang['avatarmouth1'] ?></th>
                 <th><input type="range" name="mouth" min="1" max="13" value="1" step="1" onchange="updateMouthInput(this.value);"></th>
             </label>
             <th><label> <?php echo $lang['avatarstyle']; echo '<output id="textmouth" value="">1</output>' ?> </label></th>
@@ -915,7 +915,7 @@
         </div>
         <div class="title">
         <tr>
-            <th scope="row"><label><?php echo $lang['avatarbody'] ?></th>
+            <th scope="row"><label><?php echo $lang['avatarbody1'] ?></th>
                 <th><input type="range" name="tshirt" min="1" max="9" value="1" step="1" onchange="updateShirtInput(this.value);"></th>
             </label>
             <th><label> <?php echo $lang['avatarstyle']; echo '<output id="textshirt" value="">1</output>' ?> </label></th>
@@ -923,7 +923,7 @@
         </div>
         <div class="title">
         <tr>
-            <th scope="row"><label><?php echo $lang['avatarpants'] ?></th>
+            <th scope="row"><label><?php echo $lang['avatarpants1'] ?></th>
                 <th><input type="range" name="pants" min="1" max="8" value="1" step="1" onchange="updatePantsInput(this.value);"></th>
             </label>
             <th><label> <?php echo $lang['avatarstyle']; echo '<output id="textpants" value="">1</output>' ?> </label></th>
@@ -931,7 +931,7 @@
         </div>
         <div class="title">
         <tr>
-            <th scope="row"><label><?php echo $lang['avatarshoes'] ?></th>
+            <th scope="row"><label><?php echo $lang['avatarshoes1'] ?></th>
                 <th><input type="range" name="shoes" min="1" max="12" value="1" step="1" onchange="updateShoesInput(this.value);"></th>
             </label>
             <th><label> <?php echo $lang['avatarstyle']; echo '<output id="textshoes" value="">1</output>' ?> </label></th>
