@@ -808,7 +808,7 @@
                         $g = imagecreatefrompng('assets/img/avatar_assets/Shoes/shoes_bordeaux.png');
                     }
                     else
-                    
+                    {
                         $g = imagecreatefrompng('assets/img/avatar_assets/Shoes/shoes_olive.png');
                     }
                     break;

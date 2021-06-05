@@ -99,8 +99,7 @@
 				password='$securepassword',
 				created_at='$created_at',
                 points='$points',
-                avatar_path='$avatar_path',
-                points='$points'
+                avatar_path='$avatar_path'
 			";
 			$tbl_name='tbl_users';
 
